@@ -1,0 +1,35 @@
+setup:
+  inputPath: "input"
+  logFile: "log.txt"
+  logMask: 31
+  implyTodaysFixings: "N"
+  observationModel: "Disable"
+  continueOnError: "false"
+  buildFailedTrades: "true"
+  # Default to shared input files
+  marketDataFile: "../../Input/market_20160205.txt"
+  fixingDataFile: "../../Input/fixings_20160205.txt"
+  curveConfigFile: "../../Input/curveconfig.xml"
+  conventionsFile: "../../Input/conventions.xml"
+  marketConfigFile: "../../Input/todaysmarket.xml"
+  pricingEnginesFile: "../../Input/pricingengine.xml"
+  portfolioFile: "portfolio.xml"
+
+markets:
+  lgmcalibration: "default"
+  fxcalibration: "default"
+  infcalibration: "default"
+  pricing: "default"
+  simulation: "default"
+  sensitivity: "default"
+
+analytics:
+  npv:
+    active: "Y"
+    baseCurrency: "EUR"
+    outputFileName: "npv.csv"
+    additionalResults: "Y"
+    additionalResultsReportPrecision: 12
+  cashflow:
+    active: "Y"
+    outputFileName: "flows.csv"

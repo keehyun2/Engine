@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ORE xmlns:th="http://www.thymeleaf.org">
+  <Setup>
+    <Parameter name="asofDate" th:text="${setup.asOfDate}"/>
+    <Parameter name="inputPath" th:text="${setup.inputPath}"/>
+    <Parameter name="outputPath" th:text="${outputPath}"/>
+    <Parameter name="logFile" th:text="${setup.logFile}"/>
+    <Parameter name="logMask" th:text="${setup.logMask}"/>
+    <Parameter name="marketDataFile" th:text="${setup.marketDataFile}"/>
+    <Parameter name="fixingDataFile" th:text="${setup.fixingDataFile}"/>
+    <Parameter name="implyTodaysFixings" th:text="${setup.implyTodaysFixings}"/>
+    <Parameter name="curveConfigFile" th:text="${setup.curveConfigFile}"/>
+    <Parameter name="conventionsFile" th:text="${setup.conventionsFile}"/>
+    <Parameter name="marketConfigFile" th:text="${setup.marketConfigFile}"/>
+    <Parameter name="pricingEnginesFile" th:text="${setup.pricingEnginesFile}"/>
+    <Parameter name="portfolioFile" th:text="${setup.portfolioFile}"/>
+    <Parameter name="observationModel" th:text="${setup.observationModel}"/>
+  </Setup>
+  <Markets>
+    <Parameter th:each="market : ${markets}" th:name="${market.key}" th:text="${market.value}"/>
+  </Markets>
+  <Analytics>
+    <Analytic th:each="analytic : ${analytics}" th:type="${analytic.key}">
+      <Parameter th:each="param : ${analytic.value}" th:name="${param.key}" th:text="${param.value}"/>
+    </Analytic>
+  </Analytics>
+</ORE>

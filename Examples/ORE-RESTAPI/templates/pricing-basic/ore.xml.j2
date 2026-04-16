@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ORE>
+  <Setup>
+    <Parameter name="asofDate">{{ setup.asofDate }}</Parameter>
+    <Parameter name="inputPath">{{ setup.inputPath }}</Parameter>
+    <Parameter name="outputPath">{{ output_path }}</Parameter>
+    <Parameter name="logFile">{{ setup.logFile }}</Parameter>
+    <Parameter name="logMask">{{ setup.logMask }}</Parameter>
+    <Parameter name="marketDataFile">{{ setup.marketDataFile }}</Parameter>
+    <Parameter name="fixingDataFile">{{ setup.fixingDataFile }}</Parameter>
+    <Parameter name="implyTodaysFixings">{{ setup.implyTodaysFixings }}</Parameter>
+    <Parameter name="curveConfigFile">{{ setup.curveConfigFile }}</Parameter>
+    <Parameter name="conventionsFile">{{ setup.conventionsFile }}</Parameter>
+    <Parameter name="marketConfigFile">{{ setup.marketConfigFile }}</Parameter>
+    <Parameter name="pricingEnginesFile">{{ setup.pricingEnginesFile }}</Parameter>
+    <Parameter name="portfolioFile">{{ setup.portfolioFile }}</Parameter>
+    <Parameter name="observationModel">{{ setup.observationModel }}</Parameter>
+    <Parameter name="continueOnError">{{ setup.continueOnError }}</Parameter>
+    <Parameter name="buildFailedTrades">{{ setup.buildFailedTrades }}</Parameter>
+  </Setup>
+  <Markets>
+    {% for name, value in markets.items() %}
+    <Parameter name="{{ name }}">{{ value }}</Parameter>
+    {% endfor %}
+  </Markets>
+  <Analytics>
+    {% for analytic_type, params in analytics.items() %}
+    <Analytic type="{{ analytic_type }}">
+      {% for param_name, param_value in params.items() %}
+      <Parameter name="{{ param_name }}">{{ param_value }}</Parameter>
+      {% endfor %}
+    </Analytic>
+    {% endfor %}
+  </Analytics>
+</ORE>

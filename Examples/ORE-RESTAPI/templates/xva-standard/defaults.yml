@@ -1,0 +1,66 @@
+setup:
+  inputPath: "input"
+  logFile: "log.txt"
+  logMask: 31
+  implyTodaysFixings: "Y"
+  observationModel: "Disable"
+  continueOnError: "false"
+  buildFailedTrades: "true"
+  # Default to shared input files
+  marketDataFile: "../../Input/market_20160205.txt"
+  fixingDataFile: "../../Input/fixings_20160205.txt"
+  curveConfigFile: "../../Input/curveconfig.xml"
+  conventionsFile: "../../Input/conventions.xml"
+  marketConfigFile: "../../Input/todaysmarket.xml"
+  pricingEnginesFile: "../../Input/pricingengine.xml"
+  portfolioFile: "portfolio.xml"
+
+markets:
+  lgmcalibration: "libor"
+  fxcalibration: "libor"
+  pricing: "libor"
+  simulation: "libor"
+
+analytics:
+  npv:
+    active: "Y"
+    baseCurrency: "EUR"
+    outputFileName: "npv.csv"
+  cashflow:
+    active: "Y"
+    outputFileName: "flows.csv"
+  curves:
+    active: "Y"
+    configuration: "default"
+    grid: "240,1M"
+    outputFileName: "curves.csv"
+  simulation:
+    active: "Y"
+    simulationConfigFile: "simulation.xml"
+    pricingEnginesFile: "../../Input/pricingengine.xml"
+    baseCurrency: "EUR"
+    cubeFile: "cube.csv.gz"
+    aggregationScenarioDataFileName: "scenariodata.csv.gz"
+  xva:
+    active: "Y"
+    csaFile: "netting.xml"
+    cubeFile: "cube.csv.gz"
+    scenarioFile: "scenariodata.csv.gz"
+    baseCurrency: "EUR"
+    exposureProfiles: "Y"
+    exposureProfilesByTrade: "Y"
+    quantile: 0.95
+    calculationType: "Symmetric"
+    allocationMethod: "None"
+    marginalAllocationLimit: 1.0
+    exerciseNextBreak: "N"
+    cva: "Y"
+    dva: "N"
+    dvaName: "BANK"
+    fva: "N"
+    fvaBorrowingCurve: "BANK_EUR_BORROW"
+    fvaLendingCurve: "BANK_EUR_LEND"
+    colva: "N"
+    collateralFloor: "N"
+    rawCubeOutputFile: "rawcube.csv"
+    netCubeOutputFile: "netcube.csv"

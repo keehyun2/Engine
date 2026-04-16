@@ -1,0 +1,42 @@
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# Maven Wrapper Script
+# ----------------------------------------------------------------------------
+
+# Resolve links: $0 may be a link
+PRG="$0"
+# Need this for relative symlinks.
+while [ -h "$PRG" ] ; do
+    ls=`ls -ld "$PRG"`
+    link=`expr "$ls" : '.*-> \(.*\)$'`
+    if expr "$link" : '/.*' > /dev/null; then
+        PRG="$link"
+    else
+        PRG=`dirname "$PRG"`"/$link"
+    fi
+done
+SAVED="`pwd`"
+cd "`dirname \"$PRG\"`/" >/dev/null
+APP_HOME="`pwd -P`"
+cd "$SAVED" >/dev/null
+
+# Check if Maven is in PATH
+if command -v mvn >/dev/null 2>&1; then
+    exec mvn "$@"
+fi
+
+# Use Maven Wrapper
+WRAPPER_JAR="$APP_HOME/.mvn/wrapper/maven-wrapper.jar"
+if [ ! -f "$WRAPPER_JAR" ]; then
+    echo "Downloading Maven Wrapper..."
+    mkdir -p "$APP_HOME/.mvn/wrapper"
+    curl -L -o "$WRAPPER_JAR" https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper.jar
+fi
+
+if [ ! -f "$WRAPPER_JAR" ]; then
+    echo "ERROR: Maven Wrapper JAR not found at $WRAPPER_JAR"
+    exit 1
+fi
+
+# Execute Maven Wrapper
+java -jar "$WRAPPER_JAR" "$@"

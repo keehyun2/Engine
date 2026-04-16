@@ -1,0 +1,67 @@
+# ORE Configuration
+ore:
+  executable:
+    path: ""  # Empty = auto-detect, or set full path to ore executable
+    timeout-seconds: 600
+  jobs:
+    base-dir: "./jobs"
+  shared-input-dir: "../Input"
+
+# Spring Configuration
+spring:
+  application:
+    name: ore-rest-api
+
+  # H2 In-Memory Database
+  datasource:
+    url: jdbc:h2:mem:oredb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  # JPA/Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  # Task Execution for @Async
+  task:
+    execution:
+      pool:
+        core-size: 4
+        max-size: 10
+        queue-capacity: 100
+      thread-name-prefix: ore-worker-
+
+  # Thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .xml
+    mode: XML
+
+# Server Configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# Logging
+logging:
+  level:
+    com.ore.api: INFO
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Swagger/OpenAPI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha

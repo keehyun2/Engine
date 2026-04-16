@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(mvn clean:*)",
+      "Bash(/c/dev/apache-maven-3.9.6/bin/mvn.cmd clean:*)",
+      "Bash(java:*)",
+      "Bash(curl -s http://localhost:8080/api/jobs)",
+      "Bash(curl -s http://localhost:8080/swagger-ui/index.html)",
+      "Bash(curl:*)",
+      "Bash(/c/dev/apache-maven-3.9.6/bin/mvn.cmd package:*)",
+      "Bash(pkill -f \"ore-rest-api\")",
+      "Bash(taskkill /F /IM java.exe)",
+      "Bash(taskkill /F /T java)",
+      "Bash(ls /c/dev/Engine/Examples/ore-rest-api/target/*.jar)",
+      "Bash(ls server*.log)",
+      "Bash(taskkill /F /PID 1710)",
+      "Bash(ls:*)",
+      "Bash(taskkill /F /PID 1710 /T)"
+    ]
+  }
+}

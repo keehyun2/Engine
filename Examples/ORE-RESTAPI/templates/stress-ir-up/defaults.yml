@@ -1,0 +1,47 @@
+setup:
+  inputPath: "input"
+  logFile: "log.txt"
+  logMask: 31
+  implyTodaysFixings: "N"
+  observationModel: "None"
+  continueOnError: "false"
+  buildFailedTrades: "true"
+  # Default to shared input files
+  marketDataFile: "../../Input/market_20160205.txt"
+  fixingDataFile: "../../Input/fixings_20160205.txt"
+  curveConfigFile: "../../Input/curveconfig.xml"
+  conventionsFile: "conventions.xml"
+  marketConfigFile: "todaysmarket.xml"
+  pricingEnginesFile: "pricingengine.xml"
+  portfolioFile: "portfolio.xml"
+
+markets:
+  lgmcalibration: "collateral_inccy"
+  fxcalibration: "xois_eur"
+  pricing: "xois_eur"
+  simulation: "xois_eur"
+  sensitivity: "xois_eur"
+
+analytics:
+  npv:
+    active: "Y"
+    baseCurrency: "EUR"
+    outputFileName: "npv.csv"
+  cashflow:
+    active: "Y"
+    outputFileName: "flows.csv"
+  curves:
+    active: "Y"
+    configuration: "default"
+    grid: "240,1M"
+    outputFileName: "curves.csv"
+  stress:
+    active: "Y"
+    precision: 6
+    marketConfigFile: "stressmarket.xml"
+    stressConfigFile: "stresstest.xml"
+    pricingEnginesFile: "pricingengine.xml"
+    scenarioOutputFile: "stresstest.csv"
+    outputThreshold: 0.000001
+    generateCashflows: "Y"
+    scenarioCashflowOutputFile: "stresstest_flows.csv"
