@@ -1,4 +1,21 @@
+<!-- ======================================== -->
+<!-- 커브 설정 (Curve Configuration) 파일 -->
+<!-- 이자율 곡선(Yield Curve) 부트스트래핑 설정 -->
+<!-- ======================================== -->
+<!--
+  [핵심 개념: 이자율 곡선 (Yield Curve)]
+  - 목적: 다양한 만기별 금리를 연속적인 곡선으로 구축
+  - 용도: 미래 현금흐름의 현재 가치 계산 (할인율)
+  - 부트스트래핑: 단기 금리 → 장기 금리 순으로 곡선 구축
+
+  [곡선 종류]
+  1. USD-FedFunds: 연방기금 금리 기반 할인 곡선
+  2. USD-LIBOR-3M: 3개월 LIBOR 기반 프로젝션(예측) 곡선
+  3. USD-Prime: 프라임 금리 기반 곡선
+-->
+
 <CurveConfiguration>
+  <!-- 사용하지 않는 설정들 (빈 값) -->
   <FXSpots/>
   <FXVolatilities/>
   <SwaptionVolatilities/>
@@ -6,20 +23,30 @@
   <CapFloorVolatilities/>
   <CDSVolatilities/>
   <DefaultCurves/>
+
   <YieldCurves>
+    <!-- ======================================== -->
+    <!-- 곡선 1: USD-FedFunds (연방기금 금리 곡선) -->
+    <!-- ======================================== -->
     <YieldCurve>
       <CurveId>USD-FedFunds</CurveId>
       <CurveDescription>USD discount curve bootstrapped from FED FUNDS swap rates</CurveDescription>
       <Currency>USD</Currency>
+      <!-- DiscountCurve: 할인에 사용할 곡선 (자기 자신) -->
       <DiscountCurve>USD-FedFunds</DiscountCurve>
       <Segments>
+        <!-- Segment 1: 단기 예금 (Deposit) -->
         <Simple>
           <Type>Deposit</Type>
           <Quotes>
+            <!-- 1일 만기 (Overnight) -->
             <Quote>MM/RATE/USD/0D/1D</Quote>
           </Quotes>
           <Conventions>USD-FED-FUNDS-CONVENTIONS</Conventions>
         </Simple>
+
+        <!-- Segment 2: OIS (Overnight Index Swap) -->
+        <!-- 1개월 ~ 1년 9개월까지 -->
         <Simple>
           <Type>OIS</Type>
           <Quotes>
@@ -34,11 +61,17 @@
           </Quotes>
           <Conventions>USD-OIS</Conventions>
         </Simple>
+
+        <!-- Segment 3: Average OIS (Basis Swap 사용) -->
+        <!-- 2년 ~ 30년까지 (LIBOR-FedFunds 베이시스 활용) -->
         <AverageOIS>
           <Type>Average OIS</Type>
           <Quotes>
+            <!-- 각 만기별 베이시스 스왑 + IRS 금리 조합 -->
             <CompositeQuote>
+              <!-- 베이시스 스프레드: LIBOR 대비 FedFunds의 차이 -->
               <SpreadQuote>BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/2Y</SpreadQuote>
+              <!-- 기준 금리 스왑 -->
               <RateQuote>IR_SWAP/RATE/USD/2D/3M/2Y</RateQuote>
             </CompositeQuote>
             <CompositeQuote>
@@ -97,18 +130,26 @@
           <Conventions>USD-AVERAGE-OIS-CONVENTIONS</Conventions>
         </AverageOIS>
       </Segments>
+      <!-- 보간 방법: 로그 선형 보간 -->
       <InterpolationVariable>Discount</InterpolationVariable>
       <InterpolationMethod>LogLinear</InterpolationMethod>
       <YieldCurveDayCounter>A365</YieldCurveDayCounter>
       <Tolerance>0.0000000000010000</Tolerance>
+      <!-- Extrapolation: 데이터 없는 구간 외삽 여부 -->
       <Extrapolation>true</Extrapolation>
     </YieldCurve>
+
+    <!-- ======================================== -->
+    <!-- 곡선 2: USD-LIBOR-3M (LIBOR 프로젝션 곡선) -->
+    <!-- ======================================== -->
     <YieldCurve>
       <CurveId>USD-LIBOR-3M</CurveId>
       <CurveDescription/>
       <Currency>USD</Currency>
+      <!-- 할인은 FedFunds 곡선 사용 (이중 곡선 방식) -->
       <DiscountCurve>USD-FedFunds</DiscountCurve>
       <Segments>
+        <!-- Segment 1: 단기 예금 (1주 ~ 3개월) -->
         <Simple>
           <Type>Deposit</Type>
           <Quotes>
@@ -118,8 +159,12 @@
             <Quote>MM/RATE/USD/2D/3M</Quote>
           </Quotes>
           <Conventions>USD-LIBOR-CONVENTIONS</Conventions>
+          <!-- ProjectionCurve: 미래 금리 예측에 사용 -->
           <ProjectionCurve>USD-LIBOR-3M</ProjectionCurve>
         </Simple>
+
+        <!-- Segment 2: FRA (Forward Rate Agreement) -->
+        <!-- 3개월 ~ 1년 -->
         <Simple>
           <Type>FRA</Type>
           <Quotes>
@@ -131,6 +176,9 @@
           <Conventions>USD-3M-FRA-CONVENTIONS</Conventions>
           <ProjectionCurve>USD-LIBOR-3M</ProjectionCurve>
         </Simple>
+
+        <!-- Segment 3: IRS (Interest Rate Swap) -->
+        <!-- 2년 ~ 30년 -->
         <Simple>
           <Type>Swap</Type>
           <Quotes>
@@ -159,15 +207,22 @@
       <Tolerance>0.0000000000010000</Tolerance>
       <Extrapolation>true</Extrapolation>
     </YieldCurve>
+
+    <!-- ======================================== -->
+    <!-- 곡선 3: USD-Prime (프라임 금리 곡선) -->
+    <!-- ======================================== -->
     <YieldCurve>
       <CurveId>USD-Prime</CurveId>
       <CurveDescription>USD discount curve bootstrapped from PRIME swap rates</CurveDescription>
       <Currency>USD</Currency>
+      <!-- 할인은 FedFunds 곡선 사용 -->
       <DiscountCurve>USD-FedFunds</DiscountCurve>
       <Segments>
+        <!-- Average OIS with LIBOR-Prime Basis -->
         <AverageOIS>
           <Type>Average OIS</Type>
           <Quotes>
+            <!-- LIBOR 대비 Prime 금리 차이 활용 -->
             <CompositeQuote>
               <SpreadQuote>BASIS_SWAP/BASIS_SPREAD/3M/1D/USD/LIBOR_PRIME/2Y</SpreadQuote>
               <RateQuote>IR_SWAP/RATE/USD/2D/3M/2Y</RateQuote>
@@ -199,6 +254,8 @@
       <Extrapolation>true</Extrapolation>
     </YieldCurve>
   </YieldCurves>
+
+  <!-- 사용하지 않는 설정들 -->
   <InflationCurves/>
   <InflationCapFloorVolatilities/>
   <EquityCurves/>

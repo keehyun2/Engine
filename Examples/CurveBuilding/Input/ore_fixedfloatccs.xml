@@ -1,28 +1,75 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE 고정-변동 통화 간 스왑 예제        -->
+<!-- CurveBuilding/fixedfloatccs             -->
+<!-- ======================================== -->
+<!--
+  [고정-변동 통화 간 스왑이란?]
+  - Fixed-Floating Cross Currency Swap
+  - 한 통화는 고정 금리, 다른 통화는 변동 금리
+  - 원금 교환이 있는 크로스 통화 스왑
+
+  [스왑 구조]
+  Fixed Leg (USD):
+    - 고정 금리 지급
+    - USD 명목 금액
+
+  Floating Leg (EUR):
+    - 변동 금리(EURIBOR) 수취
+    - EUR 명목 금액
+
+  원금 교환:
+    - 초기: USD ↔ EUR
+    - 만기: USD ↔ EUR
+
+  [이 예제의 특징]
+  - USD 고정 금리 vs EUR 변동 금리
+  - 여러 만기 (1Y ~ 30Y)
+  - 할인율 비율 곡선 활용
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/fixedfloatccs</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">63</Parameter>
+
+    <!-- 상위 폴더의 시장 데이터 사용 -->
     <Parameter name="marketDataFile">../../Input/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">../../Input/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>
+
+    <!-- 고정-변동 통화 간 스왑 설정 -->
     <Parameter name="curveConfigFile">curveconfig_fixedfloatccs.xml</Parameter>
     <Parameter name="conventionsFile">../../Input/conventions.xml</Parameter>
     <Parameter name="marketConfigFile">todaysmarket_fixedfloatccs.xml</Parameter>
+
+    <!-- 상위 폴더의 가격 평가 엔진 사용 -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_fixedfloatccs.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [default 설정]
+      - pricing: default (표준 가격 평가)
+      - USD, EUR 곡선 모두 사용
+    -->
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="eqcalibration">default</Parameter>
     <Parameter name="pricing">default</Parameter>
     <Parameter name="simulation">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 설정 ========== -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="baseCurrency">USD</Parameter>

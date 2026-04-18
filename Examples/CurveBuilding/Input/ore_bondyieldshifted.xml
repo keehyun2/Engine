@@ -1,6 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- ======================================== -->
+<!-- ORE 채권 수익률 시프트 곡선 예제         -->
+<!-- CurveBuilding/bondyieldshifted           -->
+<!-- ======================================== -->
+<!--
+  [채권 수익률 시프트 곡선이란?]
+  - BondYieldShifted 세그먼트 타입 사용
+  - 기존 곡선을 채권 수익률만큼 시프트
+  - 채권 시장 가격을 반영한 신용 스프레드 곡선 구축
+
+  [곡선 구축 방법]
+  1. 기준 곡선 선택 (USD1D - 단기 할인율 곡선)
+  2. 채권 가격 데이터 수집 (BOND/PRICE/*)
+  3. 각 채권의 듀레이션과 수익률 계산
+  4. 수익률 차이만큼 기준 곡선 시프트
+  5. 보간으로 연속 곡선 생성
+
+  [이 예제의 특징]
+  - USD 채권 기반 신용 곡선 구축
+  - 제로 쿠폰 채권 포트폴리오
+  - 듀레이션 기반 시프트 계산
+  - 30Y 만기 커버
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2022-03-01</Parameter>
     <Parameter name="accrualDate">ASOF</Parameter>
     <Parameter name="dateCalendar">TARGET</Parameter>
@@ -9,16 +34,24 @@
     <Parameter name="inputPathMarket">./Input</Parameter>
     <Parameter name="inputPathPortfolio">./Input</Parameter>
     <Parameter name="outputPath">./Output/bondyieldshifted</Parameter>
+
+    <!-- 채권 시장 데이터 -->
     <Parameter name="marketDataFile">market_bondyieldshifted.csv</Parameter>
     <Parameter name="fixingDataFile">fixings_bondyieldshifted.csv</Parameter>
     <Parameter name="marketDataMappingFile" />
     <Parameter name="fixingDataMappingFile" />
+
     <Parameter name="logFile">log.txt</Parameter>
+
+    <!-- 채권 수익률 시프트 곡선 설정 -->
     <Parameter name="curveConfigFile">curveconfig_bondyieldshifted.xml</Parameter>
     <Parameter name="conventionsFile">conventions_bondyieldshifted.xml</Parameter>
     <Parameter name="marketConfigFile">todaysmarket_bondyieldshifted.xml</Parameter>
+
+    <!-- 상위 폴더의 가격 평가 엔진 사용 -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
     <Parameter name="pricingEnginesFileScenario">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_bondyieldshifted.xml</Parameter>
     <Parameter name="portfolioRecurseIntoSubDirectories">false</Parameter>
     <Parameter name="continueOnError">true</Parameter>
@@ -30,11 +63,18 @@
     <Parameter name="implyTodaysFixings">N</Parameter>
   </Setup>
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [default 설정]
+      - pricing: default (표준 가격 평가)
+      - 채권 수익률 시프트 곡선 사용
+    -->
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="pricing">default</Parameter>
   </Markets>
   <Analytics>
+    <!-- ========== 분석 설정 ========== -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="outputFileName">npv.csv</Parameter>

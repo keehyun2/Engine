@@ -1,3 +1,16 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 포트폴리오 정의 파일                   -->
+<!-- GBP SONIA OIS (Overnight Index Swap)    -->
+<!-- ======================================== -->
+<!--
+  [이 상품의 구조]
+  - GBP SONIA OIS: 영국 파운드 익일 인덱스 스왑
+  - 고정금리 수신 (4.204%)
+  - 변동금리(SONIA) 지급
+  - 만기: 2032년 9월 (10년)
+-->
+
 <Portfolio>
   <Trade id="OIS">
     <TradeType>Swap</TradeType>
@@ -7,24 +20,33 @@
       <AdditionalFields/>
     </Envelope>
     <SwapData>
+      <!-- ========== 다리 1: 고정금리 수신 ========== -->
       <LegData>
         <LegType>Fixed</LegType>
+        <!-- Payer: false = 수신 (이자를 받음) -->
         <Payer>false</Payer>
         <Currency>GBP</Currency>
+        <!-- Notional: 1만 GBP -->
         <Notionals>
           <Notional>10000.00</Notional>
         </Notionals>
+        <!-- DayCounter: 30/360 (30일/360일 기준) -->
         <DayCounter>30/360</DayCounter>
+        <!-- PaymentConvention: F (Following) -->
         <PaymentConvention>F</PaymentConvention>
         <FixedLegData>
+          <!-- Rates: 고정금리 4.204% -->
           <Rates>
             <Rate>0.04204</Rate>
           </Rates>
         </FixedLegData>
         <ScheduleData>
           <Rules>
+            <!-- StartDate: 계약 시작일 -->
             <StartDate>2022-09-22</StartDate>
+            <!-- EndDate: 계약 만기일 -->
             <EndDate>2032-09-22</EndDate>
+            <!-- Tenor: 1년 (연 1회 지급) -->
             <Tenor>1Y</Tenor>
             <Calendar>TARGET</Calendar>
             <Convention>F</Convention>
@@ -36,27 +58,36 @@
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- ========== 다리 2: 변동금리 지급 ========== -->
       <LegData>
         <LegType>Floating</LegType>
+        <!-- Payer: true = 지급 (이자를 냄) -->
         <Payer>true</Payer>
         <Currency>GBP</Currency>
         <Notionals>
           <Notional>10000.00</Notional>
         </Notionals>
+        <!-- DayCounter: A365 (Actual/365) -->
         <DayCounter>A365</DayCounter>
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
+          <!-- Index: GBP SONIA (Sterling Overnight Index Average) -->
+          <!-- SONIA: 영국의 익일 인덱스 기준 금리 -->
           <Index>GBP-SONIA</Index>
           <Spreads>
             <Spread>0.000000</Spread>
           </Spreads>
+          <!-- IsInArrears: false = 선도(FORWARD) 방식 -->
           <IsInArrears>false</IsInArrears>
+          <!-- FixingDays: 2영업일 전 피싱 -->
           <FixingDays>2</FixingDays>
         </FloatingLegData>
         <ScheduleData>
           <Rules>
             <StartDate>2022-09-22</StartDate>
             <EndDate>2032-09-22</EndDate>
+            <!-- Tenor: 6개월 (반기별 지급) -->
             <Tenor>6M</Tenor>
             <Calendar>GBP</Calendar>
             <Convention>F</Convention>
@@ -69,5 +100,12 @@
         </ScheduleData>
       </LegData>
     </SwapData>
+    <!--
+      [요약]
+      - 내가 받는 것: 고정금리 4.204% (연 1회)
+      - 내가 내는 것: SONIA (변동, 반기별)
+      - 목적: 고정금리 수익 확보
+      - 위험: SONIA 상승 시 추가 지급
+    -->
   </Trade>
 </Portfolio>

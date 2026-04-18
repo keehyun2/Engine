@@ -1,7 +1,22 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 오늘의 시장 (Today's Market) 설정 파일   -->
+<!-- SOFR 기반 시장 데이터 매핑             -->
+<!-- ======================================== -->
+<!--
+  [이 예제의 특징]
+  - SOFR(Secured Overnight Financing Rate) 기반 곡선
+  - SABR 변동성 곡선 포함
+  - 두 가지 설정: default, inccy
+-->
+
 <TodaysMarket>
+  <!-- ======================================== -->
+  <!-- Configuration 1: inccy (기준 통화)     -->
+  <!-- ======================================== -->
   <Configuration id="inccy">
     <YieldCurvesId>default</YieldCurvesId>
+    <!-- DiscountingCurvesId: inccy 설정 사용 -->
     <DiscountingCurvesId>inccy</DiscountingCurvesId>
     <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
     <SwapIndexCurvesId>default</SwapIndexCurvesId>
@@ -9,8 +24,10 @@
     <YYInflationIndexCurvesId>default</YYInflationIndexCurvesId>
     <FxSpotsId>default</FxSpotsId>
     <FxVolatilitiesId>default</FxVolatilitiesId>
+    <!-- SwaptionVolatilitiesId: 스왑션 변동성 -->
     <SwaptionVolatilitiesId>default</SwaptionVolatilitiesId>
     <YieldVolatilitiesId>default</YieldVolatilitiesId>
+    <!-- CapFloorVolatilitiesId: Cap/Floor 변동성 -->
     <CapFloorVolatilitiesId>default</CapFloorVolatilitiesId>
     <CDSVolatilitiesId>default</CDSVolatilitiesId>
     <DefaultCurvesId>default</DefaultCurvesId>
@@ -24,6 +41,10 @@
     <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
     <CorrelationsId>default</CorrelationsId>
   </Configuration>
+
+  <!-- ======================================== -->
+  <!-- Configuration 2: default (기본)         -->
+  <!-- ======================================== -->
   <Configuration id="default">
     <YieldCurvesId>default</YieldCurvesId>
     <DiscountingCurvesId>default</DiscountingCurvesId>
@@ -48,29 +69,73 @@
     <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
     <CorrelationsId>default</CorrelationsId>
   </Configuration>
+
+  <!-- ======================================== -->
+  <!-- 이자율 곡선 정의                        -->
+  <!-- ======================================== -->
   <YieldCurves id="default"/>
+
+  <!-- ======================================== -->
+  <!-- 할인 곡선 (Discounting Curves)          -->
+  <!-- ======================================== -->
   <DiscountingCurves id="default">
+    <!-- USD: SOFR 곡선 사용 (LIBOR 대신 SOFR) -->
     <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
   </DiscountingCurves>
+
   <DiscountingCurves id="inccy">
     <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
   </DiscountingCurves>
+
+  <!-- ======================================== -->
+  <!-- 인덱스 프로젝션 곡선                    -->
+  <!-- ======================================== -->
   <IndexForwardingCurves id="default">
+    <!-- FedFunds 인덱스 -->
     <Index name="USD-FedFunds">Yield/USD/USD-FedFunds</Index>
+    <!-- SOFR 인덱스 -->
     <Index name="USD-SOFR">Yield/USD/USD-SOFR</Index>
   </IndexForwardingCurves>
+
+  <!-- ======================================== -->
+  <!-- 스왑 인덱스 곡선                        -->
+  <!-- ======================================== -->
   <SwapIndexCurves id="default">
+    <!-- 1년 만기 SOFR CMS -->
     <SwapIndex name="USD-CMS-SOFR-1Y">
       <Discounting>USD-SOFR</Discounting>
     </SwapIndex>
+    <!-- 30년 만기 SOFR CMS -->
     <SwapIndex name="USD-CMS-SOFR-30Y">
       <Discounting>USD-SOFR</Discounting>
     </SwapIndex>
   </SwapIndexCurves>
+
+  <!-- ======================================== -->
+  <!-- FX 환율                                 -->
+  <!-- ======================================== -->
   <FxSpots id="default"/>
+
+  <!-- ======================================== -->
+  <!-- 스왑션 변동성 (Swaption Volatilities)    -->
+  <!-- ======================================== -->
+  <!--
+    [SABR 변동성 곡선]
+    - 스왑션 가치 평가에 사용
+    - 만기/행사가별 변동성 제공
+  -->
   <SwaptionVolatilities id="default">
     <SwaptionVolatility key="USD-SOFR">SwaptionVolatility/USD-SOFR/USD-SOFR</SwaptionVolatility>
   </SwaptionVolatilities>
+
+  <!-- ======================================== -->
+  <!-- Cap/Floor 변동성                        -->
+  <!-- ======================================== -->
+  <!--
+    [Cap/Floor 변동성 곡선]
+    - Cap/Floor 가치 평가에 사용
+    - 만기별 행사가(Strike)별 변동성
+  -->
   <CapFloorVolatilities id="default">
     <CapFloorVolatility key="USD-SOFR">CapFloorVolatility/USD-SOFR/USD-SOFR</CapFloorVolatility>
   </CapFloorVolatilities>

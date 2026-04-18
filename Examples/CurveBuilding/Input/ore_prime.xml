@@ -1,46 +1,119 @@
 <?xml version="1.0"?>
 <ORE>
+  <!-- ORE(Open Source Risk Engine) 설정 파일 -->
+  <!-- 금융 파생상품 가치 평가 및 리스크 분석을 위한 설정 -->
+
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
+    <!-- asofDate: 기준일자 (이 날짜를 기준으로 모든 가치 평가) -->
     <Parameter name="asofDate">2016-02-05</Parameter>
+
+    <!-- inputPath: 입력 파일들이 있는 디렉토리 -->
     <Parameter name="inputPath">Input</Parameter>
+
+    <!-- outputPath: 결과 파일이 저장될 디렉토리 -->
     <Parameter name="outputPath">Output/prime</Parameter>
+
+    <!-- logFile: 로그 파일 이름 -->
     <Parameter name="logFile">log.txt</Parameter>
+
+    <!-- logMask: 로그 레벨 마스크 (31 = 모든 로그 출력) -->
     <Parameter name="logMask">31</Parameter>
+
+    <!-- marketDataFile: 시장 데이터 파일 (금리, 환율 등) -->
     <Parameter name="marketDataFile">market_20160205.txt</Parameter>
+
+    <!-- fixingDataFile: 고정(Fixing) 데이터 파일 (과거 금리 등) -->
     <Parameter name="fixingDataFile">fixings_20160205.txt</Parameter>
+
+    <!-- implyTodaysFixings: 오늘자 Fixings를 자동 계산할지 여부 -->
     <Parameter name="implyTodaysFixings">Y</Parameter>
+
+    <!-- curveConfigFile: 커브(이자율 곡선) 설정 파일 -->
     <Parameter name="curveConfigFile">curveconfig_prime.xml</Parameter>
+
+    <!-- conventionsFile: 금융 상품 관례(Convention) 설정 파일 -->
     <Parameter name="conventionsFile">conventions_prime.xml</Parameter>
+
+    <!-- marketConfigFile: 시장 데이터 구성 설정 -->
     <Parameter name="marketConfigFile">todaysmarket_prime.xml</Parameter>
+
+    <!-- pricingEnginesFile: 가치 평가 엔진 설정 (어떤 모델을 사용할지) -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
+    <!-- portfolioFile: 평가할 금융 상품 포트폴리오 파일 -->
     <Parameter name="portfolioFile">portfolio_prime.xml</Parameter>
+
+    <!-- observationModel: 관찰 모드 (Disable = 비활성화) -->
     <Parameter name="observationModel">Disable</Parameter>
+
+    <!-- continueOnError: 에러 발생 시 계속 진행할지 여부 -->
     <Parameter name="continueOnError">false</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!-- 각 용도별 사용할 시장 컨피규레이션 이름 -->
+    <!-- lgmcalibration: LGM(Linear Gaussian Markov) 모델 보정용 시장 데이터 -->
     <Parameter name="lgmcalibration">default</Parameter>
+
+    <!-- fxcalibration: FX(외환) 모델 보정용 시장 데이터 -->
     <Parameter name="fxcalibration">default</Parameter>
+
+    <!-- eqcalibration: Equity(주식) 모델 보정용 시장 데이터 -->
     <Parameter name="eqcalibration">default</Parameter>
+
+    <!-- pricing: 일반 가치 평가용 시장 데이터 -->
     <Parameter name="pricing">default</Parameter>
+
+    <!-- simulation: 시뮬레이션(Monte Carlo 등)용 시장 데이터 -->
     <Parameter name="simulation">default</Parameter>
+
+    <!-- sensitivity: 민감도 분석용 시장 데이터 -->
     <Parameter name="sensitivity">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 항목 설정 ========== -->
+
+    <!-- NPV(순현재가치) 분석 -->
     <Analytic type="npv">
+      <!-- active: 활성화 여부 -->
       <Parameter name="active">Y</Parameter>
+
+      <!-- baseCurrency: 기준 통화 -->
       <Parameter name="baseCurrency">USD</Parameter>
+
+      <!-- outputFileName: 결과 파일 이름 -->
       <Parameter name="outputFileName">npv.csv</Parameter>
     </Analytic>
+
+    <!-- 캐시플로우(현금흐름) 분석 -->
     <Analytic type="cashflow">
       <Parameter name="active">Y</Parameter>
+
+      <!-- 각 상품의 미래 현금흐름 상세 -->
       <Parameter name="outputFileName">flows.csv</Parameter>
     </Analytic>
+
+    <!-- 커브(이자율 곡선) 분석 -->
     <Analytic type="curves">
       <Parameter name="active">Y</Parameter>
+
+      <!-- configuration: 사용할 커브 컨피규레이션 -->
       <Parameter name="configuration">default</Parameter>
+
+      <!-- grid: 출력할 커브의 기간 (240개월 = 20년, 1개월 간격) -->
       <Parameter name="grid">240,1M</Parameter>
+
+      <!-- outputFileName: 커브 데이터 파일 -->
       <Parameter name="outputFileName">curves.csv</Parameter>
     </Analytic>
+
+    <!--
+      민감도(Sensitivity) 분석 - 현재 비활성화됨
+      금리/환율 등이 변할 때 가치가 얼마나 변하는지 분석
+    -->
     <!--
     <Analytic type="sensitivity">
       <Parameter name="active">Y</Parameter>
@@ -51,7 +124,7 @@
       <Parameter name="sensitivityOutputFile">sensitivity.csv</Parameter>
       <Parameter name="outputSensitivityThreshold">0.000001</Parameter>
       <Parameter name="recalibrateModels">Y</Parameter>
-      </Analytic>
+    </Analytic>
     -->
   </Analytics>
 </ORE>

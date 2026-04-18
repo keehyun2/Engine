@@ -1,38 +1,86 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE OIS 일관성 검증 예제 설정 파일    -->
+<!-- CurveBuilding/consistency/ois           -->
+<!-- ======================================== -->
+<!--
+  [OIS 일관성 검증이란?]
+  - OIS(Overnight Index Swap) 곡선 구축의 정확성 검증
+  - 각 통화별 OIS 곡선이 시장 데이터를 잘 재현하는지 확인
+  - "일관성" = 곡선이 입력 데이터와 일치하는지
+
+  [검증 방법]
+  1. 시장 데이터로 OIS 곡선 구축
+  2. 구축된 곡선으로 OIS 상품 재가격
+  3. 재가격 결과가 원래 입력과 일치하는지 확인
+
+  [이 예제의 특징]
+  - 다양한 통화의 OIS 스왑 포트폴리오
+  - CHF(스위스 프랑), EUR(유로), USD, GBP 등
+  - collateral_inccy 설정 사용 (담보 통화 기반 할인)
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/consistency/ois</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">31</Parameter>
+
+    <!-- marketDataFile: 상위 폴더의 시장 데이터 사용 -->
     <Parameter name="marketDataFile">../../Input/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">../../Input/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>
+
+    <!-- curveConfigFile: 상위 폴더의 곡선 설정 사용 -->
     <Parameter name="curveConfigFile">../../Input/curveconfig.xml</Parameter>
     <Parameter name="conventionsFile">../../Input/conventions.xml</Parameter>
     <Parameter name="marketConfigFile">../../Input/todaysmarket.xml</Parameter>
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_consistency_ois.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [ois 설정 사용]
+      - OIS 관련 시장 데이터 구성
+      - lgmcalibration: LGM 모델 보정용
+      - fxcalibration: FX 보정용
+      - eqcalibration: Equity 보정용
+      - pricing: collateral_inccy (담보 통화 기반 가격 결정)
+      - simulation: 시뮬레이션용
+    -->
     <Parameter name="lgmcalibration">ois</Parameter>
     <Parameter name="fxcalibration">ois</Parameter>
     <Parameter name="eqcalibration">ois</Parameter>
+    <!-- pricing: collateral_inccy 설정 -->
     <Parameter name="pricing">collateral_inccy</Parameter>
     <Parameter name="simulation">ois</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 항목 설정 ========== -->
+
+    <!-- NPV 분석 -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
+      <!-- baseCurrency: EUR (유로 기준) -->
       <Parameter name="baseCurrency">EUR</Parameter>
       <Parameter name="outputFileName">npv.csv</Parameter>
     </Analytic>
+
+    <!-- 캐시플로우 분석 -->
     <Analytic type="cashflow">
       <Parameter name="active">Y</Parameter>
       <Parameter name="outputFileName">flows.csv</Parameter>
     </Analytic>
+
+    <!-- 커브 분석 -->
     <Analytic type="curves">
       <Parameter name="active">Y</Parameter>
       <Parameter name="configuration">default</Parameter>

@@ -1,16 +1,39 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 컨벤션 (Conventions) 설정 파일          -->
+<!-- GBP SONIA 기반 금융 상품 관행         -->
+<!-- ======================================== -->
+<!--
+  [SONIA란?]
+  - Sterling Overnight Index Average
+  - 영국의 익일 인덱스 기준 금리
+  - 2021년부터 LIBOR를 완전히 대체
+-->
+
 <Conventions>
+  <!-- ======================================== -->
+  <!-- OIS (Overnight Index Swap)             -->
+  <!-- ======================================== -->
   <OIS>
     <Id>GBP-OIS</Id>
+    <!-- SpotLag: 0 (당일 Spot) -->
     <SpotLag>0</SpotLag>
     <Index>GBP-SONIA</Index>
     <FixedDayCounter>A365</FixedDayCounter>
+    <!-- PaymentLag: 0 (지체 없음) -->
     <PaymentLag>0</PaymentLag>
     <EOM>false</EOM>
+    <!-- FixedFrequency: 연 1회 -->
     <FixedFrequency>Annual</FixedFrequency>
     <FixedConvention>Following</FixedConvention>
     <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <!-- Rule: Backward = 만기에서 역순 생성 -->
     <Rule>Backward</Rule>
   </OIS>
+
+  <!-- ======================================== -->
+  <!-- Deposit (예금)                          -->
+  <!-- ======================================== -->
   <Deposit>
     <Id>GBP-DEPOSIT</Id>
     <IndexBased>true</IndexBased>

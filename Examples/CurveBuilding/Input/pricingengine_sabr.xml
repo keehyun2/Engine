@@ -1,46 +1,109 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 가치 평가 엔진 (Pricing Engine) 설정   -->
+<!-- SABR 변동성 모델 사용                 -->
+<!-- ======================================== -->
+<!--
+  [이 예제에서 사용하는 모델]
+  - BlackBachelier: Black-Scholes & Bachelier 모델
+  - SABR 변동성 곡면 자동으로 사용
+-->
+
 <PricingEngines>
+  <!-- ======================================== -->
+  <!-- 1. Swap (일반 스왑)                    -->
+  <!-- ======================================== -->
   <Product type="Swap">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>DiscountingSwapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 2. EuropeanSwaption (유럽형 스왑션)    -->
+  <!-- ======================================== -->
+  <!--
+    [BlackBachelier 모델]
+    - Black-Scholes 모델: 로그 정규분포 가정 (변동성 일정)
+    - Bachelier 모델: 정규분포 가정 (음수 금리 허용)
+    - 입력 변동성에 따라 자동 선택
+  -->
   <Product type="EuropeanSwaption">
+    <!-- Model: BlackBachelier (SABR 변동성 사용) -->
     <Model>BlackBachelier</Model>
     <ModelParameters/>
+    <!-- Engine: BlackBachelier 스왑션 엔진 -->
     <Engine>BlackBachelierSwaptionEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 3. CapFlooredIborLeg (IBOR Cap/Floor)  -->
+  <!-- ======================================== -->
+  <!--
+    [Cap/Floor란?]
+    - Cap: 금리 상한 (금리가 상한가 이상이면 차액 지급)
+    - Floor: 금리 하한 (금리가 하한가 이하면 차액 지급)
+  -->
   <Product type="CapFlooredIborLeg">
+    <!-- Model: Black 또는 Bachelier -->
     <Model>BlackOrBachelier</Model>
     <ModelParameters/>
+    <!-- Engine: Black IBOR 쿠폰 프라이서 -->
     <Engine>BlackIborCouponPricer</Engine>
     <EngineParameters>
+      <!-- TimingAdjustment: 타이밍 조정 방식 (Black76) -->
       <Parameter name="TimingAdjustment">Black76</Parameter>
+      <!-- Correlation: 상관계수 -->
       <Parameter name="Correlation">1.0</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 4. CapFlooredOvernightIndexedCouponLeg -->
+  <!--    (Overnight Index Cap/Floor)         -->
+  <!-- ======================================== -->
+  <!-- 익일 인덱스(Overnight Index) 기반 Cap/Floor -->
   <Product type="CapFlooredOvernightIndexedCouponLeg">
     <Model>BlackOrBachelier</Model>
     <ModelParameters/>
     <Engine>BlackOvernightIndexedCouponPricer</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 5. CapFlooredAverageONIndexedCouponLeg -->
+  <!--    (평균 Overnight Index Cap/Floor)    -->
+  <!-- ======================================== -->
+  <!-- 평균 익일 인덱스 기반 Cap/Floor -->
   <Product type="CapFlooredAverageONIndexedCouponLeg">
     <Model>BlackOrBachelier</Model>
     <ModelParameters/>
     <Engine>BlackAverageONIndexedCouponPricer</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 전역 파라미터                          -->
+  <!-- ======================================== -->
   <GlobalParameters>
+    <!-- 보정(Calibration) 에러 시 계속 진행 -->
     <Parameter name="ContinueOnCalibrationError">true</Parameter>
+
+    <!--
+      [PseudoCurrency 설정]
+      - 의사 통화(Pseudo Currency) 처리 방식
+      - 금(Gold, XAU), 은(Silver, XAG) 등 귀금속 처리
+    -->
     <Parameter name="PseudoCurrency.TreatAsFX">false</Parameter>
     <Parameter name="PseudoCurrency.BaseCurrency">USD</Parameter>
     <Parameter name="PseudoCurrency.FXIndexTag">GENERIC</Parameter>
-    <Parameter name="PseudoCurrency.Curve.XAU">PM:XAUUSD</Parameter>
-    <Parameter name="PseudoCurrency.Curve.XAG">PM:XAGUSD</Parameter>
-    <Parameter name="PseudoCurrency.Curve.XPT">PM:XPTUSD</Parameter>
-    <Parameter name="PseudoCurrency.Curve.XPD">PM:XPDUSD</Parameter>
+
+    <!-- 귀금속 커브 매핑 -->
+    <Parameter name="PseudoCurrency.Curve.XAU">PM:XAUUSD</Parameter>  <!-- 금 -->
+    <Parameter name="PseudoCurrency.Curve.XAG">PM:XAGUSD</Parameter>  <!-- 은 -->
+    <Parameter name="PseudoCurrency.Curve.XPT">PM:XPTUSD</Parameter>  <!-- 백금 -->
+    <Parameter name="PseudoCurrency.Curve.XPD">PM:XP-DUSD</Parameter> <!-- 팔라듐 -->
   </GlobalParameters>
 </PricingEngines>

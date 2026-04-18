@@ -1,22 +1,59 @@
 <?xml version="1.0"?>
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE 통화 간 OIS 일관성 검증 예제 (EUR) -->
+<!-- CurveBuilding/consistency/xoiseur        -->
+<!-- ======================================== -->
+<!--
+  [XOIS EUR 일관성 검증이란?]
+  - XOIS = Cross-Currency OIS (통화 간 익일 인덱스 스왑)
+  - EUR OIS 곡선을 사용한 통화 간 거래의 정확성 검증
+  - FX 포워드와 크로스 통화 베이시스 스왑 재가격
+
+  [검증 방법]
+  1. EUR OIS 곡선(EUR-EONIA) 구축
+  2. 통화 간 FX 포워드 재가격
+  3. 크로스 통화 베이시스 스왑 재가격
+  4. NPV ≈ 0 확인 (일관성 검증)
+
+  [이 예제의 특징]
+  - EUR-USD, EUR-GBP, EUR-CHF 통화 쌍
+  - FX 포워드 (3M, 6M, 9M, 12M)
+  - 크로스 통화 베이시스 스왑 (2Y ~ 50Y)
+  - xois_eur 마켓 설정 사용 (EUR OIS 기반)
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/consistency/xoiseur</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">31</Parameter>
+
+    <!-- 상위 폴더의 시장 데이터 사용 -->
     <Parameter name="marketDataFile">../../Input/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">../../Input/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>
+
+    <!-- 상위 폴더의 설정 파일 사용 -->
     <Parameter name="curveConfigFile">../../Input/curveconfig.xml</Parameter>
     <Parameter name="conventionsFile">../../Input/conventions.xml</Parameter>
     <Parameter name="marketConfigFile">../../Input/todaysmarket.xml</Parameter>
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_consistency_xoiseur.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [xois_eur 설정]
+      - pricing: xois_eur (EUR OIS 기반 통화 간 가격 평가)
+      - FX 포워드와 크로스 통화 스왑에 EUR OIS 할인율 적용
+    -->
     <Parameter name="lgmcalibration">ois</Parameter>
     <Parameter name="fxcalibration">ois</Parameter>
     <Parameter name="eqcalibration">ois</Parameter>
@@ -24,6 +61,7 @@
     <Parameter name="simulation">ois</Parameter>
   </Markets>
   <Analytics>
+    <!-- ========== 분석 설정 ========== -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="baseCurrency">EUR</Parameter>

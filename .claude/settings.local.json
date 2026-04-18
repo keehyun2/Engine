@@ -16,7 +16,9 @@
       "Bash(ls server*.log)",
       "Bash(taskkill /F /PID 1710)",
       "Bash(ls:*)",
-      "Bash(taskkill /F /PID 1710 /T)"
+      "Bash(taskkill /F /PID 1710 /T)",
+      "Bash(ore Input/ore_centralbank_0.xml)",
+      "Bash(ore Input/ore_consistency_ois.xml)"
     ]
   }
 }

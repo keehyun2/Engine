@@ -1,36 +1,90 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 오늘의 시장 (Today's Market) 설정 파일 -->
+<!-- 구축된 이자율 곡선을 실제 시장 데이터로 매핑 -->
+<!-- ======================================== -->
+<!--
+  [Today's Market의 역할]
+  - Curve Configuration에서 정의한 곡선 ID들을
+    실제 시장 데이터와 연결
+  - 각 용도별(할인, 프로젝션 등) 어떤 곡선을 사용할지 지정
+
+  [곡선 매핑 구조]
+  Yield/USD/USD-FedFunds → "USD" 통화의 FedFunds 곡선
+-->
+
 <TodaysMarket>
+  <!-- ========== 기본 설정 (Configuration) ========== -->
   <Configuration id="default">
+    <!-- YieldCurvesId: 이자율 곡선 설정 ID -->
     <YieldCurvesId>default</YieldCurvesId>
+
+    <!-- DiscountingCurvesId: 할인 곡선 설정 ID -->
     <DiscountingCurvesId>default</DiscountingCurvesId>
+
+    <!-- IndexForwardingCurvesId: 인덱스 프로젝션 곡선 설정 ID -->
+    <!--   미래 금리(Fixing) 예측에 사용 -->
     <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
+
+    <!-- SwapIndexCurvesId: 스왑 인덱스 곡선 설정 ID -->
     <SwapIndexCurvesId>default</SwapIndexCurvesId>
+
+    <!-- 인플레이션 관련 (사용하지 않음) -->
     <ZeroInflationIndexCurvesId>default</ZeroInflationIndexCurvesId>
     <ZeroInflationCapFloorVolatilitiesId>default</ZeroInflationCapFloorVolatilitiesId>
     <YYInflationIndexCurvesId>default</YYInflationIndexCurvesId>
+
+    <!-- FX 관련 (사용하지 않음) -->
     <FxSpotsId>default</FxSpotsId>
+
+    <!-- 변동성 관련 (사용하지 않음) -->
     <BaseCorrelationsId>default</BaseCorrelationsId>
     <FxVolatilitiesId>default</FxVolatilitiesId>
     <SwaptionVolatilitiesId>default</SwaptionVolatilitiesId>
     <YieldVolatilitiesId>default</YieldVolatilitiesId>
     <CapFloorVolatilitiesId>default</CapFloorVolatilitiesId>
     <CDSVolatilitiesId>default</CDSVolatilitiesId>
+
+    <!-- 신용 곡선 (사용하지 않음) -->
     <DefaultCurvesId>default</DefaultCurvesId>
     <YYInflationCapFloorVolatilitiesId>default</YYInflationCapFloorVolatilitiesId>
+
+    <!-- 주식 관련 (사용하지 않음) -->
     <EquityCurvesId>default</EquityCurvesId>
     <EquityVolatilitiesId>default</EquityVolatilitiesId>
+
+    <!-- 증권, 상품, 상관관계 (사용하지 않음) -->
     <SecuritiesId>default</SecuritiesId>
     <CommodityCurvesId>default</CommodityCurvesId>
     <CommodityVolatilitiesId>default</CommodityVolatilitiesId>
     <CorrelationsId>default</CorrelationsId>
   </Configuration>
+
+  <!-- ========== 이자율 곡선 정의 ========== -->
+  <!-- 비어있음 - CurveConfiguration에서 이미 정의됨 -->
   <YieldCurves id="default"/>
+
+  <!-- ========== 할인 곡선 (Discounting Curves) ========== -->
+  <!-- 할인: 미래 현금흐름 → 현재 가치 변환에 사용 -->
   <DiscountingCurves id="default">
+    <!-- USD 통화: FedFunds 곡선 사용 -->
     <DiscountingCurve currency="USD">Yield/USD/USD-FedFunds</DiscountingCurve>
   </DiscountingCurves>
+
+  <!-- ========== 인덱스 프로젝션 곡선 (Index Forwarding Curves) ========== -->
+  <!-- 프로젝션: 미래 금리(Fixing) 예측에 사용 -->
   <IndexForwardingCurves id="default">
+    <!-- USD-FedFunds 인덱스: FedFunds 곡선 사용 -->
     <Index name="USD-FedFunds">Yield/USD/USD-FedFunds</Index>
+
+    <!-- USD-LIBOR-3M 인덱스: LIBOR 3M 곡선 사용 -->
     <Index name="USD-LIBOR-3M">Yield/USD/USD-LIBOR-3M</Index>
+
+    <!-- USD-Prime 인덱스: Prime 곡선 사용 -->
     <Index name="USD-Prime">Yield/USD/USD-Prime</Index>
   </IndexForwardingCurves>
+
+  <!-- ========== FX 환율 ========== -->
+  <!-- 비어있음 - 이 예제에서는 FX 사용하지 않음 -->
   <FxSpots id="default"/>
 </TodaysMarket>

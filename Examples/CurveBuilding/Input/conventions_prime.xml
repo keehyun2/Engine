@@ -1,48 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ======================================== -->
+<!-- 컨벤션 (Conventions) 설정 파일 -->
+<!-- 금융 상품의 표준 관행(Convention) 정의 -->
+<!-- ======================================== -->
+<!--
+  [컨벤션이란?]
+  - 금융 시장에서 사용하는 표준화된 규칙
+  - 예: 일수 계산 방식, 지급 주기, 휴일 처리 등
+  - 예시: "30/360" = 1달을 30일, 1년을 360일로 계산
+-->
+
 <Conventions>
-  <!-- Deposits -->
+  <!-- ======================================== -->
+  <!-- 예금 (Deposit) 컨벤션 -->
+  <!-- ======================================== -->
   <Deposit>
     <Id>USD-LIBOR-CONVENTIONS</Id>
+    <!-- IndexBased: 인덱스 기반 여부 -->
     <IndexBased>true</IndexBased>
     <Index>USD-LIBOR</Index>
   </Deposit>
+
   <Deposit>
     <Id>USD-DEPOSIT</Id>
     <IndexBased>true</IndexBased>
     <Index>USD-FedFunds</Index>
   </Deposit>
+
   <Deposit>
     <Id>USD-ON-DEPOSIT</Id>
+    <!-- ON = Overnight (당일자) -->
     <IndexBased>true</IndexBased>
     <Index>USD-FedFunds</Index>
   </Deposit>
+
   <Deposit>
     <Id>USD-FED-FUNDS-CONVENTIONS</Id>
     <IndexBased>true</IndexBased>
     <Index>USD-FedFunds</Index>
   </Deposit>
-  <!-- Forward Rate Agreements -->
+
+  <!-- ======================================== -->
+  <!-- FRA (Forward Rate Agreement) 컨벤션 -->
+  <!-- ======================================== -->
+  <!-- FRA: 미래 특정 시점의 금리를 미리 확정하는 계약 -->
   <FRA>
     <Id>USD-3M-FRA-CONVENTIONS</Id>
     <Index>USD-LIBOR-3M</Index>
   </FRA>
-  <!-- Interest Rate Swaps -->
+
+  <!-- ======================================== -->
+  <!-- IRS (Interest Rate Swap) 컨벤션 -->
+  <!-- ======================================== -->
   <Swap>
     <Id>USD-3M-SWAP-CONVENTIONS</Id>
+    <!-- FixedCalendar: 고정금리 쪽 휴일 달력 -->
     <FixedCalendar>US,UK</FixedCalendar>
+    <!-- FixedFrequency: 고정금리 지급 주기 (반년마다) -->
     <FixedFrequency>Semiannual</FixedFrequency>
+    <!-- FixedConvention: 고정금리 날짜 조정 규칙 -->
     <FixedConvention>MF</FixedConvention>
+    <!-- FixedDayCounter: 고정금리 일수 계산 (30/360) -->
     <FixedDayCounter>30/360</FixedDayCounter>
+    <!-- Index: 변동금리 기준 지표 -->
     <Index>USD-LIBOR-3M</Index>
   </Swap>
+
   <Swap>
     <Id>USD-LIBOR-3M-SWAP</Id>
     <FixedCalendar>TARGET</FixedCalendar>
-    <FixedFrequency>Annual</FixedFrequency>
+    <FixedFrequency>Annual</FixedFrequency>  <!-- 연 1회 -->
     <FixedConvention>MF</FixedConvention>
     <FixedDayCounter>30/360</FixedDayCounter>
     <Index>USD-LIBOR-3M</Index>
   </Swap>
+
   <Swap>
     <Id>USD-SWAP</Id>
     <FixedCalendar>TARGET</FixedCalendar>
@@ -51,31 +83,48 @@
     <FixedDayCounter>30/360</FixedDayCounter>
     <Index>USD-LIBOR-3M</Index>
   </Swap>
-  <!-- Overnight Index linked Swap Legs -->
+
+  <!-- ======================================== -->
+  <!-- OIS (Overnight Index Swap) 컨벤션 -->
+  <!-- ======================================== -->
+  <!-- OIS: 익일 금리(Overnight Rate) 평균 기반 스왑 -->
   <OIS>
     <Id>USD-OIS</Id>
+    <!-- SpotLag: 거래일(Spot) 지연일수 -->
     <SpotLag>2</SpotLag>
     <Index>USD-FedFunds</Index>
-    <FixedDayCounter>A360</FixedDayCounter>
+    <FixedDayCounter>A360</FixedDayCounter>  <!-- Actual/360 -->
+    <!-- PaymentLag: 지급 지연일수 -->
     <PaymentLag>2</PaymentLag>
+    <!-- EOM: End of Month (월말 여부) -->
     <EOM>false</EOM>
     <FixedFrequency>Annual</FixedFrequency>
     <FixedConvention>Following</FixedConvention>
     <FixedPaymentConvention>Following</FixedPaymentConvention>
+    <!-- Rule: 날짜 생성 규칙 (Backward = 만기에서 역순 생성) -->
     <Rule>Backward</Rule>
   </OIS>
+
+  <!-- ======================================== -->
+  <!-- Average OIS 컨벤션 -->
+  <!-- ======================================== -->
+  <!-- Average OIS: 여러 익일 금리를 평균한 OIS -->
   <AverageOIS>
     <Id>USD-AVERAGE-OIS-CONVENTIONS</Id>
     <SpotLag>2</SpotLag>
+    <!-- FixedTenor: 고정금리 지급 주기 -->
     <FixedTenor>6M</FixedTenor>
     <FixedDayCounter>30/360</FixedDayCounter>
     <FixedCalendar>US</FixedCalendar>
     <FixedConvention>MF</FixedConvention>
     <FixedPaymentConvention>MF</FixedPaymentConvention>
     <Index>USD-FedFunds</Index>
+    <!-- OnTenor: 변동금리(Overnight) 지급 주기 -->
     <OnTenor>3M</OnTenor>
+    <!-- RateCutoff: 금리 확정(Fixing) 차단일 -->
     <RateCutoff>2</RateCutoff>
   </AverageOIS>
+
   <AverageOIS>
     <Id>USD-AVERAGE-Prime-CONVENTIONS</Id>
     <SpotLag>2</SpotLag>
@@ -84,7 +133,7 @@
     <FixedCalendar>US</FixedCalendar>
     <FixedConvention>MF</FixedConvention>
     <FixedPaymentConvention>MF</FixedPaymentConvention>
-    <Index>USD-Prime</Index>
+    <Index>USD-Prime</Index>  <!-- Prime 금리 인덱스 -->
     <OnTenor>3M</OnTenor>
     <RateCutoff>2</RateCutoff>
   </AverageOIS>

@@ -1,36 +1,72 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 오늘의 시장 (Today's Market) 설정 파일  -->
+<!-- GBP SONIA 곡선 매핑                   -->
+<!-- ======================================== -->
+<!--
+  [설정 종류]
+  - inccy: 기준 통화 할인 설정
+  - single: 단일 곡선 설정
+  - default: 기본 설정
+-->
+
 <TodaysMarket>
+  <!-- ======================================== -->
+  <!-- Configuration 1: inccy (기준 통화)     -->
+  <!-- ======================================== -->
   <Configuration id="inccy">
     <YieldCurvesId>default</YieldCurvesId>
     <DiscountingCurvesId>inccy</DiscountingCurvesId>
     <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
   </Configuration>
+
+  <!-- ======================================== -->
+  <!-- Configuration 2: single (단일 곡선)    -->
+  <!-- ======================================== -->
   <Configuration id="single">
     <YieldCurvesId>default</YieldCurvesId>
     <DiscountingCurvesId>single</DiscountingCurvesId>
     <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
   </Configuration>
+
+  <!-- ======================================== -->
+  <!-- Configuration 3: default (기본)         -->
+  <!-- ======================================== -->
   <Configuration id="default">
     <YieldCurvesId>default</YieldCurvesId>
     <DiscountingCurvesId>default</DiscountingCurvesId>
     <IndexForwardingCurvesId>default</IndexForwardingCurvesId>
   </Configuration>
+
+  <!-- ======================================== -->
+  <!-- 할인 곡선 (Discounting Curves)          -->
+  <!-- ======================================== -->
   <DiscountingCurves id="single">
+    <!-- GBP: GBP1D 곡선 사용 -->
     <DiscountingCurve currency="GBP">Yield/GBP/GBP1D</DiscountingCurve>
   </DiscountingCurves>
+
   <DiscountingCurves id="inccy">
     <DiscountingCurve currency="GBP">Yield/GBP/GBP1D</DiscountingCurve>
   </DiscountingCurves>
+
   <DiscountingCurves id="default">
     <DiscountingCurve currency="GBP">Yield/GBP/GBP1D</DiscountingCurve>
   </DiscountingCurves>
+
+  <!-- ======================================== -->
+  <!-- 인덱스 프로젝션 곡선                    -->
+  <!-- ======================================== -->
   <IndexForwardingCurves id="single">
+    <!-- GBP-SONIA 인덱스: GBP1D 곡선 사용 -->
     <Index name="GBP-SONIA">Yield/GBP/GBP1D</Index>
   </IndexForwardingCurves>
+
   <IndexForwardingCurves id="inccy">
     <Index name="GBP-SONIA">Yield/GBP/GBP1D</Index>
   </IndexForwardingCurves>
+
   <IndexForwardingCurves id="default">
     <Index name="GBP-SONIA">Yield/GBP/GBP1D</Index>
   </IndexForwardingCurves>
 </TodaysMarket>
-

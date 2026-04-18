@@ -1,32 +1,74 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 가치 평가 엔진 (Pricing Engine) 설정 파일 -->
+<!-- 각 금융 상품별 가치 평가 모델과 엔진 정의 -->
+<!-- ======================================== -->
+<!--
+  [Pricing Engine의 역할]
+  - 각 금융 상품(Product)의 가치를 계산하는 방법 정의
+  - Model: 수학적 모델 (예: Black-Scholes, LGM)
+  - Engine: 계산 엔진 (예: Analytic, Monte Carlo)
+
+  [모델 vs 엔진]
+  - Model: 금융 상품의 가격 결정 이론
+  - Engine: 그 이론을 실제로 계산하는 구현
+-->
+
 <PricingEngines>
+  <!-- ======================================== -->
+  <!-- 1. Swap (금리 스왑) -->
+  <!-- ======================================== -->
   <Product type="Swap">
+    <!-- Model: 할인 현금흐름 (DCF) 모델 -->
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
+    <!-- Engine: 현금흐름 할인 방식 -->
     <Engine>DiscountingSwapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 2. CrossCurrencySwap (통화 간 스왑) -->
+  <!-- ======================================== -->
   <Product type="CrossCurrencySwap">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>DiscountingCrossCurrencySwapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 3. FxForward (환율 선도 계약) -->
+  <!-- ======================================== -->
+  <!--   미래 특정일에 정해진 환율로 통화 교환 -->
   <Product type="FxForward">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>DiscountingFxForwardEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 4. FxOption (외환 옵션 - 유럽형) -->
+  <!-- ======================================== -->
+  <!--   유럽형: 만기일에만 행사 가능 -->
   <Product type="FxOption">
+    <!-- Model: Garman-Kohlhagen 모델 (Black-Scholes의 FX 버전) -->
     <Model>GarmanKohlhagen</Model>
     <ModelParameters/>
+    <!-- Engine: 해석적(Analytic) 유럽형 옵션 엔진 -->
     <Engine>AnalyticEuropeanEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 5. FxOptionAmerican (외환 옵션 - 미국형) -->
+  <!-- ======================================== -->
+  <!--   미국형: 만기 전 언제든지 행시 가능 -->
   <Product type="FxOptionAmerican">
     <Model>GarmanKohlhagen</Model>
     <ModelParameters/>
+    <!-- Engine: 유한차분법(FD) 기반 엔진 -->
     <Engine>FdBlackScholesVanillaEngine</Engine>
     <EngineParameters>
       <Parameter name="Scheme">Douglas</Parameter>
@@ -36,26 +78,40 @@
       <Parameter name="TimeGridMinimumSize">1</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 6. EuropeanSwaption (유럽형 스왑션) -->
+  <!-- ======================================== -->
+  <!--   스왑션: 스왑 계약을 체결할 권리 -->
   <Product type="EuropeanSwaption">
+    <!-- Model: Black-Bachelier 모델 -->
     <Model>BlackBachelier</Model>
-    <!-- depends on input vol -->
     <ModelParameters/>
     <Engine>BlackBachelierSwaptionEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 7. BermudanSwaption (버뮤다형 스왑션) -->
+  <!-- ======================================== -->
+  <!--   버뮤다형: 지정된 날짜에만 행시 가능 -->
   <Product type="BermudanSwaption">
+    <!-- Model: LGM (Linear Gaussian Markov) 모델 -->
+    <!--   금리 모델링에 널리 사용됨 -->
     <Model>LGM</Model>
     <ModelParameters>
       <Parameter name="Calibration">Bootstrap</Parameter>
       <Parameter name="CalibrationStrategy">CoterminalATM</Parameter>
+      <!-- Reversion: 평균 회귀 속도 -->
       <Parameter name="Reversion">0.03</Parameter>
       <Parameter name="ReversionType">HullWhite</Parameter>
+      <!-- Volatility: 변동성 -->
       <Parameter name="Volatility">0.01</Parameter>
       <Parameter name="VolatilityType">Hagan</Parameter>
-      <!-- shift horizon as ratio of maturity time -->
       <Parameter name="ShiftHorizon">0.5</Parameter>
       <Parameter name="Tolerance">0.0001</Parameter>
     </ModelParameters>
+    <!-- Engine: 그리드 기반 엔진 -->
     <Engine>Grid</Engine>
     <EngineParameters>
       <Parameter name="sy">3.0</Parameter>
@@ -64,6 +120,10 @@
       <Parameter name="nx">10</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 8. AmericanSwaption (미국형 스왑션) -->
+  <!-- ======================================== -->
   <Product type="AmericanSwaption">
     <Model>LGM</Model>
     <ModelParameters>
@@ -73,73 +133,106 @@
       <Parameter name="ReversionType">HullWhite</Parameter>
       <Parameter name="Volatility">0.01</Parameter>
       <Parameter name="VolatilityType">Hagan</Parameter>
-      <!-- shift horizon as ratio of maturity time -->
       <Parameter name="ShiftHorizon">0.5</Parameter>
       <Parameter name="Tolerance">0.0001</Parameter>
+      <!-- ReferenceCalibrationGrid: 보정 그리드 -->
       <Parameter name="ReferenceCalibrationGrid">400,3M</Parameter>
       <Parameter name="ExerciseTimeStepsPerYear">24</Parameter>
     </ModelParameters>
-     <Engine>FD</Engine>
+    <!-- Engine: 유한차분법(FD) -->
+    <Engine>FD</Engine>
     <EngineParameters>
       <Parameter name="Scheme">Douglas</Parameter>
       <Parameter name="StateGridPoints">64</Parameter>
       <Parameter name="TimeStepsPerYear">24</Parameter>
       <Parameter name="MesherEpsilon">1E-4</Parameter>
     </EngineParameters>
- </Product>
+  </Product>
+
+  <!-- ======================================== -->
+  <!-- 9. CapFloor (금리 상한/하한) -->
+  <!-- ======================================== -->
+  <!--   Cap: 금리가 상한가 이상으로 상승 시 차액 지급 -->
+  <!--   Floor: 금리가 하한가 이하로 하락 시 차액 지급 -->
   <Product type="CapFloor">
     <Model>IborCapModel</Model>
     <ModelParameters/>
     <Engine>IborCapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 10. YYCapFloor (Year-On-Year Cap/Floor) -->
+  <!-- ======================================== -->
+  <!--   인플레이션 연결 Cap/Floor -->
   <Product type="YYCapFloor">
     <Model>YYCapModel</Model>
     <ModelParameters/>
     <Engine>YYCapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 11. CapFlooredYYLeg -->
+  <!-- ======================================== -->
   <Product type="CapFlooredYYLeg">
     <Model>CapFlooredYYModel</Model>
     <ModelParameters/>
     <Engine>CapFlooredYYCouponPricer</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 12. CpiCapFloor (CPI Cap/Floor) -->
+  <!-- ======================================== -->
+  <!--   소비자물가지수(CPI) 연결 Cap/Floor -->
   <Product type="CpiCapFloor">
     <Model>CpiCapModel</Model>
     <ModelParameters/>
-    <Engine>CpiCapEngine</Engine>
+    <Engine>CpiBlackCapFloorEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 13. CappedFlooredCpiLeg... -->
+  <!-- ======================================== -->
   <Product type="CappedFlooredCpiLegCoupons">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>BlackAnalytic</Engine>
     <EngineParameters/>
   </Product>
+
   <Product type="CappedFlooredCpiLegCashFlows">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>BlackAnalytic</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 14. CapFlooredIborLeg -->
+  <!-- ======================================== -->
   <Product type="CapFlooredIborLeg">
     <Model>BlackOrBachelier</Model>
     <ModelParameters/>
     <Engine>BlackIborCouponPricer</Engine>
     <EngineParameters>
-      <!-- Black76 or BivariateLognormal -->
       <Parameter name="TimingAdjustment">Black76</Parameter>
-      <!-- Correlation Parameter for BivariateLognormal -->
       <Parameter name="Correlation">1.0</Parameter>
     </EngineParameters>
   </Product>
-  <!-- Formula Based Coupons -->
+
+  <!-- ======================================== -->
+  <!-- 15. FormulaBasedCoupon -->
+  <!-- ======================================== -->
+  <!--   사용자 정의 수식 기반 쿠폰 -->
   <Product type="FormulaBasedCoupon">
     <Model>BrigoMercurio</Model>
     <ModelParameters>
       <Parameter name="FXSource">ECB</Parameter>
     </ModelParameters>
+    <!-- Engine: Monte Carlo 시뮬레이션 -->
     <Engine>MC</Engine>
     <EngineParameters>
       <Parameter name="Samples">1000</Parameter>
@@ -148,18 +241,31 @@
       <Parameter name="SalvagingAlgorithm">Spectral</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 16. EquityForward (주식 선도) -->
+  <!-- ======================================== -->
   <Product type="EquityForward">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>DiscountingEquityForwardEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 17. EquityOption (주식 옵션) -->
+  <!-- ======================================== -->
   <Product type="EquityOption">
+    <!-- Model: Black-Scholes-Merton 모델 -->
     <Model>BlackScholesMerton</Model>
     <ModelParameters/>
     <Engine>AnalyticEuropeanEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 18. EquityOptionAmerican (미국형 주식 옵션) -->
+  <!-- ======================================== -->
   <Product type="EquityOptionAmerican">
     <Model>BlackScholesMerton</Model>
     <ModelParameters/>
@@ -171,14 +277,23 @@
       <Parameter name="DampingSteps">0</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 19. Bond (채권) -->
+  <!-- ======================================== -->
   <Product type="Bond">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
+    <!-- Engine: 리스크 할인 채권 엔진 (부도 위험 포함) -->
     <Engine>DiscountingRiskyBondEngine</Engine>
     <EngineParameters>
       <Parameter name="TimestepPeriod">6M</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 20. ForwardBond (채권 선도) -->
+  <!-- ======================================== -->
   <Product type="ForwardBond">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
@@ -187,108 +302,100 @@
       <Parameter name="TimestepPeriod">6M</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 21. CreditDefaultSwap (CDS, 신용부도스왑) -->
+  <!-- ======================================== -->
+  <!--   CDS: 참조자산의 부도 시 보상 받는 계약 -->
   <Product type="CreditDefaultSwap">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
+    <!-- Engine: 중간점(Midpoint) CDS 엔진 -->
     <Engine>MidPointCdsEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 22. CreditDefaultSwapOption (CDS 옵션) -->
+  <!-- ======================================== -->
   <Product type="CreditDefaultSwapOption">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>BlackCdsOptionEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 23. IndexCreditDefaultSwap (지수 CDS) -->
+  <!-- ======================================== -->
   <Product type="IndexCreditDefaultSwap">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>MidPointIndexCdsEngine</Engine>
     <EngineParameters>
-      <Parameter name="Curve">Underlying</Parameter> <!-- Underlying or Index -->
+      <Parameter name="Curve">Underlying</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 24. IndexCreditDefaultSwapOption (지수 CDS 옵션) -->
+  <!-- ======================================== -->
   <Product type="IndexCreditDefaultSwapOption">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>BlackIndexCdsOptionEngine</Engine>
     <EngineParameters>
-      <!-- this is only affecting the FE protection, for the underlying the Curve -->
-      <!-- parameter of the IndexCreditDefaultSwap is used -->
-      <Parameter name="Curve">Underlying</Parameter> <!-- Underlying or Index -->
+      <Parameter name="Curve">Underlying</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 25. SyntheticCDO (합성 CDO) -->
+  <!-- ======================================== -->
+  <!--   CDO: 부동산 담보 부채 증권 -->
   <Product type="SyntheticCDO">
+    <!-- Model: 가우스 코풀라 모델 -->
     <Model>GaussCopula</Model>
     <ModelParameters>
       <Parameter name="correlation">0.0</Parameter>
       <Parameter name="min">-5.0</Parameter>
       <Parameter name="max">5.0</Parameter>
-      <!-- high copula correlation requires large number of steps -->
       <Parameter name="steps">64</Parameter>
     </ModelParameters>
     <Engine>Bucketing</Engine>
     <EngineParameters>
-      <!-- large number of names and inhomogeneous loss amounts
-	   require large number of buckets, for a homogeneous pool 
-	   buckets in the ballpark of the pool size seems to be sufficient -->
       <Parameter name="buckets">124</Parameter>
-      <!-- we use the inhomgeneous pol loss model by default. If this
-	   flag is set to Y we switch to homogeneous pool when
-	   justified (same notionals, same recovery rates across the
-	   basket) -->
       <Parameter name="homogeneousPoolWhenJustified">Y</Parameter>
     </EngineParameters>
   </Product>
-  <!-- CMS Linear TRS Model -->
+
+  <!-- ======================================== -->
+  <!-- 26. CMS (Constant Maturity Swap) -->
+  <!-- ======================================== -->
+  <!--   CMS: 고정 만기 스왑 (예: 10년 만기 금리 참조) -->
   <Product type="CMS">
+    <!-- Model: Linear TSR (Terminal Swap Rate) 모델 -->
     <Model>LinearTSR</Model>
     <ModelParameters/>
     <Engine>LinearTSRPricer</Engine>
     <EngineParameters>
       <Parameter name="MeanReversion">0.0</Parameter>
-      <!-- RateBound, VegaRatio, PriceThreshold, BsStdDev -->
       <Parameter name="Policy">RateBound</Parameter>
-      <!-- RateBounds for ln / sln volatility input -->
       <Parameter name="LowerRateBoundLogNormal">0.0001</Parameter>
       <Parameter name="UpperRateBoundLogNormal">2.0000</Parameter>
-      <!-- RateBounds for normal volatility input -->
       <Parameter name="LowerRateBoundNormal">-2.0000</Parameter>
       <Parameter name="UpperRateBoundNormal">2.0000</Parameter>
-      <!-- Only required for policy VegaRatio -->
       <Parameter name="VegaRatio">0.01</Parameter>
-      <!-- Only required for policy PriceThreshold -->
       <Parameter name="PriceThreshold">0.0000001</Parameter>
-      <!-- Only required for policy BsStdDev -->
       <Parameter name="BsStdDev">3.0</Parameter>
     </EngineParameters>
   </Product>
-  <!-- Hagan Analytic Model -->
-  <Product type="CMS_DEACTIVATED">
-    <Model>Hagan</Model>
-    <ModelParameters/>
-    <Engine>Analytic</Engine>
-    <EngineParameters>
-      <Parameter name="YieldCurveModel">Standard</Parameter>
-      <!-- or ExactYield, ParallelShifts, NonParallelShifts -->
-      <Parameter name="MeanReversion">0.0</Parameter>
-    </EngineParameters>
-  </Product>
-  <!-- Hagan Numerical Model -->
-  <Product type="CMS_DEACTIVATED">
-    <Model>Hagan</Model>
-    <ModelParameters/>
-    <Engine>Numerical</Engine>
-    <EngineParameters>
-      <Parameter name="YieldCurveModel">Standard</Parameter>
-      <!-- or ExactYield, ParallelShifts, NonParallelShifts -->
-      <Parameter name="MeanReversion">0.0</Parameter>
-      <Parameter name="UpperLimit">0.0</Parameter>
-      <Parameter name="LowerLimit">1.0</Parameter>
-      <Parameter name="Precision">0.000001</Parameter>
-    </EngineParameters>
-  </Product>
-  <!-- CMS Spread Brigo Mercurio Model -->
+
+  <!-- ======================================== -->
+  <!-- 27. CMSSpread (CMS 스프레드) -->
+  <!-- ======================================== -->
   <Product type="CMSSpread">
+    <!-- Model: Brigo-Mercurio 모델 -->
     <Model>BrigoMercurio</Model>
     <ModelParameters/>
     <Engine>Analytic</Engine>
@@ -296,40 +403,54 @@
       <Parameter name="IntegrationPoints">16</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 28. CommodityForward (상품 선도) -->
+  <!-- ======================================== -->
   <Product type="CommodityForward">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>DiscountingCommodityForwardEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 29. CommoditySwap (상품 스왑) -->
+  <!-- ======================================== -->
   <Product type="CommoditySwap">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
     <Engine>CommoditySwapEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 30. CommodityOption (상품 옵션) -->
+  <!-- ======================================== -->
   <Product type="CommodityOption">
     <Model>BlackScholes</Model>
     <ModelParameters/>
     <Engine>AnalyticEuropeanEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 31. CommodityAveragePriceOption (평균 가격 옵션) -->
+  <!-- ======================================== -->
   <Product type="CommodityAveragePriceOption">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>MonteCarlo</Engine>
     <EngineParameters>
-      <Parameter name="beta">0</Parameter> 
+      <Parameter name="beta">0</Parameter>
       <Parameter name="samples">1000</Parameter>
       <Parameter name="seed">42</Parameter>
     </EngineParameters>
-    <!--
-    <Engine>AnalyticalApproximation</Engine>
-    <EngineParameters>
-      <Parameter name="beta">0</Parameter>
-    </EngineParameters>
-    -->
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 32. CommoditySwaption (상품 스왑션) -->
+  <!-- ======================================== -->
   <Product type="CommoditySwaption">
     <Model>Black</Model>
     <ModelParameters/>
@@ -338,20 +459,33 @@
       <Parameter name="beta">0</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 33. CPICapFloor (CPI Cap/Floor) -->
+  <!-- ======================================== -->
   <Product type="CPICapFloor">
     <Model>CPICapFloorModel</Model>
     <ModelParameters/>
     <Engine>CPIBlackCapFloorEngine</Engine>
     <EngineParameters/>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 34. BondOption (채권 옵션) -->
+  <!-- ======================================== -->
   <Product type="BondOption">
     <Model>Black</Model>
     <ModelParameters/>
     <Engine>BlackBondOptionEngine</Engine>
     <EngineParameters>
-        <Parameter name="TimestepPeriod">6M</Parameter>
+      <Parameter name="TimestepPeriod">6M</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 35. BondTRS (채권 TRS) -->
+  <!-- ======================================== -->
+  <!--   TRS: Total Return Swap (총수익 스왑) -->
   <Product type="BondTRS">
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
@@ -360,7 +494,12 @@
       <Parameter name="TimestepPeriod">6M</Parameter>
     </EngineParameters>
   </Product>
-    <Product type="FlexiSwap">
+
+  <!-- ======================================== -->
+  <!-- 36. FlexiSwap (플렉시 스왑) -->
+  <!-- ======================================== -->
+  <!--   FlexiSwap: 유동성이 있는 스왑 (조정 가능) -->
+  <Product type="FlexiSwap">
     <Model>LGM</Model>
     <ModelParameters>
       <Parameter name="Calibration">Bootstrap</Parameter>
@@ -369,31 +508,27 @@
       <Parameter name="ReversionType">HullWhite</Parameter>
       <Parameter name="Volatility">0.01</Parameter>
       <Parameter name="VolatilityType">HullWhite</Parameter>
-      <!-- increased tolerance ! -->
       <Parameter name="Tolerance">0.001</Parameter>
     </ModelParameters>
     <Engine>Grid</Engine>
     <EngineParameters>
-      <!-- SingleSwaptions, SwaptionArray, Automatic -->
       <Parameter name="method">Automatic</Parameter>
-      <!-- in Automatic mode, if the effective number of swaptions exceeds -->
-      <!-- this parameter, SwaptionArray is used, otherwise SingleSwaptions -->
       <Parameter name="singleSwaptionThreshold">20.0</Parameter>
-      <!-- numeric integration parameters -->
       <Parameter name="sy">5.0</Parameter>
       <Parameter name="ny">20</Parameter>
       <Parameter name="sx">5.0</Parameter>
       <Parameter name="nx">20</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 37. BalanceGuaranteedSwap -->
+  <!-- ======================================== -->
   <Product type="BalanceGuaranteedSwap">
     <Model>LGM-FlexiSwap</Model>
     <ModelParameters>
-      <!-- Notional Bounds for FlexiSwap are built using the average CPR -->
-      <!-- multiplier with the Min/Max multiplier here -->
       <Parameter name="MinCPRMultiplier">0.0</Parameter>
       <Parameter name="MaxCPRMultiplier">2.0</Parameter>
-      <!-- these parameters are the same as for the FlexiSwap engine -->
       <Parameter name="Calibration">Bootstrap</Parameter>
       <Parameter name="CalibrationStrategy">CoterminalDealStrike</Parameter>
       <Parameter name="Reversion">0.0</Parameter>
@@ -404,7 +539,6 @@
     </ModelParameters>
     <Engine>Grid</Engine>
     <EngineParameters>
-      <!-- these parameters are the same as for the FlexiSwap engine -->
       <Parameter name="method">Automatic</Parameter>
       <Parameter name="singleSwaptionThreshold">20.0</Parameter>
       <Parameter name="sy">5.0</Parameter>
@@ -413,7 +547,12 @@
       <Parameter name="nx">20</Parameter>
     </EngineParameters>
   </Product>
+
+  <!-- ======================================== -->
+  <!-- 전역 파라미터 -->
+  <!-- ======================================== -->
   <GlobalParameters>
+    <!-- 보정(Calibration) 에러 시 계속 진행 여부 -->
     <Parameter name="ContinueOnCalibrationError">true</Parameter>
   </GlobalParameters>
 </PricingEngines>

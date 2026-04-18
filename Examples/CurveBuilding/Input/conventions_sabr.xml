@@ -1,15 +1,38 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 컨벤션 (Conventions) 설정 파일          -->
+<!-- SOFR 기반 금융 상품 관행 정의           -->
+<!-- ======================================== -->
+<!--
+  [SOFR란?]
+  - Secured Overnight Financing Rate
+  - 미국 달러의 새로운 기준 금리 (LIBOR 대체)
+  - 담보secured) 거래 기반 익일overnight) 금리
+-->
+
 <Conventions>
+  <!-- ======================================== -->
+  <!-- 1. SwapIndex (스왑 인덱스)              -->
+  <!-- ======================================== -->
+  <!-- CMS(Constant Maturity Swap) 인덱스 -->
   <SwapIndex>
     <Id>USD-CMS-SOFR-1Y</Id>
     <Conventions>USD-SOFR-OIS</Conventions>
     <FixingCalendar/>
   </SwapIndex>
+
   <SwapIndex>
     <Id>USD-CMS-SOFR-30Y</Id>
     <Conventions>USD-SOFR-OIS</Conventions>
     <FixingCalendar/>
   </SwapIndex>
+
+  <!-- ======================================== -->
+  <!-- 2. OIS (Overnight Index Swap)          -->
+  <!-- ======================================== -->
+  <!-- OIS: 익일 금리 평균 기반 스왑 -->
+
+  <!-- FedFunds OIS -->
   <OIS>
     <Id>USD-FedFunds-OIS</Id>
     <SpotLag>2</SpotLag>
@@ -22,6 +45,8 @@
     <FixedPaymentConvention>Following</FixedPaymentConvention>
     <Rule>Backward</Rule>
   </OIS>
+
+  <!-- 일반 OIS (FedFunds 기반) -->
   <OIS>
     <Id>USD-OIS</Id>
     <SpotLag>2</SpotLag>
@@ -34,24 +59,45 @@
     <FixedPaymentConvention>Following</FixedPaymentConvention>
     <Rule>Backward</Rule>
   </OIS>
+
+  <!-- ======================================== -->
+  <!-- 3. Deposit (예금)                       -->
+  <!-- ======================================== -->
+  <!-- 당일자 예금 -->
   <Deposit>
     <Id>USD-ON-DEPOSIT</Id>
     <IndexBased>true</IndexBased>
     <Index>USD-FedFunds</Index>
   </Deposit>
+
+  <!-- SOFR 당일자 예금 -->
   <Deposit>
     <Id>USD-ON-SOFR-DEPOSIT</Id>
     <IndexBased>true</IndexBased>
     <Index>USD-SOFR</Index>
   </Deposit>
+
+  <!-- ======================================== -->
+  <!-- 4. Future (선물)                       -->
+  <!-- ======================================== -->
+  <!-- SOFR 선물 계약 -->
   <Future>
     <Id>USD-SOFR-3M-FUTURES</Id>
     <Index>USD-SOFR</Index>
+    <!-- OvernightIndexFutureNettingType: 청산 방식 -->
     <OvernightIndexFutureNettingType>Compounding</OvernightIndexFutureNettingType>
+    <!-- DateGenerationRule: 날짜 생성 규칙 (IMM) -->
+    <!-- IMM: International Monetary Market (3월, 6월, 9월, 12월 만기) -->
     <DateGenerationRule>IMM</DateGenerationRule>
   </Future>
+
+  <!-- ======================================== -->
+  <!-- 5. SOFR OIS                           -->
+  <!-- ======================================== -->
+  <!-- SOFR 기반 OIS -->
   <OIS>
     <Id>USD-SOFR-OIS</Id>
+    <!-- SpotLag: 0 (당일 Spot) -->
     <SpotLag>0</SpotLag>
     <Index>USD-SOFR</Index>
     <FixedDayCounter>A360</FixedDayCounter>

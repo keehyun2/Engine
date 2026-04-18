@@ -1,46 +1,73 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 포트폴리오 (Portfolio) 정의 파일 -->
+<!-- 평가할 금융 상품(Trade)들을 정의 -->
+<!-- ======================================== -->
+
 <Portfolio>
+  <!-- Trade 1: Prime 금리 기반 20년 만기 스왑 -->
   <Trade id="Swap_Prime_20y">
     <TradeType>Swap</TradeType>
     <Envelope>
+      <!-- CounterParty: 거래 상대방 (예: 은행, 헤지펀드 등) -->
       <CounterParty>CPTY_A</CounterParty>
+      <!-- NettingSetId: 상계(Netting) 집합 ID -->
+      <!--   같은 NettingSet 내에서는 상계 계약이 가능 -->
       <NettingSetId>CPTY_A</NettingSetId>
       <AdditionalFields/>
     </Envelope>
     <SwapData>
+      <!-- ========== 다리(Leg) 1: Prime 금리 수신 ========== -->
       <LegData>
-        <LegType>Floating</LegType>
+        <LegType>Floating</LegType>  <!-- 변동금리 -->
+        <!-- Payer: false = 수신(Receive), true = 지급(Pay) -->
         <Payer>false</Payer>
         <Currency>USD</Currency>
+        <!-- Notional: 명목 금액 (1천만 USD) -->
         <Notionals>
           <Notional>10000000.000000</Notional>
         </Notionals>
+        <!-- DayCounter: 일수 계산 방식 (A360 = Actual/360) -->
         <DayCounter>A360</DayCounter>
+        <!-- PaymentConvention: 지급 일정 규칙 (MF = Modified Following) -->
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
+          <!-- Index: 기준 금리 지표 (USD Prime Rate) -->
           <Index>USD-Prime</Index>
+          <!-- Spreads: 금리에 추가할 스프레드 -->
           <Spreads>
             <Spread>0.000000</Spread>
           </Spreads>
+          <!-- FixingDays: 금리 확정(Fixing) 일자 (2영업일 전) -->
           <FixingDays>2</FixingDays>
         </FloatingLegData>
         <ScheduleData>
           <Rules>
+            <!-- StartDate: 계약 시작일 -->
             <StartDate>20160301</StartDate>
+            <!-- EndDate: 계약 만기일 -->
             <EndDate>20360301</EndDate>
+            <!-- Tenor: 지급 주기 (3M = 3개월) -->
             <Tenor>3M</Tenor>
+            <!-- Calendar: 휴일 달력 (TARGET = 유럽 중앙은행 휴일) -->
             <Calendar>TARGET</Calendar>
+            <!-- Convention: 날짜 조정 규칙 -->
             <Convention>MF</Convention>
             <TermConvention>MF</TermConvention>
+            <!-- Rule: Forward = 미래 날짜 생성 -->
             <Rule>Forward</Rule>
+            <!-- EndOfMonth: 월말 여부 -->
             <EndOfMonth/>
             <FirstDate/>
             <LastDate/>
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- ========== 다리(Leg) 2: LIBOR 금리 지급 ========== -->
       <LegData>
         <LegType>Floating</LegType>
+        <!-- Payer: true = 지급 (내가 이자를 냄) -->
         <Payer>true</Payer>
         <Currency>USD</Currency>
         <Notionals>
@@ -49,10 +76,13 @@
         <DayCounter>A360</DayCounter>
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
+          <!-- Index: USD 3개월 LIBOR -->
           <Index>USD-LIBOR-3M</Index>
+          <!-- Spreads: LIBOR + 2.42% 추가 지급 -->
           <Spreads>
             <Spread>0.024246420172367</Spread>
           </Spreads>
+          <!-- IsInArrears: 후불(Fixing 후 지급) 여부 -->
           <IsInArrears>false</IsInArrears>
           <FixingDays>2</FixingDays>
         </FloatingLegData>
@@ -72,7 +102,14 @@
         </ScheduleData>
       </LegData>
     </SwapData>
+    <!--
+      [요약]
+      - 내가 하는 거래: LIBOR + 2.42% 지급 ↔ Prime 금리 수신
+      - 이 스왑의 목적: Prime 금리와 LIBOR 스프레드 차이 활용
+    -->
   </Trade>
+
+  <!-- Trade 2: FedFunds 금리 기반 20년 만기 스왑 -->
   <Trade id="Swap_FedFunds_20y">
     <TradeType>Swap</TradeType>
     <Envelope>
@@ -81,6 +118,7 @@
       <AdditionalFields/>
     </Envelope>
     <SwapData>
+      <!-- ========== 다리(Leg) 1: FedFunds 금리 수신 ========== -->
       <LegData>
         <LegType>Floating</LegType>
         <Payer>false</Payer>
@@ -91,7 +129,9 @@
         <DayCounter>A360</DayCounter>
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
+          <!-- Index: 연방기금(Fed Funds) 금리 -->
           <Index>USD-FedFunds</Index>
+          <!-- Spreads: FedFunds + 2.70% 수신 -->
           <Spreads>
             <Spread>0.02700347453122</Spread>
           </Spreads>
@@ -112,6 +152,8 @@
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- ========== 다리(Leg) 2: LIBOR 금리 지급 ========== -->
       <LegData>
         <LegType>Floating</LegType>
         <Payer>true</Payer>
@@ -123,6 +165,7 @@
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
           <Index>USD-LIBOR-3M</Index>
+          <!-- Spreads: LIBOR + 2.42% 지급 -->
           <Spreads>
             <Spread>0.024246420172367</Spread>
           </Spreads>
@@ -145,5 +188,10 @@
         </ScheduleData>
       </LegData>
     </SwapData>
+    <!--
+      [요약]
+      - 내가 하는 거래: LIBOR + 2.42% 지급 ↔ FedFunds + 2.70% 수신
+      - 이 스왑의 목적: FedFunds와 LIBOR 스프레드 차이 활용
+    -->
   </Trade>
 </Portfolio>

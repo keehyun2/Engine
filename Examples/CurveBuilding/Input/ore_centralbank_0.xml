@@ -1,43 +1,83 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE 중앙은행 예제 설정 파일 #0        -->
+<!-- GBP SONIA 기반 OIS 곡선 구축         -->
+<!-- ======================================== -->
+<!--
+  [중앙은행 예제 시리즈란?]
+  - 영국 은행(BoE)의 SONIA 금리를 사용한 곡선 구축
+  - CurveConfig 0~4: 다른 Priority 설정 비교
+  - Priority: 곡선 부트스트래핑 시 데이터 우선순위
+
+  [이 예제에서의 설정 (#0)]
+  - Priority 1: BOE 회의일 기반 OIS (가장 중요)
+  - Priority 2: 일반 OIS & 단기 OIS (선택적)
+  - Priority 0: 당일자 예금 (최우선)
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
+    <!-- asofDate: 기준일자 (2025년 11월 27일) -->
     <Parameter name="asofDate">2025-11-27</Parameter>
+
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/centralbank_0</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
+    <!-- logMask: 255 = 모든 로그 출력 -->
     <Parameter name="logMask">255</Parameter>
+
+    <!-- marketDataFile: 시장 데이터 파일 (CSV) -->
     <Parameter name="marketDataFile">market_centralbank.csv</Parameter>
     <Parameter name="fixingDataFile">fixings_centralbank.csv</Parameter>
+    <!-- implyTodaysFixings: 오늘 피싱 자동 계산 -->
     <Parameter name="implyTodaysFixings">Y</Parameter>
+
+    <!-- curveConfigFile: 곡선 설정 (#0) -->
     <Parameter name="curveConfigFile">curveconfig_centralbank_0.xml</Parameter>
     <Parameter name="conventionsFile">conventions_centralbank.xml</Parameter>
     <Parameter name="marketConfigFile">todaysmarket_centralbank.xml</Parameter>
+    <!-- pricingEnginesFile: 기본 엔진 설정 사용 -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_centralbank.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
     <Parameter name="continueOnError">false</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!-- pricing: inccy 설정 사용 (기준 통화 할인) -->
     <Parameter name="pricing">inccy</Parameter>
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="eqcalibration">default</Parameter>
     <Parameter name="simulation">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 항목 설정 ========== -->
+
+    <!-- NPV 분석 -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
+      <!-- baseCurrency: GBP (영국 파운드) -->
       <Parameter name="baseCurrency">GBP</Parameter>
       <Parameter name="outputFileName">npv.csv</Parameter>
       <Parameter name="additionalResults">Y</Parameter>
     </Analytic>
+
+    <!-- 캐시플로우 분석 -->
     <Analytic type="cashflow">
       <Parameter name="active">Y</Parameter>
       <Parameter name="outputFileName">flows.csv</Parameter>
     </Analytic>
+
+    <!-- 커브 분석 -->
     <Analytic type="curves">
       <Parameter name="active">Y</Parameter>
       <Parameter name="configuration">default</Parameter>
+      <!-- grid: 400일, 1일 간격 -->
       <Parameter name="grid">400,1D</Parameter>
       <Parameter name="calendar">NullCalendar</Parameter>
       <Parameter name="outputFileName">curves.csv</Parameter>

@@ -1,42 +1,103 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE SABR 예제 설정 파일                 -->
+<!-- SABR 변동성 모델을 사용한 스왑션 가치 평가 -->
+<!-- ======================================== -->
+<!--
+  [SABR 모델이란?]
+  - Stochastic Alpha Beta Rho 모델
+  - 금리 옵션(스왑션 등)의 변동성을 모델링하는 데 널리 사용
+  - 변동성의 "스마일"(행사가에 따른 변동성 차이)을 포착
+
+  [이 예제의 목적]
+  - USD SOFR 기반 스왑션 가치 평가
+  - SABR 변동성 모델 사용
+  - Cap/Floor 가치 평가
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
+    <!-- asofDate: 기준일자 (2024년 3월 19일) -->
     <Parameter name="asofDate">2024-03-19</Parameter>
+
+    <!-- inputPath: 입력 파일 디렉토리 -->
     <Parameter name="inputPath">Input</Parameter>
+
+    <!-- outputPath: 결과 파일 디렉토리 -->
     <Parameter name="outputPath">Output/sabr</Parameter>
+
+    <!-- logFile: 로그 파일 이름 -->
     <Parameter name="logFile">log.txt</Parameter>
+
+    <!-- logMask: 로그 레벨 마스크 (31 = 모든 로그) -->
     <Parameter name="logMask">31</Parameter>
+
+    <!-- marketDataFile: 시장 데이터 파일 (CSV 형식) -->
     <Parameter name="marketDataFile">market_sabr.csv</Parameter>
+
+    <!-- fixingDataFile: 피싱 데이터 파일 -->
     <Parameter name="fixingDataFile">fixings_sabr.csv</Parameter>
+
+    <!-- implyTodaysFixings: 오늘 피싱 자동 계산 여부 -->
     <Parameter name="implyTodaysFixings">N</Parameter>
+
+    <!-- curveConfigFile: 커브 설정 파일 -->
     <Parameter name="curveConfigFile">curveconfig_sabr.xml</Parameter>
+
+    <!-- conventionsFile: 관행 설정 파일 -->
     <Parameter name="conventionsFile">conventions_sabr.xml</Parameter>
+
+    <!-- marketConfigFile: 시장 구성 설정 -->
     <Parameter name="marketConfigFile">todaysmarket_sabr.xml</Parameter>
+
+    <!-- pricingEnginesFile: 가치 평가 엔진 설정 -->
     <Parameter name="pricingEnginesFile">pricingengine_sabr.xml</Parameter>
+
+    <!-- observationModel: 관찰 모드 (None = 비활성화) -->
     <Parameter name="observationModel">None</Parameter>
+
+    <!-- baseCurrency: 기준 통화 -->
     <Parameter name="baseCurrency">USD</Parameter>
+
+    <!-- portfolioFile: 포트폴리오 파일 -->
     <Parameter name="portfolioFile">portfolio_sabr.xml</Parameter>
+
+    <!-- nThreads: 사용 스레드 수 -->
     <Parameter name="nThreads">1</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!-- 각 용도별 시장 데이터 설정 -->
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="pricing">default</Parameter>
     <Parameter name="simulation">default</Parameter>
     <Parameter name="sensitivity">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 항목 설정 ========== -->
+
+    <!-- NPV(순현재가치) 분석 -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
+      <!-- baseCurrency: EUR로 설정 (예시) -->
       <Parameter name="baseCurrency">EUR</Parameter>
       <Parameter name="outputFileName">npv.csv</Parameter>
+      <!-- additionalResults: 추가 결과 출력 -->
       <Parameter name="additionalResults">Y</Parameter>
     </Analytic>
+
+    <!-- 커브(이자율 곡선) 분석 -->
     <Analytic type="curves">
       <Parameter name="active">Y</Parameter>
       <Parameter name="configuration">default</Parameter>
+      <!-- grid: 240개월(20년), 1개월 간격 -->
       <Parameter name="grid">240,1M</Parameter>
       <Parameter name="outputFileName">curves.csv</Parameter>
+      <!-- outputTodaysMarketCalibration: 시장 보정 결과 출력 -->
       <Parameter name="outputTodaysMarketCalibration">Y</Parameter>
     </Analytic>
   </Analytics>

@@ -1,30 +1,75 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE 중앙은행 곡선 구축 예제 #2            -->
+<!-- CurveBuilding/centralbank_2               -->
+<!-- ======================================== -->
+<!--
+  [중앙은행 곡선 구축 #2이란?]
+  - GBP SONIA OIS 곡선 구축
+  - BOE(영국 중앙은행) 회의일 기반 선도 스왑 활용
+  - Priority 기반 부트스트래핑
+
+  [곡선 구축 전략]
+  Priority 0 (최우선):
+    - 익일(ON) 금리: SONIA Overnight Rate
+
+  Priority 1 (중요):
+    - BOE 회의일 선도 OIS 스왑
+    - PillarChoice: StartDateAndMaturityDate (기본값)
+    - 시작일과 만기일 모두 고려
+
+  Priority 2 (보조):
+    - 단기 OIS 스왑 (1W~2M)
+    - 표준 OIS 스왑 (3M~5Y)
+
+  [다른 예제와의 차이]
+  - centralbank_1: PillarChoice 없음 (기본값)
+  - centralbank_2: StartDateAndMaturityDate (명시적)
+  - centralbank_3: StartDate만 사용
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2025-11-27</Parameter>
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/centralbank_2</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">255</Parameter>
+
+    <!-- 중앙은행 예제용 시장 데이터 -->
     <Parameter name="marketDataFile">market_centralbank.csv</Parameter>
     <Parameter name="fixingDataFile">fixings_centralbank.csv</Parameter>
     <Parameter name="implyTodaysFixings">Y</Parameter>
+
+    <!-- centralbank_2 곡선 설정 -->
     <Parameter name="curveConfigFile">curveconfig_centralbank_2.xml</Parameter>
     <Parameter name="conventionsFile">conventions_centralbank.xml</Parameter>
     <Parameter name="marketConfigFile">todaysmarket_centralbank.xml</Parameter>
+
+    <!-- 상위 폴더의 가격 평가 엔진과 포트폴리오 사용 -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
     <Parameter name="portfolioFile">portfolio_centralbank.xml</Parameter>
+
     <Parameter name="observationModel">None</Parameter>
     <Parameter name="continueOnError">false</Parameter>
   </Setup>
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [inccy 설정]
+      - pricing: inccy (내재 통화 기반 가격 평가)
+      - 각 통화의 자체 곡선을 할인율로 사용
+    -->
     <Parameter name="pricing">inccy</Parameter>
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="eqcalibration">default</Parameter>
     <Parameter name="simulation">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 설정 ========== -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="baseCurrency">GBP</Parameter>

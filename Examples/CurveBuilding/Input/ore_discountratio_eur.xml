@@ -1,28 +1,67 @@
+<?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- ORE 할인율 비율 예제 (EUR 기준)        -->
+<!-- CurveBuilding/discountratio/eur_base     -->
+<!-- ======================================== -->
+<!--
+  [할인율 비율이란?]
+  - 두 통화 간 할인율의 비율(Ratio)을 계산
+  - EUR 기준 할인율 곡선 구축
+  - 크로스 통화 가격 평가에 활용
+
+  [이론적 배경]
+  - 선도 환율 = 현물 환율 × (DF_domestic / DF_foreign)
+  - 할인율 비율 = DF_domestic / DF_foreign
+  - FX 포워드 가격 평가의 핵심 요소
+
+  [이 예제의 특징]
+  - EUR 기준 할인율 비율 곡선
+  - 여러 통화 쌍 지원 (EUR-USD, EUR-GBP, etc.)
+  - 크로스 통화 스왑 재가격 검증
+-->
+
 <ORE>
   <Setup>
+    <!-- ========== 기본 설정 ========== -->
     <Parameter name="asofDate">2016-02-05</Parameter>
     <Parameter name="inputPath">Input</Parameter>
     <Parameter name="outputPath">Output/discountratio/eur_base</Parameter>
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">63</Parameter>
+
+    <!-- 상위 폴더의 시장 데이터 사용 -->
     <Parameter name="marketDataFile">../../Input/market_20160205.txt</Parameter>
     <Parameter name="fixingDataFile">../../Input/fixings_20160205.txt</Parameter>
     <Parameter name="implyTodaysFixings">N</Parameter>
+
+    <!-- 할인율 비율 곡선 설정 -->
     <Parameter name="curveConfigFile">curveconfig_discountratio.xml</Parameter>
     <Parameter name="conventionsFile">../../Input/conventions.xml</Parameter>
     <Parameter name="marketConfigFile">todaysmarket_discountratio_eur.xml</Parameter>
+
+    <!-- 상위 폴더의 가격 평가 엔진 사용 -->
     <Parameter name="pricingEnginesFile">../../Input/pricingengine.xml</Parameter>
+
     <Parameter name="portfolioFile">portfolio_discountratio.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
   </Setup>
+
   <Markets>
+    <!-- ========== 시장 설정 ========== -->
+    <!--
+      [default 설정]
+      - pricing: default (표준 가격 평가)
+      - 할인율 비율 곡선 사용
+    -->
     <Parameter name="lgmcalibration">default</Parameter>
     <Parameter name="fxcalibration">default</Parameter>
     <Parameter name="eqcalibration">default</Parameter>
     <Parameter name="pricing">default</Parameter>
     <Parameter name="simulation">default</Parameter>
   </Markets>
+
   <Analytics>
+    <!-- ========== 분석 설정 ========== -->
     <Analytic type="npv">
       <Parameter name="active">Y</Parameter>
       <Parameter name="baseCurrency">EUR</Parameter>

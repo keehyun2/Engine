@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ======================================== -->
+<!-- 곡선 설정 파일 (Curve Configuration)    -->
+<!-- GBP SONIA OIS 곡선 - Priority 기반 구축 -->
+<!-- ======================================== -->
+<!--
+  [이 설정의 핵심: Priority 기반 곡선 구축]
+
+  Priority 시스템:
+  - Priority 0: 최우선 (항상 사용)
+  - Priority 1: 1차 우선 (가장 중요한 시장 데이터)
+  - Priority 2: 2차 우선 (보조적 데이터)
+
+  구축 순서:
+  1. Priority 0 데이터로 시작 (당일자 예금)
+  2. Priority 1 데이터로 곡선 확장 (BOE 회의일 OIS)
+  3. Priority 2 데이터로 곡선 완성 (일반 OIS)
+
+  MinDistance: 인접 데이터 간 최소 거리
+  - 곡선의 부드러움 보장
+  - 데이터 밀도 조절
+-->
+
 <CurveConfiguration>
   <YieldCurves>
     <YieldCurve>
+      <!-- CurveId: GBP1D (GBP 1일 곡선) -->
       <CurveId>GBP1D</CurveId>
       <CurveDescription>GBP discount curve bootstrapped from OIS swap rates</CurveDescription>
       <Currency>GBP</Currency>
       <DiscountCurve>GBP1D</DiscountCurve>
+
       <Segments>
-          <!-- SONIA ON Rate -->
+        <!-- ======================================== -->
+        <!-- Segment 1: SONIA 당일자 (Priority 0)    -->
+        <!-- ======================================== -->
         <Simple>
           <Type>Deposit</Type>
           <Quotes>
+            <!-- 0D/1D = 당일자 (Overnight) -->
             <Quote>MM/RATE/GBP/0D/1D</Quote>
           </Quotes>
           <Conventions>GBP-DEPOSIT</Conventions>
+          <!-- Priority 0 = 최우선 (항상 사용) -->
           <Priority>0</Priority>
         </Simple>
-          <!-- SONIA short OI swaps until first BOE meeting date -->
+
+        <!-- ======================================== -->
+        <!-- Segment 2: 단기 OIS - 주석 처리됨       -->
+        <!-- (Priority 2)                            -->
+        <!-- ======================================== -->
         <Simple>
           <Type>OIS</Type>
           <Quotes>
+            <!-- 1주~2개월 OIS는 주석 처리 (선택적 사용) -->
             <!-- <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/1W</Quote> -->
             <!-- <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/2W</Quote> -->
             <!-- <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/3W</Quote> -->
@@ -27,25 +60,50 @@
             <!-- <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/2M</Quote> -->
           </Quotes>
           <Conventions>GBP-OIS</Conventions>
+          <!-- Priority 2 = 2차 우선 -->
           <Priority>2</Priority>
+          <!-- MinDistance: 인접 데이터 간 최소 5일 간격 -->
           <MinDistance>5</MinDistance>
         </Simple>
-          <!-- SONIA forward starting BOE meeting date swap -->
+
+        <!-- ======================================== -->
+        <!-- Segment 3: BOE 회의일 OIS (Priority 1)   -->
+        <!-- ======================================== -->
+        <!--
+          [BOE (Bank of England) 회의일 OIS]
+          - 영국 중앙은행 금리 결정일 기반
+          - 시장에서 가장 중요한 데이터
+          - Priority 1: 최우선 사용
+
+          형식: IR_SWAP/RATE/GBP/{Spot}/{Index}/{회의일}
+          예: 20251218/1D/20260205
+              - Spot: 2025년 12월 18일
+              - 회의일: 2026년 2월 5일
+        -->
         <Simple>
           <Type>OIS</Type>
           <Quotes>
+            <!-- 2025년 12월 → 2026년 2월 회의일 -->
             <Quote optional="false">IR_SWAP/RATE/GBP/20251218/1D/20260205</Quote>
+            <!-- 2026년 2월 → 2026년 3월 회의일 -->
             <Quote optional="false">IR_SWAP/RATE/GBP/20260205/1D/20260319</Quote>
+            <!-- 2026년 3월 → 2026년 4월 회의일 -->
             <Quote optional="false">IR_SWAP/RATE/GBP/20260319/1D/20260430</Quote>
+            <!-- 2026년 4월 → 2026년 6월 회의일 -->
             <Quote optional="false">IR_SWAP/RATE/GBP/20260430/1D/20260618</Quote>
           </Quotes>
           <Conventions>GBP-OIS</Conventions>
+          <!-- Priority 1 = 1차 우선 (가장 중요) -->
           <Priority>1</Priority>
         </Simple>
-        <!-- SONIA longer term OI swaps after last BOE meeting date -->
+
+        <!-- ======================================== -->
+        <!-- Segment 4: 장기 OIS (Priority 2)        -->
+        <!-- ======================================== -->
         <Simple>
           <Type>OIS</Type>
           <Quotes>
+            <!-- 3개월 ~ 5년 OIS (정기적 간격) -->
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/3M</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/4M</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/5M</Quote>
@@ -55,6 +113,7 @@
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/9M</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/10M</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/11M</Quote>
+            <!-- 1년 ~ 5년 (연 1회) -->
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/1Y</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/2Y</Quote>
             <Quote optional="false">IR_SWAP/RATE/GBP/0D/1D/3Y</Quote>
@@ -63,32 +122,55 @@
           </Quotes>
           <Conventions>GBP-OIS</Conventions>
           <Priority>2</Priority>
+          <!-- MinDistance: 데이터 간 최소 5일 간격 -->
           <MinDistance>5</MinDistance>
         </Simple>
       </Segments>
+
+      <!-- ======================================== -->
+      <!-- 보간 방법 설정                          -->
+      <!-- ======================================== -->
+      <!-- InterpolationVariable: Discount 기준 보간 -->
       <InterpolationVariable>Discount</InterpolationVariable>
+
+      <!--
+        InterpolationMethod: 혼합 보간 방식
+        - DefaultLogMixedLinearCubic: 기본 로그 혼합 선형/3차
+        - 단기: 선형 보간
+        - 장기: 3차 스플라인 보간
+      -->
       <InterpolationMethod>DefaultLogMixedLinearCubic</InterpolationMethod>
+
+      <!-- MixedInterpolationCutoff: 혼합 보간 경계 (3년) -->
+      <!-- 3년 미만: 선형, 3년 이상: 3차 -->
       <MixedInterpolationCutoff>3</MixedInterpolationCutoff>
+
       <YieldCurveDayCounter>A365</YieldCurveDayCounter>
-      <!-- <BootstrapConfig> -->
-      <!--   <Accuracy>1E-14</Accuracy> -->
-      <!--   <Global>true</Global> -->
-      <!-- </BootstrapConfig> -->
     </YieldCurve>
   </YieldCurves>
+
+  <!-- ======================================== -->
+  <!-- 스왑션 변동성 곡선                     -->
+  <!-- ======================================== -->
   <SwaptionVolatilities>
     <SwaptionVolatility>
       <CurveId>GBP_VOL</CurveId>
       <CurveDescription>GBP normal swaption volatilities</CurveDescription>
+      <!-- Dimension: ATM (At-The-Money) 만 -->
       <Dimension>ATM</Dimension>
-      <VolatilityType>Lognormal</VolatilityType>
+      <!-- VolatilityType: Lognormal (로그정규분포) -->
+      <VolatilityType>Lognormal</Volatility>
       <Extrapolation>Flat</Extrapolation>
       <DayCounter>Actual/365 (Fixed)</DayCounter>
       <Calendar>TARGET</Calendar>
       <BusinessDayConvention>Following</BusinessDayConvention>
+      <!-- OptionTenors: 옵션 만기 (5, 10, 20년) -->
       <OptionTenors>5Y,10Y,20Y</OptionTenors>
+      <!-- SwapTenors: 기초 스왑 만기 (5, 10, 20년) -->
       <SwapTenors>5Y,10Y,20Y</SwapTenors>
+      <!-- ShortSwapIndexBase: 1년 SONIA CMS -->
       <ShortSwapIndexBase>GBP-CMS-SONIA-1Y</ShortSwapIndexBase>
+      <!-- SwapIndexBase: 10년 SONIA CMS -->
       <SwapIndexBase>GBP-CMS-SONIA-10Y</SwapIndexBase>
     </SwaptionVolatility>
   </SwaptionVolatilities>

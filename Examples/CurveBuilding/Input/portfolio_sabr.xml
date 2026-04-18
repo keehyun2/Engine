@@ -1,40 +1,74 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 포트폴리오 (Portfolio) 정의 파일       -->
+<!-- SABR 예제: 스왑션 & Cap 상품          -->
+<!-- ======================================== -->
+
 <Portfolio>
+  <!-- ======================================== -->
+  <!-- Trade 1: USD SOFR 스왑션 (Swaption)    -->
+  <!-- ======================================== -->
+  <!--
+    [스왑션(Swaption)이란?]
+    - 스왑(Swap) 계약을 체결할 권리를 주는 옵션
+    - European: 만기일에만 행시 가능
+    - Payer Swaption: 고정금리 지급 + 변동금리 수신 권리
+
+    [이 상품의 구조]
+    - 기초 자산: 20년 USD SOFR 스왑 (2026-2046)
+    - 행시가: 1.537% (고정금리)
+    - 행시일: 2026년 1월 8일
+    - Long: 옵션 매입 (권리 보유)
+  -->
   <Trade id="Swaption_USD_SOFR">
     <TradeType>Swaption</TradeType>
     <Envelope>
+      <!-- NettingSetId: 상계 집합 ID -->
       <NettingSetId>DUMMY_NS</NettingSetId>
+      <!-- CounterParty: 거래 상대방 -->
       <CounterParty>DUMMY_CP</CounterParty>
       <AdditionalFields/>
     </Envelope>
     <SwaptionData>
+      <!-- Leg 1: 변동금리 지급 (내가 지급) -->
       <LegData>
+        <!-- Payer: true = 지급 (이자를 냄) -->
         <Payer>true</Payer>
         <LegType>Floating</LegType>
         <Currency>USD</Currency>
         <PaymentConvention>MF</PaymentConvention>
         <DayCounter>A360</DayCounter>
+        <!-- Notional: 명목 금액 (1억 USD) -->
         <Notionals>
           <Notional>100000000</Notional>
         </Notionals>
         <FloatingLegData>
+          <!-- Index: USD SOFR (Secured Overnight Financing Rate) -->
+          <!-- SOFR: 새로운 USD 기준 금리 (LIBOR 대체) -->
           <Index>USD-SOFR</Index>
           <Spreads>
             <Spread>0.00</Spread>
           </Spreads>
+          <!-- FixingDays: 금리 확정 일자 (2영업일 전) -->
           <FixingDays>2</FixingDays>
         </FloatingLegData>
         <ScheduleData>
           <Rules>
             <Convention>MF</Convention>
+            <!-- StartDate: 스왑 시작일 -->
             <StartDate>2026-01-12</StartDate>
+            <!-- EndDate: 스왑 만기일 -->
             <EndDate>2046-01-12</EndDate>
             <TermConvention>MF</TermConvention>
+            <!-- Tenor: 지급 주기 (연 1회) -->
             <Tenor>1Y</Tenor>
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- Leg 2: 고정금리 수신 (내가 받음) -->
       <LegData>
+        <!-- Payer: false = 수신 (이자를 받음) -->
         <Payer>false</Payer>
         <LegType>Fixed</LegType>
         <Currency>USD</Currency>
@@ -44,6 +78,7 @@
           <Notional>100000000</Notional>
         </Notionals>
         <FixedLegData>
+          <!-- Rates: 고정금리 1.537% -->
           <Rates>
             <Rate>0.01537</Rate>
           </Rates>
@@ -58,16 +93,43 @@
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- 옵션 정보 -->
       <OptionData>
+        <!-- LongShort: Long = 옵션 매입 (권리 보유) -->
         <LongShort>Long</LongShort>
+        <!-- Style: European = 만기일에만 행시 가능 -->
         <Style>European</Style>
+        <!-- Settlement: Physical = 실제 스왑 체결 -->
         <Settlement>Physical</Settlement>
+        <!-- ExerciseDates: 행시 가능일 -->
         <ExerciseDates>
           <ExerciseDate>2026-01-08</ExerciseDate>
         </ExerciseDates>
       </OptionData>
     </SwaptionData>
+    <!--
+      [요약]
+      - 2026년 1월 8일에 20년 USD SOFR 스왑 체결 권리
+      - 권리 행사 시: 고정금리 1.537% 수신 ↔ SOFR 지급
+      - 옵션 프리미럼을 지불하고 스왑션을 매입
+    -->
   </Trade>
+
+  <!-- ======================================== -->
+  <!-- Trade 2: USD SOFR Cap (금리 상한)      -->
+  <!-- ======================================== -->
+  <!--
+    [Cap이란?]
+    - 금리가 상한가(Cap) 이상으로 상승 시 차액 지급
+    - 대출자에게 금리 상승 보험 제공
+
+    [이 상품의 구조]
+    - 기초: USD SOFR
+    - 상한가: 0% (Floor가 0%인 경우)
+    - 기간: 1년 (2024년 3월 ~ 2025년 3월)
+    - NakedOption: 순수 옵션 (기초 스왑 없이 독립)
+  -->
   <Trade id="Cap_USD_SOFR">
     <TradeType>Swap</TradeType>
     <Envelope>
@@ -76,10 +138,13 @@
       <AdditionalFields/>
     </Envelope>
     <SwapData>
+      <!-- 변동금리 다리 (Cap이 적용되는 다리) -->
       <LegData>
         <LegType>Floating</LegType>
+        <!-- Payer: false = 수신 -->
         <Payer>false</Payer>
         <Currency>USD</Currency>
+        <!-- Notional: 1억 USD -->
         <Notionals>
           <Notional>100000000</Notional>
         </Notionals>
@@ -87,26 +152,35 @@
         <PaymentConvention>MF</PaymentConvention>
         <FloatingLegData>
           <Index>USD-SOFR</Index>
+          <!-- FixingDays: 0 (당일 확정) -->
           <FixingDays>0</FixingDays>
+          <!-- Lookback: 0D (룩백 없음) -->
           <Lookback>0D</Lookback>
+          <!-- RateCutoff: 금리 확정 차단일 -->
           <RateCutoff>2</RateCutoff>
+          <!-- IncludeSpread: 스프레드 포함 여부 -->
           <IncludeSpread>false</IncludeSpread>
           <Spreads>
             <Spread>0.0</Spread>
           </Spreads>
+          <!-- Floors: 하한가 (0% = 없음) -->
           <Floors>
             <Floor>0.0</Floor>
           </Floors>
+          <!-- NakedOption: 순수 옵션 여부 -->
           <NakedOption>true</NakedOption>
+          <!-- LocalCapFloor: 로컬 Cap/Floor 여부 -->
           <LocalCapFloor>false</LocalCapFloor>
         </FloatingLegData>
         <ScheduleData>
           <Rules>
             <StartDate>20240321</StartDate>
             <EndDate>20250321</EndDate>
+            <!-- Tenor: 3개월 (분기별 지급) -->
             <Tenor>3M</Tenor>
             <Calendar>US</Calendar>
             <Convention>MF</Convention>
+            <!-- Rule: Backward = 만기에서 역순 생성 -->
             <Rule>Backward</Rule>
             <EndOfMonth>false</EndOfMonth>
             <FirstDate/>
@@ -114,6 +188,13 @@
           </Rules>
         </ScheduleData>
       </LegData>
+      <!-- Cap은 수신 다리만 있음 (지급 다리 없음) -->
     </SwapData>
+    <!--
+      [요약]
+      - 1년간 USD SOFR이 상승할 경우 보호
+      - SOFR이 상한가 이상이면 차액 지급
+      - Cap 프리미럼을 지불하고 보험 구매
+    -->
   </Trade>
 </Portfolio>
