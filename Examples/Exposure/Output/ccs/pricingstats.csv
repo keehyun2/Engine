@@ -1,0 +1,4 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+CCSwap,Swap,240002,5160000,21
+XCCY_Swap_EUR_USD,Swap,119002,1380000,11
+XCCY_Swap_EUR_USD_RESET,Swap,119002,11300000,94

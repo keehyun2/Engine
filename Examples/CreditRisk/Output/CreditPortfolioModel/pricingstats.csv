@@ -1,0 +1,3 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+Bond_1,Bond,48002,2190000,45
+CDS_1,CreditDefaultSwap,48002,8430000,175

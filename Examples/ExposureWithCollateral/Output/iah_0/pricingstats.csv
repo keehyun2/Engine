@@ -1,0 +1,4 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+Swap_1,Swap,5002,110000,21
+Swap_2,Swap,5002,60000,11
+Swap_3,Swap,5002,80000,15

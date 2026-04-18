@@ -1,0 +1,820 @@
+NOTICE   [2026-Apr-18 19:21:40.269254]    (OREAnalytics/orea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2026-Apr-18 19:21:40.269311]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : fxcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.269326]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : lgmcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.269337]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : pricing = default
+NOTICE   [2026-Apr-18 19:21:40.269348]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : simulation = default
+NOTICE   [2026-Apr-18 19:21:40.269359]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : asofDate = 2020-12-28
+NOTICE   [2026-Apr-18 19:21:40.269370]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../../Input/conventions.xml
+NOTICE   [2026-Apr-18 19:21:40.269381]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : curveConfigFile = ../../../Input/curveconfig.xml
+NOTICE   [2026-Apr-18 19:21:40.269391]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : fixingDataFile = 
+NOTICE   [2026-Apr-18 19:21:40.269402]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2026-Apr-18 19:21:40.269412]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : inputPath = Input/Simm
+NOTICE   [2026-Apr-18 19:21:40.269423]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2026-Apr-18 19:21:40.269433]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : logMask = 255
+NOTICE   [2026-Apr-18 19:21:40.269444]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : marketConfigFile = simm_todaysmarket.xml
+NOTICE   [2026-Apr-18 19:21:40.269455]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : marketDataFile = simm_market.txt
+NOTICE   [2026-Apr-18 19:21:40.269465]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2026-Apr-18 19:21:40.269481]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : outputPath = Output/SIMM2.4_10D
+NOTICE   [2026-Apr-18 19:21:40.269491]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : portfolioFile = 
+NOTICE   [2026-Apr-18 19:21:40.269501]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = ../../../Input/pricingengine.xml
+NOTICE   [2026-Apr-18 19:21:40.269513]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : active = Y
+NOTICE   [2026-Apr-18 19:21:40.269524]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : calculationCurrency = USD
+NOTICE   [2026-Apr-18 19:21:40.269534]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : crif = crif.csv
+NOTICE   [2026-Apr-18 19:21:40.269545]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : enforceIMRegulations = Y
+NOTICE   [2026-Apr-18 19:21:40.269555]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : mporDays = 10
+NOTICE   [2026-Apr-18 19:21:40.269566]    (OREAnalytics/orea/app/parameters.cpp:136) : group = simm : version = 2.4
+NOTICE   [2026-Apr-18 19:21:40.269637]        (OREAnalytics/orea/app/oreapp.cpp:653) : load OREAppInputParameters called
+WARNING  [2026-Apr-18 19:21:40.269659]        (OREAnalytics/orea/app/oreapp.cpp:674) : Calendar adjustments not found, using defaults
+WARNING  [2026-Apr-18 19:21:40.269672]        (OREAnalytics/orea/app/oreapp.cpp:684) : Currency configurations not found, using defaults
+WARNING  [2026-Apr-18 19:21:40.269694]        (OREAnalytics/orea/app/oreapp.cpp:701) : Base currency not set
+NOTICE   [2026-Apr-18 19:21:40.269709]        (OREAnalytics/orea/app/oreapp.cpp:752) : Observation Mode is None
+WARNING  [2026-Apr-18 19:21:40.269732]        (OREAnalytics/orea/app/oreapp.cpp:797) : Reference data not found
+WARNING  [2026-Apr-18 19:21:40.269744]        (OREAnalytics/orea/app/oreapp.cpp:806) : Script library not loaded
+NOTICE   [2026-Apr-18 19:21:40.269765]        (OREAnalytics/orea/app/oreapp.cpp:811) : Loading conventions from file: "Input/Simm/../../../Input/conventions.xml"
+DATA     [2026-Apr-18 19:21:40.269933]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-ZERO-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.269957]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-ZERO-CONVENTIONS-TENOR-BASED
+DATA     [2026-Apr-18 19:21:40.269971]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-ZERO-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.269983]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-ZERO-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.269995]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-ZERO-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270006]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CDS-STANDARD-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270018]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-LIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270030]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-FED-FUNDS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270042]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-LIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270053]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-TOIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270064]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-SARON-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270075]  (...ored/configuration/conventions.cpp:2763) : Reading Convention DKK-DKKOIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270086]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-SIOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270098]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-EONIA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270109]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-EURIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270120]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270132]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-SONIA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270149]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-LIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270160]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270171]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270183]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-CORRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270194]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CZK-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270205]  (...ored/configuration/conventions.cpp:2763) : Reading Convention DKK-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270216]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NOK-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270227]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270239]  (...ored/configuration/conventions.cpp:2763) : Reading Convention HUF-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270250]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PLN-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270261]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SGD-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270273]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NZD-DEPOSIT
+DATA     [2026-Apr-18 19:21:40.270284]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-LIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270296]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-TIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270307]  (...ored/configuration/conventions.cpp:2763) : Reading Convention AUD-BBSW-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270318]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-STIBOR-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270331]  (...ored/configuration/conventions.cpp:2763) : Reading Convention MXN-TIIE-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270342]  (...ored/configuration/conventions.cpp:2763) : Reading Convention RUB-MOSPRIME-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270354]  (...ored/configuration/conventions.cpp:2763) : Reading Convention BRL-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270365]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CLP-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270376]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CNY-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270387]  (...ored/configuration/conventions.cpp:2763) : Reading Convention IDR-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270398]  (...ored/configuration/conventions.cpp:2763) : Reading Convention INR-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270410]  (...ored/configuration/conventions.cpp:2763) : Reading Convention KRW-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270422]  (...ored/configuration/conventions.cpp:2763) : Reading Convention MYR-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270433]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PHP-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270444]  (...ored/configuration/conventions.cpp:2763) : Reading Convention TWD-GENERIC-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270456]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-LIBOR-3M-FUTURES-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270467]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EURIBOR-3M-FUTURES-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270479]  (...ored/configuration/conventions.cpp:2763) : Reading Convention AUD-BBSW-3M-FUTURES-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270490]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-LIBOR-3M-FUTURES-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270501]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-STIBOR-3M-FUTURES-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270512]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-12M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270524]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-6M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270535]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-3M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270546]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-1M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270557]  (...ored/configuration/conventions.cpp:2763) : Reading Convention AUD-3M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270569]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-6M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270580]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-3M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270591]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-3M-FRA
+DATA     [2026-Apr-18 19:21:40.270603]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-6M-FRA
+DATA     [2026-Apr-18 19:21:40.270614]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-6M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270625]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-3M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270636]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-1M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270647]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-FRA-3M
+DATA     [2026-Apr-18 19:21:40.270658]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CZK-6M-FRA
+DATA     [2026-Apr-18 19:21:40.270669]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CZK-3M-FRA
+DATA     [2026-Apr-18 19:21:40.270682]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NZD-3M-FRA
+DATA     [2026-Apr-18 19:21:40.270693]  (...ored/configuration/conventions.cpp:2763) : Reading Convention HUF-6M-FRA
+DATA     [2026-Apr-18 19:21:40.270704]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PLN-6M-FRA
+DATA     [2026-Apr-18 19:21:40.270715]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PLN-3M-FRA
+DATA     [2026-Apr-18 19:21:40.270726]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-3M-FRA
+DATA     [2026-Apr-18 19:21:40.270737]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-6M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270749]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-3M-FRA-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.270760]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-1Y
+DATA     [2026-Apr-18 19:21:40.270771]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-2Y
+DATA     [2026-Apr-18 19:21:40.270782]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-5Y
+DATA     [2026-Apr-18 19:21:40.270793]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-10Y
+DATA     [2026-Apr-18 19:21:40.270804]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-20Y
+DATA     [2026-Apr-18 19:21:40.270815]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-30Y
+DATA     [2026-Apr-18 19:21:40.270826]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-1Y
+DATA     [2026-Apr-18 19:21:40.270837]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-2Y
+DATA     [2026-Apr-18 19:21:40.270848]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-5Y
+DATA     [2026-Apr-18 19:21:40.270859]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-10Y
+DATA     [2026-Apr-18 19:21:40.270872]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-20Y
+DATA     [2026-Apr-18 19:21:40.270883]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CMS-30Y
+DATA     [2026-Apr-18 19:21:40.270894]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-1Y
+DATA     [2026-Apr-18 19:21:40.270905]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-2Y
+DATA     [2026-Apr-18 19:21:40.270916]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-5Y
+DATA     [2026-Apr-18 19:21:40.270927]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-10Y
+DATA     [2026-Apr-18 19:21:40.270938]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-20Y
+DATA     [2026-Apr-18 19:21:40.270949]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-CMS-30Y
+DATA     [2026-Apr-18 19:21:40.270960]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-CMS-1Y
+DATA     [2026-Apr-18 19:21:40.270971]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-CMS-30Y
+DATA     [2026-Apr-18 19:21:40.270982]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-CMS-1Y
+DATA     [2026-Apr-18 19:21:40.270993]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-CMS-30Y
+DATA     [2026-Apr-18 19:21:40.271004]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271016]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-1M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271028]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271041]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-12M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271053]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-1M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271066]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271077]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-1M-SWAP-ANNUAL-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271089]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-3M-SWAP-ANNUAL-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271101]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271113]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271124]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271137]  (...ored/configuration/conventions.cpp:2763) : Reading Convention AUD-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271152]  (...ored/configuration/conventions.cpp:2763) : Reading Convention AUD-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271163]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-3M-SWAP-CONVENTIONS-1Y
+DATA     [2026-Apr-18 19:21:40.271175]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271188]  (...ored/configuration/conventions.cpp:2763) : Reading Convention DKK-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271199]  (...ored/configuration/conventions.cpp:2763) : Reading Convention DKK-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271211]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NOK-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271222]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NOK-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271235]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-LIBOR-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271247]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-LIBOR-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271259]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-TIBOR-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271271]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271282]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271294]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SGD-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271306]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-6M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271317]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271330]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CZK-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271342]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CZK-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271353]  (...ored/configuration/conventions.cpp:2763) : Reading Convention HUF-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271365]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PLN-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271376]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PLN-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271388]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NZD-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271400]  (...ored/configuration/conventions.cpp:2763) : Reading Convention NZD-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271411]  (...ored/configuration/conventions.cpp:2763) : Reading Convention MXN-28D-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271423]  (...ored/configuration/conventions.cpp:2763) : Reading Convention HKD-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271436]  (...ored/configuration/conventions.cpp:2763) : Reading Convention INR-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271447]  (...ored/configuration/conventions.cpp:2763) : Reading Convention INR-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271459]  (...ored/configuration/conventions.cpp:2763) : Reading Convention KRW-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271471]  (...ored/configuration/conventions.cpp:2763) : Reading Convention MYR-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271483]  (...ored/configuration/conventions.cpp:2763) : Reading Convention RUB-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271494]  (...ored/configuration/conventions.cpp:2763) : Reading Convention THB-6M-SWAP
+DATA     [2026-Apr-18 19:21:40.271505]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PHP-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271517]  (...ored/configuration/conventions.cpp:2763) : Reading Convention TWD-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271529]  (...ored/configuration/conventions.cpp:2763) : Reading Convention ZAR-3M-SWAP
+DATA     [2026-Apr-18 19:21:40.271540]  (...ored/configuration/conventions.cpp:2763) : Reading Convention BRL-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271553]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CLP-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271565]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CNY-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271576]  (...ored/configuration/conventions.cpp:2763) : Reading Convention IDR-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271588]  (...ored/configuration/conventions.cpp:2763) : Reading Convention INR-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271600]  (...ored/configuration/conventions.cpp:2763) : Reading Convention KRW-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271612]  (...ored/configuration/conventions.cpp:2763) : Reading Convention MYR-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271624]  (...ored/configuration/conventions.cpp:2763) : Reading Convention PHP-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271636]  (...ored/configuration/conventions.cpp:2763) : Reading Convention TWD-GENERIC-3M-SWAP-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271648]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271660]  (...ored/configuration/conventions.cpp:2763) : Reading Convention DKK-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271672]  (...ored/configuration/conventions.cpp:2763) : Reading Convention SEK-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271685]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271698]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-OIS-SARON-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271710]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271723]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-AVERAGE-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271736]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271748]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271760]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CAD-OIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271773]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EURIBOR-3M-6M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271786]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-EURIBOR-6M-12M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271799]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-LIBOR-3M-6M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271811]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-LIBOR-1M-3M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271826]  (...ored/configuration/conventions.cpp:2763) : Reading Convention GBP-LIBOR-3M-6M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271839]  (...ored/configuration/conventions.cpp:2763) : Reading Convention CHF-LIBOR-3M-6M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271851]  (...ored/configuration/conventions.cpp:2763) : Reading Convention JPY-LIBOR-3M-6M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271862]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-OIS-1M-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.271874]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-LIBOR-SIFMA-3M-BASIS-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271888]  (...ored/configuration/conventions.cpp:2753) : Building Convention GBP-USD-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271918]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-GBP-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271932]  (...ored/configuration/conventions.cpp:2753) : Building Convention EUR-USD-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271947]  (...ored/configuration/conventions.cpp:2753) : Building Convention FX-ECB-EUR-USD
+DEBUG    [2026-Apr-18 19:21:40.271961]  (...ored/configuration/conventions.cpp:2753) : Building Convention EUR-JPY-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271974]  (...ored/configuration/conventions.cpp:2753) : Building Convention CHF-USD-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.271987]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-CHF-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272000]  (...ored/configuration/conventions.cpp:2753) : Building Convention EUR-GBP-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272014]  (...ored/configuration/conventions.cpp:2753) : Building Convention EUR-CHF-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272027]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-NOK-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272041]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-SEK-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272054]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-MXN-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272066]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-JPY-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272079]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-CAD-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272092]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-TWD-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272104]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-KRW-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272116]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-TRY-FX
+DEBUG    [2026-Apr-18 19:21:40.272128]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-INR-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272143]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-BRL-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272156]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-CLP-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272168]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-IDR-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272180]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-CNY-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272192]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-MYR-FX-CONVENTIONS
+DEBUG    [2026-Apr-18 19:21:40.272204]  (...ored/configuration/conventions.cpp:2753) : Building Convention USD-PHP-FX-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272216]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-USD-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272229]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-GBP-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272241]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-GBP-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272254]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CHF-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272267]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CHF-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272278]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-NOK-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272290]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-SEK-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272302]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-MXN-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272315]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-MXN-3M-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272327]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-JPY-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272339]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CAD-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272351]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-BRL-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272363]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CLP-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272375]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-CNY-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272388]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-IDR-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272400]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-INR-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272412]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-KRW-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272423]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-MYR-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272435]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-PHP-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272447]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-TWD-GENERIC-XCCY-BASIS-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272460]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USD-TRY-XCCY-FIX-FLOAT-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272472]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUHICP_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272485]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUHICPXT_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272497]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FRHICP_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272510]  (...ored/configuration/conventions.cpp:2763) : Reading Convention UKRPI_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272522]  (...ored/configuration/conventions.cpp:2763) : Reading Convention USCPI_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272534]  (...ored/configuration/conventions.cpp:2763) : Reading Convention ZACPI_INFLATIONSWAP
+DATA     [2026-Apr-18 19:21:40.272547]  (...ored/configuration/conventions.cpp:2763) : Reading Convention EUR-CMS-10Y-2Y-CONVENTION
+DATA     [2026-Apr-18 19:21:40.272559]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-USD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272570]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-GBP-USD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272581]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-AUD-USD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272593]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-NZD-USD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272604]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-USD-CAD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272616]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-USD-CHF-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272629]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-USD-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272640]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-GBP-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272651]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-AUD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272662]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-CAD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272674]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-CHF-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272685]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-EUR-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272696]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-GBP-AUD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272707]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-GBP-CAD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272718]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-GBP-CHF-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272731]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-GBP-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272742]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-AUD-NZD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272753]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-AUD-CAD-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272764]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-AUD-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272776]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-NZD-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272787]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-CAD-JPY-OPTION-CONVENTIONS
+DATA     [2026-Apr-18 19:21:40.272798]  (...ored/configuration/conventions.cpp:2763) : Reading Convention FX-CHF-JPY-OPTION-CONVENTIONS
+WARNING  [2026-Apr-18 19:21:40.272813]        (OREAnalytics/orea/app/oreapp.cpp:822) : Using default Ibor fallback config
+WARNING  [2026-Apr-18 19:21:40.272825]        (OREAnalytics/orea/app/oreapp.cpp:830) : Using default Basel Traffic Light config
+NOTICE   [2026-Apr-18 19:21:40.272838]        (OREAnalytics/orea/app/oreapp.cpp:835) : Load curve configurations from file: 
+NOTICE   [2026-Apr-18 19:21:40.273526]        (OREAnalytics/orea/app/oreapp.cpp:844) : Load pricing engine data from file: "Input/Simm/../../../Input/pricingengine.xml"
+DEBUG    [2026-Apr-18 19:21:40.273574]    (OREData/ored/portfolio/enginedata.cpp:41) : Processing the GlobalParameters node
+DEBUG    [2026-Apr-18 19:21:40.273595]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=Swap model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.273609]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=Swap engine=DiscountingSwapEngine
+DEBUG    [2026-Apr-18 19:21:40.273621]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CrossCurrencySwap model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.273632]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CrossCurrencySwap engine=DiscountingCrossCurrencySwapEngine
+DEBUG    [2026-Apr-18 19:21:40.273644]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=FxForward model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.273655]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=FxForward engine=DiscountingFxForwardEngine
+DEBUG    [2026-Apr-18 19:21:40.273667]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=FxOption model=GarmanKohlhagen
+DEBUG    [2026-Apr-18 19:21:40.273678]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=FxOption engine=AnalyticEuropeanEngine
+DEBUG    [2026-Apr-18 19:21:40.273690]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=FxOptionAmerican model=GarmanKohlhagen
+DEBUG    [2026-Apr-18 19:21:40.273701]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=FxOptionAmerican engine=FdBlackScholesVanillaEngine
+DEBUG    [2026-Apr-18 19:21:40.273713]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FxOptionAmerican paramName=Scheme paramValue=Douglas
+DEBUG    [2026-Apr-18 19:21:40.273724]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FxOptionAmerican paramName=TimeGridPerYear paramValue=100
+DEBUG    [2026-Apr-18 19:21:40.273735]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FxOptionAmerican paramName=XGrid paramValue=100
+DEBUG    [2026-Apr-18 19:21:40.273746]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FxOptionAmerican paramName=DampingSteps paramValue=0
+DEBUG    [2026-Apr-18 19:21:40.273757]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FxOptionAmerican paramName=TimeGridMinimumSize paramValue=1
+DEBUG    [2026-Apr-18 19:21:40.273769]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=EuropeanSwaption model=BlackBachelier
+DEBUG    [2026-Apr-18 19:21:40.273780]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=EuropeanSwaption engine=BlackBachelierSwaptionEngine
+DEBUG    [2026-Apr-18 19:21:40.273791]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=BermudanSwaption model=LGM
+DEBUG    [2026-Apr-18 19:21:40.273802]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Calibration paramValue=Bootstrap
+DEBUG    [2026-Apr-18 19:21:40.273813]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=CalibrationStrategy paramValue=CoterminalATM
+DEBUG    [2026-Apr-18 19:21:40.273824]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Reversion paramValue=0.03
+DEBUG    [2026-Apr-18 19:21:40.273835]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=ReversionType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.273845]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Volatility paramValue=0.01
+DEBUG    [2026-Apr-18 19:21:40.273856]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=VolatilityType paramValue=Hagan
+DEBUG    [2026-Apr-18 19:21:40.273867]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=ShiftHorizon paramValue=0.5
+DEBUG    [2026-Apr-18 19:21:40.273878]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BermudanSwaption paramName=Tolerance paramValue=0.0001
+DEBUG    [2026-Apr-18 19:21:40.273889]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=BermudanSwaption engine=Grid
+DEBUG    [2026-Apr-18 19:21:40.273900]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=sy paramValue=3.0
+DEBUG    [2026-Apr-18 19:21:40.273911]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=ny paramValue=10
+DEBUG    [2026-Apr-18 19:21:40.273922]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=sx paramValue=3.0
+DEBUG    [2026-Apr-18 19:21:40.273932]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BermudanSwaption paramName=nx paramValue=10
+DEBUG    [2026-Apr-18 19:21:40.273944]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=AmericanSwaption model=LGM
+DEBUG    [2026-Apr-18 19:21:40.273955]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=Calibration paramValue=Bootstrap
+DEBUG    [2026-Apr-18 19:21:40.273966]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=CalibrationStrategy paramValue=CoterminalATM
+DEBUG    [2026-Apr-18 19:21:40.273977]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=Reversion paramValue=0.03
+DEBUG    [2026-Apr-18 19:21:40.273988]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=ReversionType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.273999]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=Volatility paramValue=0.01
+DEBUG    [2026-Apr-18 19:21:40.274009]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=VolatilityType paramValue=Hagan
+DEBUG    [2026-Apr-18 19:21:40.274020]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=ShiftHorizon paramValue=0.5
+DEBUG    [2026-Apr-18 19:21:40.274031]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=Tolerance paramValue=0.0001
+DEBUG    [2026-Apr-18 19:21:40.274042]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=ReferenceCalibrationGrid paramValue=400,3M
+DEBUG    [2026-Apr-18 19:21:40.274052]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=AmericanSwaption paramName=ExerciseTimeStepsPerYear paramValue=24
+DEBUG    [2026-Apr-18 19:21:40.274064]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=AmericanSwaption engine=FD
+DEBUG    [2026-Apr-18 19:21:40.274075]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=AmericanSwaption paramName=Scheme paramValue=Douglas
+DEBUG    [2026-Apr-18 19:21:40.274085]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=AmericanSwaption paramName=StateGridPoints paramValue=64
+DEBUG    [2026-Apr-18 19:21:40.274096]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=AmericanSwaption paramName=TimeStepsPerYear paramValue=24
+DEBUG    [2026-Apr-18 19:21:40.274107]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=AmericanSwaption paramName=MesherEpsilon paramValue=1E-4
+DEBUG    [2026-Apr-18 19:21:40.274119]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CapFloor model=IborCapModel
+DEBUG    [2026-Apr-18 19:21:40.274130]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CapFloor engine=IborCapEngine
+DEBUG    [2026-Apr-18 19:21:40.274144]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=YYCapFloor model=YYCapModel
+DEBUG    [2026-Apr-18 19:21:40.274156]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=YYCapFloor engine=YYCapEngine
+DEBUG    [2026-Apr-18 19:21:40.274167]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CapFlooredYYLeg model=CapFlooredYYModel
+DEBUG    [2026-Apr-18 19:21:40.274178]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CapFlooredYYLeg engine=CapFlooredYYCouponPricer
+DEBUG    [2026-Apr-18 19:21:40.274189]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CpiCapFloor model=CpiCapModel
+DEBUG    [2026-Apr-18 19:21:40.274201]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CpiCapFloor engine=CpiBlackCapFloorEngine
+DEBUG    [2026-Apr-18 19:21:40.274212]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CappedFlooredCpiLegCoupons model=Black
+DEBUG    [2026-Apr-18 19:21:40.274223]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CappedFlooredCpiLegCoupons engine=BlackAnalytic
+DEBUG    [2026-Apr-18 19:21:40.274234]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CappedFlooredCpiLegCashFlows model=Black
+DEBUG    [2026-Apr-18 19:21:40.274245]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CappedFlooredCpiLegCashFlows engine=BlackAnalytic
+DEBUG    [2026-Apr-18 19:21:40.274257]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CapFlooredIborLeg model=BlackOrBachelier
+DEBUG    [2026-Apr-18 19:21:40.274268]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CapFlooredIborLeg engine=BlackIborCouponPricer
+DEBUG    [2026-Apr-18 19:21:40.274280]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CapFlooredIborLeg paramName=TimingAdjustment paramValue=Black76
+DEBUG    [2026-Apr-18 19:21:40.274291]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CapFlooredIborLeg paramName=Correlation paramValue=1.0
+DEBUG    [2026-Apr-18 19:21:40.274302]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=FormulaBasedCoupon model=BrigoMercurio
+DEBUG    [2026-Apr-18 19:21:40.274313]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FormulaBasedCoupon paramName=FXSource paramValue=ECB
+DEBUG    [2026-Apr-18 19:21:40.274324]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=FormulaBasedCoupon engine=MC
+DEBUG    [2026-Apr-18 19:21:40.274334]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FormulaBasedCoupon paramName=Samples paramValue=1000
+DEBUG    [2026-Apr-18 19:21:40.274345]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FormulaBasedCoupon paramName=Seed paramValue=42
+DEBUG    [2026-Apr-18 19:21:40.274356]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FormulaBasedCoupon paramName=Sobol paramValue=Y
+DEBUG    [2026-Apr-18 19:21:40.274367]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FormulaBasedCoupon paramName=SalvagingAlgorithm paramValue=Spectral
+DEBUG    [2026-Apr-18 19:21:40.274378]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=EquityForward model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274389]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=EquityForward engine=DiscountingEquityForwardEngine
+DEBUG    [2026-Apr-18 19:21:40.274400]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=EquityOption model=BlackScholesMerton
+DEBUG    [2026-Apr-18 19:21:40.274411]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=EquityOption engine=AnalyticEuropeanEngine
+DEBUG    [2026-Apr-18 19:21:40.274423]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=EquityOptionAmerican model=BlackScholesMerton
+DEBUG    [2026-Apr-18 19:21:40.274434]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=EquityOptionAmerican engine=FdBlackScholesVanillaEngine
+DEBUG    [2026-Apr-18 19:21:40.274444]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=EquityOptionAmerican paramName=Scheme paramValue=Douglas
+DEBUG    [2026-Apr-18 19:21:40.274455]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=EquityOptionAmerican paramName=TimeGridPerYear paramValue=100
+DEBUG    [2026-Apr-18 19:21:40.274466]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=EquityOptionAmerican paramName=XGrid paramValue=100
+DEBUG    [2026-Apr-18 19:21:40.274476]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=EquityOptionAmerican paramName=DampingSteps paramValue=0
+DEBUG    [2026-Apr-18 19:21:40.274488]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=Bond model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274499]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=Bond engine=DiscountingRiskyBondEngine
+DEBUG    [2026-Apr-18 19:21:40.274510]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=Bond paramName=TimestepPeriod paramValue=6M
+DEBUG    [2026-Apr-18 19:21:40.274521]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=ForwardBond model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274532]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=ForwardBond engine=DiscountingForwardBondEngine
+DEBUG    [2026-Apr-18 19:21:40.274543]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=ForwardBond paramName=TimestepPeriod paramValue=6M
+DEBUG    [2026-Apr-18 19:21:40.274554]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CreditDefaultSwap model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274566]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CreditDefaultSwap engine=MidPointCdsEngine
+DEBUG    [2026-Apr-18 19:21:40.274577]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CreditDefaultSwapOption model=Black
+DEBUG    [2026-Apr-18 19:21:40.274588]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CreditDefaultSwapOption engine=BlackCdsOptionEngine
+DEBUG    [2026-Apr-18 19:21:40.274599]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=IndexCreditDefaultSwap model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274610]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=IndexCreditDefaultSwap engine=MidPointIndexCdsEngine
+DEBUG    [2026-Apr-18 19:21:40.274621]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=IndexCreditDefaultSwap paramName=Curve paramValue=Underlying
+DEBUG    [2026-Apr-18 19:21:40.274632]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=IndexCreditDefaultSwapOption model=Black
+DEBUG    [2026-Apr-18 19:21:40.274643]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=IndexCreditDefaultSwapOption engine=BlackIndexCdsOptionEngine
+DEBUG    [2026-Apr-18 19:21:40.274654]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=IndexCreditDefaultSwapOption paramName=Curve paramValue=Underlying
+DEBUG    [2026-Apr-18 19:21:40.274665]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=SyntheticCDO model=GaussCopula
+DEBUG    [2026-Apr-18 19:21:40.274675]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=SyntheticCDO paramName=correlation paramValue=0.0
+DEBUG    [2026-Apr-18 19:21:40.274686]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=SyntheticCDO paramName=min paramValue=-5.0
+DEBUG    [2026-Apr-18 19:21:40.274697]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=SyntheticCDO paramName=max paramValue=5.0
+DEBUG    [2026-Apr-18 19:21:40.274708]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=SyntheticCDO paramName=steps paramValue=64
+DEBUG    [2026-Apr-18 19:21:40.274719]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=SyntheticCDO engine=Bucketing
+DEBUG    [2026-Apr-18 19:21:40.274729]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=SyntheticCDO paramName=buckets paramValue=124
+DEBUG    [2026-Apr-18 19:21:40.274740]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=SyntheticCDO paramName=homogeneousPoolWhenJustified paramValue=Y
+DEBUG    [2026-Apr-18 19:21:40.274751]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CMS model=LinearTSR
+DEBUG    [2026-Apr-18 19:21:40.274762]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CMS engine=LinearTSRPricer
+DEBUG    [2026-Apr-18 19:21:40.274773]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=MeanReversion paramValue=0.0
+DEBUG    [2026-Apr-18 19:21:40.274784]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=Policy paramValue=RateBound
+DEBUG    [2026-Apr-18 19:21:40.274795]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=LowerRateBoundLogNormal paramValue=0.0001
+DEBUG    [2026-Apr-18 19:21:40.274805]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=UpperRateBoundLogNormal paramValue=2.0000
+DEBUG    [2026-Apr-18 19:21:40.274816]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=LowerRateBoundNormal paramValue=-2.0000
+DEBUG    [2026-Apr-18 19:21:40.274827]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=UpperRateBoundNormal paramValue=2.0000
+DEBUG    [2026-Apr-18 19:21:40.274838]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=VegaRatio paramValue=0.01
+DEBUG    [2026-Apr-18 19:21:40.274848]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=PriceThreshold paramValue=0.0000001
+DEBUG    [2026-Apr-18 19:21:40.274860]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMS paramName=BsStdDev paramValue=3.0
+DEBUG    [2026-Apr-18 19:21:40.274872]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CMSSpread model=BrigoMercurio
+DEBUG    [2026-Apr-18 19:21:40.274883]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CMSSpread engine=Analytic
+DEBUG    [2026-Apr-18 19:21:40.274894]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CMSSpread paramName=IntegrationPoints paramValue=16
+DEBUG    [2026-Apr-18 19:21:40.274905]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CommodityForward model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274916]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CommodityForward engine=DiscountingCommodityForwardEngine
+DEBUG    [2026-Apr-18 19:21:40.274928]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CommoditySwap model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.274939]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CommoditySwap engine=CommoditySwapEngine
+DEBUG    [2026-Apr-18 19:21:40.274950]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CommodityOption model=BlackScholes
+DEBUG    [2026-Apr-18 19:21:40.274961]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CommodityOption engine=AnalyticEuropeanEngine
+DEBUG    [2026-Apr-18 19:21:40.274972]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CommodityAveragePriceOption model=Black
+DEBUG    [2026-Apr-18 19:21:40.274983]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CommodityAveragePriceOption engine=MonteCarlo
+DEBUG    [2026-Apr-18 19:21:40.274994]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CommodityAveragePriceOption paramName=beta paramValue=0
+DEBUG    [2026-Apr-18 19:21:40.275005]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CommodityAveragePriceOption paramName=samples paramValue=1000
+DEBUG    [2026-Apr-18 19:21:40.275015]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CommodityAveragePriceOption paramName=seed paramValue=42
+DEBUG    [2026-Apr-18 19:21:40.275027]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CommoditySwaption model=Black
+DEBUG    [2026-Apr-18 19:21:40.275038]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CommoditySwaption engine=AnalyticalApproximation
+DEBUG    [2026-Apr-18 19:21:40.275049]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=CommoditySwaption paramName=beta paramValue=0
+DEBUG    [2026-Apr-18 19:21:40.275060]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=CPICapFloor model=CPICapFloorModel
+DEBUG    [2026-Apr-18 19:21:40.275071]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=CPICapFloor engine=CPIBlackCapFloorEngine
+DEBUG    [2026-Apr-18 19:21:40.275082]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=BondOption model=Black
+DEBUG    [2026-Apr-18 19:21:40.275093]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=BondOption engine=BlackBondOptionEngine
+DEBUG    [2026-Apr-18 19:21:40.275104]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BondOption paramName=TimestepPeriod paramValue=6M
+DEBUG    [2026-Apr-18 19:21:40.275115]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=BondTRS model=DiscountedCashflows
+DEBUG    [2026-Apr-18 19:21:40.275126]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=BondTRS engine=DiscountingBondTRSEngine
+DEBUG    [2026-Apr-18 19:21:40.275137]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BondTRS paramName=TimestepPeriod paramValue=6M
+DEBUG    [2026-Apr-18 19:21:40.275152]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=FlexiSwap model=LGM
+DEBUG    [2026-Apr-18 19:21:40.275163]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=Calibration paramValue=Bootstrap
+DEBUG    [2026-Apr-18 19:21:40.275174]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=CalibrationStrategy paramValue=CoterminalDealStrike
+DEBUG    [2026-Apr-18 19:21:40.275185]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=Reversion paramValue=0.0
+DEBUG    [2026-Apr-18 19:21:40.275196]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=ReversionType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.275207]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=Volatility paramValue=0.01
+DEBUG    [2026-Apr-18 19:21:40.275218]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=VolatilityType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.275228]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=FlexiSwap paramName=Tolerance paramValue=0.001
+DEBUG    [2026-Apr-18 19:21:40.275240]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=FlexiSwap engine=Grid
+DEBUG    [2026-Apr-18 19:21:40.275250]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=method paramValue=Automatic
+DEBUG    [2026-Apr-18 19:21:40.275261]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=singleSwaptionThreshold paramValue=20.0
+DEBUG    [2026-Apr-18 19:21:40.275272]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=sy paramValue=5.0
+DEBUG    [2026-Apr-18 19:21:40.275283]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=ny paramValue=20
+DEBUG    [2026-Apr-18 19:21:40.275293]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=sx paramValue=5.0
+DEBUG    [2026-Apr-18 19:21:40.275304]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=FlexiSwap paramName=nx paramValue=20
+DEBUG    [2026-Apr-18 19:21:40.275316]    (OREData/ored/portfolio/enginedata.cpp:50) : EngineData product=BalanceGuaranteedSwap model=LGM-FlexiSwap
+DEBUG    [2026-Apr-18 19:21:40.275326]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=MinCPRMultiplier paramValue=0.0
+DEBUG    [2026-Apr-18 19:21:40.275337]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=MaxCPRMultiplier paramValue=2.0
+DEBUG    [2026-Apr-18 19:21:40.275348]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=Calibration paramValue=Bootstrap
+DEBUG    [2026-Apr-18 19:21:40.275359]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=CalibrationStrategy paramValue=CoterminalDealStrike
+DEBUG    [2026-Apr-18 19:21:40.275369]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=Reversion paramValue=0.0
+DEBUG    [2026-Apr-18 19:21:40.275380]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=ReversionType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.275391]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=Volatility paramValue=0.01
+DEBUG    [2026-Apr-18 19:21:40.275402]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=VolatilityType paramValue=HullWhite
+DEBUG    [2026-Apr-18 19:21:40.275412]    (OREData/ored/portfolio/enginedata.cpp:59) : EngineData product=BalanceGuaranteedSwap paramName=Tolerance paramValue=0.001
+DEBUG    [2026-Apr-18 19:21:40.275424]    (OREData/ored/portfolio/enginedata.cpp:64) : EngineData product=BalanceGuaranteedSwap engine=Grid
+DEBUG    [2026-Apr-18 19:21:40.275434]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=method paramValue=Automatic
+DEBUG    [2026-Apr-18 19:21:40.275445]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=singleSwaptionThreshold paramValue=20.0
+DEBUG    [2026-Apr-18 19:21:40.275458]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=sy paramValue=5.0
+DEBUG    [2026-Apr-18 19:21:40.275469]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=ny paramValue=20
+DEBUG    [2026-Apr-18 19:21:40.275480]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=sx paramValue=5.0
+DEBUG    [2026-Apr-18 19:21:40.275490]    (OREData/ored/portfolio/enginedata.cpp:73) : EngineData product=BalanceGuaranteedSwap paramName=nx paramValue=20
+NOTICE   [2026-Apr-18 19:21:40.275504]        (OREAnalytics/orea/app/oreapp.cpp:853) : Loading today's market parameters from file"Input/Simm/simm_todaysmarket.xml"
+DEBUG    [2026-Apr-18 19:21:40.275575]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default EURCHF FX/EUR/CHF
+DEBUG    [2026-Apr-18 19:21:40.275589]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default EURGBP FX/EUR/GBP
+DEBUG    [2026-Apr-18 19:21:40.275601]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default EURJPY FX/EUR/JPY
+DEBUG    [2026-Apr-18 19:21:40.275612]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default EURUSD FX/EUR/USD
+DEBUG    [2026-Apr-18 19:21:40.275622]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default GBPUSD FX/GBP/USD
+DEBUG    [2026-Apr-18 19:21:40.275633]  (...rketdata/todaysmarketparameters.cpp:340) : TodaysMarketParameters, add market objects of type FXSpot: default USDCHF FX/USD/CHF
+WARNING  [2026-Apr-18 19:21:40.275652]        (OREAnalytics/orea/app/oreapp.cpp:866) : Portfolio data not provided
+WARNING  [2026-Apr-18 19:21:40.275664]        (OREAnalytics/orea/app/oreapp.cpp:874) : CounterpartyManager not found
+NOTICE   [2026-Apr-18 19:21:40.275678]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::fxcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.275690]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::lgmcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.275700]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::pricing = default
+NOTICE   [2026-Apr-18 19:21:40.275711]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::simulation = default
+NOTICE   [2026-Apr-18 19:21:40.275725]       (OREAnalytics/orea/app/oreapp.cpp:1573) : SIMM
+NOTICE   [2026-Apr-18 19:21:40.297318]   (OREAnalytics/orea/simm/crifloader.cpp:243) : Starting StringStreamCrifLoader::loadFromStream()
+NOTICE   [2026-Apr-18 19:21:40.298260]   (OREAnalytics/orea/simm/crifloader.cpp:297) : Out of 28 lines, there were 27 valid lines, 0 invalid lines and 0 empty lines.
+NOTICE   [2026-Apr-18 19:21:40.298409]       (OREAnalytics/orea/app/oreapp.cpp:1676) : IM SCHEDULE
+WARNING  [2026-Apr-18 19:21:40.298466]       (OREAnalytics/orea/app/oreapp.cpp:2595) : ScenarioSimMarket parameters for sensitivity not loaded
+WARNING  [2026-Apr-18 19:21:40.298488]       (OREAnalytics/orea/app/oreapp.cpp:2603) : Sensitivity scenario data not loaded
+NOTICE   [2026-Apr-18 19:21:40.298524]       (OREAnalytics/orea/app/oreapp.cpp:3336) : analytics: 1
+NOTICE   [2026-Apr-18 19:21:40.298544]       (OREAnalytics/orea/app/oreapp.cpp:3338) : analytic: SIMM
+NOTICE   [2026-Apr-18 19:21:40.298567]       (OREAnalytics/orea/app/oreapp.cpp:3342) : buildInputParameters done
+NOTICE   [2026-Apr-18 19:21:40.298602]  (...lytics/orea/app/inputparameters.cpp:983) : OutputFileNameMap called
+NOTICE   [2026-Apr-18 19:21:40.298648]  (...ytics/orea/app/inputparameters.cpp:1080) : OutputFileNameMap complete
+NOTICE   [2026-Apr-18 19:21:40.298679]        (OREAnalytics/orea/app/oreapp.cpp:409) : initFromParameters done, requested analytics:SIMM
+NOTICE   [2026-Apr-18 19:21:40.298707]        (OREAnalytics/orea/app/oreapp.cpp:464) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2026-Apr-18 19:21:40.298731]        (OREAnalytics/orea/app/oreapp.cpp:237) : ORE analytics starting
+WARNING  [2026-Apr-18 19:21:40.298750]        (OREAnalytics/orea/app/oreapp.cpp:238) : Starting OREApp::analytics(): 91578368|51503104 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+DEBUG    [2026-Apr-18 19:21:40.298831]       (OREData/ored/marketdata/market.cpp:99) : Building default PseudoCurrencyMarketParameters
+DEBUG    [2026-Apr-18 19:21:40.298854]      (OREData/ored/marketdata/market.cpp:101) : PseudoCurrencyMarketParameters { TreatAsFX:True, BaseCurrency:}
+DEBUG    [2026-Apr-18 19:21:40.298875]       (OREData/ored/marketdata/market.cpp:99) : Building default PseudoCurrencyMarketParameters
+DEBUG    [2026-Apr-18 19:21:40.298893]      (OREData/ored/marketdata/market.cpp:101) : PseudoCurrencyMarketParameters { TreatAsFX:True, BaseCurrency:}
+ALERT    [2026-Apr-18 19:21:40.298933]        (OREAnalytics/orea/app/oreapp.cpp:211) : fixing data file not found
+WARNING  [2026-Apr-18 19:21:40.298953]        (OREAnalytics/orea/app/oreapp.cpp:218) : dividend data file not found
+WARNING  [2026-Apr-18 19:21:40.298972]        (OREAnalytics/orea/app/oreapp.cpp:226) : fixing cutoff date not set
+NOTICE   [2026-Apr-18 19:21:40.299001]   (OREData/ored/marketdata/csvloader.cpp:101) : CSVLoader loading from Input/Simm/simm_market.txt
+DATA     [2026-Apr-18 19:21:40.299263]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/EUR/CHF
+DATA     [2026-Apr-18 19:21:40.299316]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/EUR/GBP
+DATA     [2026-Apr-18 19:21:40.299346]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/EUR/JPY
+DATA     [2026-Apr-18 19:21:40.299373]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/EUR/SEK
+DATA     [2026-Apr-18 19:21:40.299401]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/EUR/USD
+DATA     [2026-Apr-18 19:21:40.299428]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/USD/GBP
+DATA     [2026-Apr-18 19:21:40.299455]   (OREData/ored/marketdata/csvloader.cpp:154) : Added MarketDatum FX/RATE/USD/CHF
+NOTICE   [2026-Apr-18 19:21:40.299477]   (OREData/ored/marketdata/csvloader.cpp:194) : CSVLoader completed processing Input/Simm/simm_market.txt
+NOTICE   [2026-Apr-18 19:21:40.299498]    (OREData/ored/marketdata/csvloader.cpp:80) : CSVLoader loaded 7 market data points for December 28th, 2020
+NOTICE   [2026-Apr-18 19:21:40.299519]    (OREData/ored/marketdata/csvloader.cpp:85) : CSVLoader loaded 0 fixings
+NOTICE   [2026-Apr-18 19:21:40.299537]    (OREData/ored/marketdata/csvloader.cpp:90) : CSVLoader loaded 0 dividends
+NOTICE   [2026-Apr-18 19:21:40.299555]    (OREData/ored/marketdata/csvloader.cpp:92) : CSVLoader complete.
+NOTICE   [2026-Apr-18 19:21:40.299607]  (...lytics/orea/app/analyticsmanager.cpp:51) : register analytic with label 'SIMM' and sub-analytics SIMM
+NOTICE   [2026-Apr-18 19:21:40.299629]        (OREAnalytics/orea/app/oreapp.cpp:262) : Available analytics: SIMM
+NOTICE   [2026-Apr-18 19:21:40.299656]        (OREAnalytics/orea/app/oreapp.cpp:265) : Requested analytics: SIMM
+NOTICE   [2026-Apr-18 19:21:40.299725]  (...ytics/orea/app/analyticsmanager.cpp:123) : AnalyticsManager::runAnalytics: populate loader for dates: December 28th, 2020
+NOTICE   [2026-Apr-18 19:21:40.299764]  (...ytics/orea/app/marketdataloader.cpp:185) : Asking portfolio for its required fixings
+NOTICE   [2026-Apr-18 19:21:40.299783]  (...ytics/orea/app/marketdataloader.cpp:197) : Add fixings possibly required for bootstrapping TodaysMarket
+NOTICE   [2026-Apr-18 19:21:40.299816]  (OREData/ored/portfolio/fixingdates.cpp:928) : Start adding market fixing dates for configuration 'default'
+DEBUG    [2026-Apr-18 19:21:40.299838]  (OREData/ored/portfolio/fixingdates.cpp:938) : Start adding market fixing dates for interest rate indices.
+DEBUG    [2026-Apr-18 19:21:40.299863]  (...ata/ored/portfolio/fixingdates.cpp:1012) : Finished adding market fixing dates for interest rate indices.
+DATA     [2026-Apr-18 19:21:40.299898]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2019-12-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.299919]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-01-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.299938]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-02-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.299957]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-03-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.299975]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-04-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.299993]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-05-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300012]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-06-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300030]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-07-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300048]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-08-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300066]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-09-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300085]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-10-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300103]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-11-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300121]  (...ata/ored/portfolio/fixingdates.cpp:1026) : Adding date 2020-12-01 to fixings for inflation indices
+DATA     [2026-Apr-18 19:21:40.300150]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-01 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300174]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-02 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300192]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-03 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300210]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-04 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300229]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-05 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300247]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-06 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300265]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-07 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300283]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-08 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300301]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-09 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300321]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-10 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300339]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-11 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300357]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-12 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300375]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-13 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300393]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-14 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300411]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-15 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300429]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-16 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300448]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-17 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300466]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-18 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300484]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-19 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300502]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-20 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300520]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-21 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300538]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-22 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300558]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-23 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300576]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-24 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300593]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-25 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300610]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-26 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300627]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-27 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300645]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-28 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300662]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-29 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300680]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-30 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300697]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-10-31 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300714]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-01 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300732]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-02 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300749]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-03 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300766]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-04 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300784]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-05 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300801]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-06 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300819]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-07 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300836]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-08 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300852]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-09 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300869]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-10 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300886]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-11 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300902]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-12 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300919]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-13 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300935]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-14 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300953]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-15 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300970]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-16 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.300986]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-17 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301003]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-18 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301020]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-19 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301036]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-20 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301053]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-21 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301069]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-22 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301086]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-23 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301103]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-24 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301119]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-25 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301136]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-26 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301158]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-27 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301175]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-28 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301191]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-29 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301208]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-11-30 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301224]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-01 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301241]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-02 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301258]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-03 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301274]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-04 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301291]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-05 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301308]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-06 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301324]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-07 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301341]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-08 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301357]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-09 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301374]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-10 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301390]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-11 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301407]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-12 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301423]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-13 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301440]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-14 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301458]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-15 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301475]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-16 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301491]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-17 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301508]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-18 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301524]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-19 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301544]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-20 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301559]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-21 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301575]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-22 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301591]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-23 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301607]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-24 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301623]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-25 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301639]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-26 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301655]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-27 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301671]  (...ata/ored/portfolio/fixingdates.cpp:1057) : Adding date 2020-12-28 to fixings for commodities
+DATA     [2026-Apr-18 19:21:40.301688]  (...ata/ored/portfolio/fixingdates.cpp:1071) : Adding contract month and year (October,2020)
+DATA     [2026-Apr-18 19:21:40.301705]  (...ata/ored/portfolio/fixingdates.cpp:1071) : Adding contract month and year (November,2020)
+DATA     [2026-Apr-18 19:21:40.301720]  (...ata/ored/portfolio/fixingdates.cpp:1071) : Adding contract month and year (December,2020)
+DATA     [2026-Apr-18 19:21:40.301735]  (...ata/ored/portfolio/fixingdates.cpp:1071) : Adding contract month and year (January,2021)
+DATA     [2026-Apr-18 19:21:40.301749]  (...ata/ored/portfolio/fixingdates.cpp:1071) : Adding contract month and year (February,2021)
+NOTICE   [2026-Apr-18 19:21:40.301767]  (...ata/ored/portfolio/fixingdates.cpp:1125) : Finished adding market fixing dates for configuration 'default'
+NOTICE   [2026-Apr-18 19:21:40.301783]  (...ytics/orea/app/marketdataloader.cpp:201) : Add fixing possibly required for equity index delta risk decomposition
+NOTICE   [2026-Apr-18 19:21:40.301804]  (...ics/orea/app/marketdatacsvloader.cpp:70) : MarketDataCsvLoader::retrieveFixings called: all fixings ? Y
+NOTICE   [2026-Apr-18 19:21:40.301842]      (OREData/ored/marketdata/fixings.cpp:67) : Added 0 of 0 fixings in 0.000000 seconds
+NOTICE   [2026-Apr-18 19:21:40.301859]  (...ytics/orea/app/marketdataloader.cpp:279) : Adding the loaded fixings to the IndexManager
+NOTICE   [2026-Apr-18 19:21:40.301874]  (...ytics/orea/app/marketdataloader.cpp:280) : Fixings size = 0
+NOTICE   [2026-Apr-18 19:21:40.301889]  (...ytics/orea/app/marketdataloader.cpp:283) : Generating market datum set
+DEBUG    [2026-Apr-18 19:21:40.301919]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/CHF
+DEBUG    [2026-Apr-18 19:21:40.301935]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/GBP
+DEBUG    [2026-Apr-18 19:21:40.301949]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/JPY
+DEBUG    [2026-Apr-18 19:21:40.301964]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/USD
+DEBUG    [2026-Apr-18 19:21:40.301979]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/GBP/USD
+DEBUG    [2026-Apr-18 19:21:40.301993]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/USD/CHF
+DEBUG    [2026-Apr-18 19:21:40.302096]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/CHF
+DEBUG    [2026-Apr-18 19:21:40.302111]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/GBP
+DEBUG    [2026-Apr-18 19:21:40.302126]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/JPY
+DEBUG    [2026-Apr-18 19:21:40.302145]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/USD
+DEBUG    [2026-Apr-18 19:21:40.302160]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/GBP/USD
+DEBUG    [2026-Apr-18 19:21:40.302174]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/USD/CHF
+NOTICE   [2026-Apr-18 19:21:40.302206]  (...ytics/orea/app/marketdataloader.cpp:301) : CurveConfigs require 12 quotes
+DATA     [2026-Apr-18 19:21:40.302238]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/EUR/CHF
+DATA     [2026-Apr-18 19:21:40.302263]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/EUR/GBP
+DATA     [2026-Apr-18 19:21:40.302283]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/EUR/JPY
+DATA     [2026-Apr-18 19:21:40.302302]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/EUR/SEK
+DATA     [2026-Apr-18 19:21:40.302321]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/EUR/USD
+DATA     [2026-Apr-18 19:21:40.302341]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/USD/CHF
+DATA     [2026-Apr-18 19:21:40.302361]  (.../ored/marketdata/inmemoryloader.cpp:123) : Added MarketDatum FX/RATE/USD/GBP
+NOTICE   [2026-Apr-18 19:21:40.302377]  (...ytics/orea/app/marketdataloader.cpp:309) : Got market data
+NOTICE   [2026-Apr-18 19:21:40.302396]  (...nalytics/orea/app/reportwriter.cpp:1176) : Writing MarketData report
+NOTICE   [2026-Apr-18 19:21:40.302434]  (...nalytics/orea/app/reportwriter.cpp:1215) : MarketData report written
+NOTICE   [2026-Apr-18 19:21:40.302454]  (...nalytics/orea/app/reportwriter.cpp:1220) : Writing Fixings report
+NOTICE   [2026-Apr-18 19:21:40.302470]  (...nalytics/orea/app/reportwriter.cpp:1229) : Fixings report written
+NOTICE   [2026-Apr-18 19:21:40.302486]  (...nalytics/orea/app/reportwriter.cpp:1234) : Writing Dividends report
+NOTICE   [2026-Apr-18 19:21:40.302502]  (...nalytics/orea/app/reportwriter.cpp:1246) : Dividends report written
+NOTICE   [2026-Apr-18 19:21:40.302529]  (...ytics/orea/app/analyticsmanager.cpp:149) : run analytic with label 'SIMM'
+WARNING  [2026-Apr-18 19:21:40.302551]       (OREAnalytics/orea/app/analytic.cpp:97) : Starting SIMM Analytic::runAnalytic(): 91578368|53751808 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.302595]      (OREAnalytics/orea/app/analytic.cpp:241) : Analytic::buildMarket called
+NOTICE   [2026-Apr-18 19:21:40.302614]  (.../ored/marketdata/bondspreadimply.cpp:51) : identify securities that require a spread imply for configuration default
+DEBUG    [2026-Apr-18 19:21:40.302630]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/CHF
+DEBUG    [2026-Apr-18 19:21:40.302644]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/GBP
+DEBUG    [2026-Apr-18 19:21:40.302658]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/JPY
+DEBUG    [2026-Apr-18 19:21:40.302672]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/EUR/USD
+DEBUG    [2026-Apr-18 19:21:40.302685]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/GBP/USD
+DEBUG    [2026-Apr-18 19:21:40.302699]  (...rketdata/todaysmarketparameters.cpp:280) : Add spec FX/USD/CHF
+NOTICE   [2026-Apr-18 19:21:40.302719]  (...ored/marketdata/bondspreadimply.cpp:108) : got 0 securities
+NOTICE   [2026-Apr-18 19:21:40.302781]  (.../ored/marketdata/fxtriangulation.cpp:65) : FXTriangulation: initializing
+DATA     [2026-Apr-18 19:21:40.302796]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote EURCHF
+DATA     [2026-Apr-18 19:21:40.302810]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote EURGBP
+DATA     [2026-Apr-18 19:21:40.302826]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote EURJPY
+DATA     [2026-Apr-18 19:21:40.302840]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote EURSEK
+DATA     [2026-Apr-18 19:21:40.302854]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote EURUSD
+DATA     [2026-Apr-18 19:21:40.302867]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote USDCHF
+DATA     [2026-Apr-18 19:21:40.302881]  (.../ored/marketdata/fxtriangulation.cpp:74) : FXTriangulation: adding quote USDGBP
+NOTICE   [2026-Apr-18 19:21:40.302907]  (...ored/marketdata/fxtriangulation.cpp:112) : FXTriangulation: initialized with 7 quotes, 6 currencies.
+DEBUG    [2026-Apr-18 19:21:40.302934]  (.../ored/marketdata/dependencygraph.cpp:53) : Build dependency graph for TodaysMarket configuration default
+DATA     [2026-Apr-18 19:21:40.302963]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 0: FXSpot(EURCHF,FX/EUR/CHF)
+DATA     [2026-Apr-18 19:21:40.302978]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 1: FXSpot(EURGBP,FX/EUR/GBP)
+DATA     [2026-Apr-18 19:21:40.302992]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 2: FXSpot(EURJPY,FX/EUR/JPY)
+DATA     [2026-Apr-18 19:21:40.303007]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 3: FXSpot(EURUSD,FX/EUR/USD)
+DATA     [2026-Apr-18 19:21:40.303024]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 4: FXSpot(GBPUSD,FX/GBP/USD)
+DATA     [2026-Apr-18 19:21:40.303037]  (.../ored/marketdata/dependencygraph.cpp:72) : add vertex # 5: FXSpot(USDCHF,FX/USD/CHF)
+DEBUG    [2026-Apr-18 19:21:40.303102]  (...ored/marketdata/dependencygraph.cpp:169) : Dependency graph built with 6 vertices, 0 edges.
+DEBUG    [2026-Apr-18 19:21:40.303116]  (...ored/marketdata/dependencygraph.cpp:173) : Searching for cycles.
+DEBUG    [2026-Apr-18 19:21:40.303130]  (...ored/marketdata/dependencygraph.cpp:178) : Identified 0 cycles in dependency graph.
+DEBUG    [2026-Apr-18 19:21:40.303151]  (...ored/marketdata/dependencygraph.cpp:190) : Joining overlapping cycles (if any).
+DEBUG    [2026-Apr-18 19:21:40.303165]  (...ored/marketdata/dependencygraph.cpp:220) : Number of cycles after joining overlapping cycles: 0
+DEBUG    [2026-Apr-18 19:21:40.303181]  (...ored/marketdata/dependencygraph.cpp:227) : Build the reduced dependency graph where cycles are replaced by a single reduced node containing the set of nodes in the cylce.
+DATA     [2026-Apr-18 19:21:40.303203]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #0: [FXSpot(EURCHF,FX/EUR/CHF)]
+DATA     [2026-Apr-18 19:21:40.303217]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #1: [FXSpot(EURGBP,FX/EUR/GBP)]
+DATA     [2026-Apr-18 19:21:40.303230]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #2: [FXSpot(EURJPY,FX/EUR/JPY)]
+DATA     [2026-Apr-18 19:21:40.303244]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #3: [FXSpot(EURUSD,FX/EUR/USD)]
+DATA     [2026-Apr-18 19:21:40.303257]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #4: [FXSpot(GBPUSD,FX/GBP/USD)]
+DATA     [2026-Apr-18 19:21:40.303271]  (...ored/marketdata/dependencygraph.cpp:242) : add vertex in reduced graph #5: [FXSpot(USDCHF,FX/USD/CHF)]
+DEBUG    [2026-Apr-18 19:21:40.303284]  (...ored/marketdata/dependencygraph.cpp:269) : Reduced dependency graph built with 6 vertices, 0 edges.
+NOTICE   [2026-Apr-18 19:21:40.303308]  (...ta/ored/marketdata/todaysmarket.cpp:230) : Build objects in TodaysMarket lazily, i.e. when requested.
+DEBUG    [2026-Apr-18 19:21:40.303322]  (...ta/ored/marketdata/todaysmarket.cpp:235) : TodaysMarket build stats:
+DEBUG    [2026-Apr-18 19:21:40.303340]  (...ta/ored/marketdata/todaysmarket.cpp:240) : 3 add all fx quotes               :               0 ms         1              0 ms
+DEBUG    [2026-Apr-18 19:21:40.303355]  (...ta/ored/marketdata/todaysmarket.cpp:240) : 4 build dep graphs                :               0 ms         1              0 ms
+DEBUG    [2026-Apr-18 19:21:40.303370]  (...ta/ored/marketdata/todaysmarket.cpp:244) : Total build time              :               0 ms
+NOTICE   [2026-Apr-18 19:21:40.303394]      (OREAnalytics/orea/app/analytic.cpp:279) : Market Build time 0.000000 sec
+NOTICE   [2026-Apr-18 19:21:40.303411]  (.../orea/app/analytics/simmanalytic.cpp:43) : Get CRIF records from CRIF loader and fill amountUSD
+NOTICE   [2026-Apr-18 19:21:40.303428]  (...orea/app/analytics/simmanalytic.cpp:116) : Loading CRIF input for SIMM
+WARNING  [2026-Apr-18 19:21:40.303461]         (OREAnalytics/orea/simm/crif.cpp:228) : Calling Crif::aggregate(): 91578368|54341632 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:21:40.303562]         (OREAnalytics/orea/simm/crif.cpp:235) : Finished Crif::aggregate(): 91578368|54341632 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.303582]  (...nalytics/orea/app/reportwriter.cpp:1573) : Writing SIMM data report.
+NOTICE   [2026-Apr-18 19:21:40.303702]  (...nalytics/orea/app/reportwriter.cpp:1655) : SIMM data report written.
+NOTICE   [2026-Apr-18 19:21:40.303717]  (.../orea/app/analytics/simmanalytic.cpp:57) : SIMM data report generated
+MEMORY   [2026-Apr-18 19:21:40.303739]  (.../orea/app/analytics/simmanalytic.cpp:59) : : 91578368|54407168 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.303756]  (.../orea/app/analytics/simmanalytic.cpp:61) : Calculating SIMM
+NOTICE   [2026-Apr-18 19:21:40.304135]  (...lytics/orea/simm/simmcalculator.cpp:182) : SimmCalculator: Splitting up original CRIF records into their respective collect/post regulations
+WARNING  [2026-Apr-18 19:21:40.304171]  (...ytics/orea/simm/simmcalculator.cpp:1726) : Before splitting CRIF records in SIMM calculator: 91578368|54542336 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:21:40.304333]  (...ytics/orea/simm/simmcalculator.cpp:1859) : After splitting CRIF records in SIMM calculator: 91578368|54542336 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:21:40.304351]  (...ytics/orea/simm/simmcalculator.cpp:1864) : Before cleaning up duplicate regulations in SIMM calculator: 91578368|54542336 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:21:40.304370]  (...ytics/orea/simm/simmcalculator.cpp:1999) : After cleaning up duplicate regulations in SIMM calculator: 91578368|54542336 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.304397]  (...lytics/orea/simm/simmcalculator.cpp:283) : SimmCalculator: Calculating SIMM Call for portfolio [NettingSetId='CRIF_20201228'], regulations ESA,USPR
+NOTICE   [2026-Apr-18 19:21:40.304412]  (...lytics/orea/simm/simmcalculator.cpp:289) : SimmCalculator: Calculating SIMM for product class RatesFX
+DEBUG    [2026-Apr-18 19:21:40.304650]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.304848]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.304890]  (...ytics/orea/simm/simmcalculator.cpp:1012) : Not calculating concentration risk for qualifier USD of risk type Risk_FX since the qualifier equals the SIMM calculation currency USD
+DEBUG    [2026-Apr-18 19:21:40.304907]  (...ytics/orea/simm/simmcalculator.cpp:1044) : Skipping qualifier USD of risk type Risk_FX since the qualifier equals the SIMM calculation currency USD
+DEBUG    [2026-Apr-18 19:21:40.304928]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, FX, Delta] of 0
+DEBUG    [2026-Apr-18 19:21:40.304960]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.304973]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305007]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Curvature] of 73242.7
+DEBUG    [2026-Apr-18 19:21:40.305019]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Curvature] of 2126.78
+NOTICE   [2026-Apr-18 19:21:40.305041]  (...ytics/orea/simm/simmcalculator.cpp:1451) : SimmCalculator: Populating higher level results
+DEBUG    [2026-Apr-18 19:21:40.305061]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, All] of 1.01175e+06
+DEBUG    [2026-Apr-18 19:21:40.305075]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, FX, All] of 0
+DEBUG    [2026-Apr-18 19:21:40.305094]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, All] of 1.01175e+06
+DEBUG    [2026-Apr-18 19:21:40.305109]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, All] of 1.01175e+06
+DEBUG    [2026-Apr-18 19:21:40.305123]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305136]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305155]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Curvature] of 73242.7
+DEBUG    [2026-Apr-18 19:21:40.305173]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305186]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305199]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Curvature] of 73242.7
+DEBUG    [2026-Apr-18 19:21:40.305215]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, FX, Delta] of 0
+DEBUG    [2026-Apr-18 19:21:40.305229]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, All] of 1.01175e+06
+DEBUG    [2026-Apr-18 19:21:40.305245]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, FX, All] of 0
+DEBUG    [2026-Apr-18 19:21:40.305258]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305270]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305283]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Call margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Curvature] of 73242.7
+DEBUG    [2026-Apr-18 19:21:40.305299]  (...ytics/orea/simm/simmcalculator.cpp:1333) : Calculating additional margin for portfolio [NettingSetId='CRIF_20201228'], regulation ESA,USPR and SIMM side Call
+NOTICE   [2026-Apr-18 19:21:40.305317]  (...lytics/orea/simm/simmcalculator.cpp:283) : SimmCalculator: Calculating SIMM Post for portfolio [NettingSetId='CRIF_20201228'], regulations CFTC,SEC
+NOTICE   [2026-Apr-18 19:21:40.305329]  (...lytics/orea/simm/simmcalculator.cpp:289) : SimmCalculator: Calculating SIMM for product class RatesFX
+DEBUG    [2026-Apr-18 19:21:40.305519]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305532]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305547]  (...ytics/orea/simm/simmcalculator.cpp:1012) : Not calculating concentration risk for qualifier USD of risk type Risk_FX since the qualifier equals the SIMM calculation currency USD
+DEBUG    [2026-Apr-18 19:21:40.305559]  (...ytics/orea/simm/simmcalculator.cpp:1044) : Skipping qualifier USD of risk type Risk_FX since the qualifier equals the SIMM calculation currency USD
+DEBUG    [2026-Apr-18 19:21:40.305574]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, FX, Delta] of 0
+DEBUG    [2026-Apr-18 19:21:40.305599]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305611]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305639]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Curvature] of 0
+DEBUG    [2026-Apr-18 19:21:40.305651]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, Curvature] of 2126.78
+NOTICE   [2026-Apr-18 19:21:40.305670]  (...ytics/orea/simm/simmcalculator.cpp:1451) : SimmCalculator: Populating higher level results
+DEBUG    [2026-Apr-18 19:21:40.305684]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, InterestRate, All] of 938504
+DEBUG    [2026-Apr-18 19:21:40.305697]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, FX, All] of 0
+DEBUG    [2026-Apr-18 19:21:40.305719]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, All] of 938504
+DEBUG    [2026-Apr-18 19:21:40.305732]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, All] of 938504
+DEBUG    [2026-Apr-18 19:21:40.305745]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305756]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305768]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], RatesFX, All, Curvature] of 0
+DEBUG    [2026-Apr-18 19:21:40.305784]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305796]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305808]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, Curvature] of 0
+DEBUG    [2026-Apr-18 19:21:40.305823]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, FX, Delta] of 0
+DEBUG    [2026-Apr-18 19:21:40.305836]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, InterestRate, All] of 938504
+DEBUG    [2026-Apr-18 19:21:40.305849]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, FX, All] of 0
+DEBUG    [2026-Apr-18 19:21:40.305861]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Delta] of 773923
+DEBUG    [2026-Apr-18 19:21:40.305872]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Vega] of 164582
+DEBUG    [2026-Apr-18 19:21:40.305884]  (...ytics/orea/simm/simmcalculator.cpp:1705) : Calculated Post margin for [netting set details, product class, risk class, margin type] = [[NettingSetId='CRIF_20201228'], All, All, Curvature] of 0
+DEBUG    [2026-Apr-18 19:21:40.305898]  (...ytics/orea/simm/simmcalculator.cpp:1333) : Calculating additional margin for portfolio [NettingSetId='CRIF_20201228'], regulation CFTC,SEC and SIMM side Post
+NOTICE   [2026-Apr-18 19:21:40.305911]  (...lytics/orea/simm/simmcalculator.cpp:236) : SimmCalculator: Determining winning regulations
+NOTICE   [2026-Apr-18 19:21:40.305935]  (...ytics/orea/simm/simmcalculator.cpp:1653) : SimmCalculator: Populating final winning regulators' IM
+NOTICE   [2026-Apr-18 19:21:40.305977]  (...nalytics/orea/app/reportwriter.cpp:1436) : Writing full SIMM results report.
+NOTICE   [2026-Apr-18 19:21:40.306029]  (...nalytics/orea/app/reportwriter.cpp:1566) : SIMM results report written.
+NOTICE   [2026-Apr-18 19:21:40.306061]  (...nalytics/orea/app/reportwriter.cpp:1566) : SIMM results report written.
+NOTICE   [2026-Apr-18 19:21:40.306073]  (.../orea/app/analytics/simmanalytic.cpp:97) : SIMM regulation breakdown report generated
+NOTICE   [2026-Apr-18 19:21:40.306091]  (...nalytics/orea/app/reportwriter.cpp:1434) : Writing SIMM results report.
+NOTICE   [2026-Apr-18 19:21:40.306130]  (...nalytics/orea/app/reportwriter.cpp:1566) : SIMM results report written.
+NOTICE   [2026-Apr-18 19:21:40.306169]  (...nalytics/orea/app/reportwriter.cpp:1566) : SIMM results report written.
+NOTICE   [2026-Apr-18 19:21:40.306184]  (...orea/app/analytics/simmanalytic.cpp:108) : SIMM report generated
+MEMORY   [2026-Apr-18 19:21:40.306195]  (...orea/app/analytics/simmanalytic.cpp:109) : : 91578368|54624256 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:21:40.306258]      (OREAnalytics/orea/app/analytic.cpp:102) : Finishing SIMM Analytic::runAnalytic(): 91578368|54624256 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.306277]  (...ytics/orea/app/analyticsmanager.cpp:158) : run analytic with label 'SIMM' finished.
+NOTICE   [2026-Apr-18 19:21:40.306302]  (...nalytics/orea/app/reportwriter.cpp:1272) : Writing runtimes report
+NOTICE   [2026-Apr-18 19:21:40.306342]  (...nalytics/orea/app/reportwriter.cpp:1296) : Finished writing runtimes report
+NOTICE   [2026-Apr-18 19:21:40.306367]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name dividends occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306379]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name fixings occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306391]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name marketdata occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306401]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name regulation_breakdown_simm occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306412]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name runtimes occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306423]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name simm occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306433]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name simm_data occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306444]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306455]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name todaysmarketcalibration_cashflows occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.306472]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/dividends.csv'
+NOTICE   [2026-Apr-18 19:21:40.306531]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/dividends.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306545]  (...ytics/orea/app/analyticsmanager.cpp:299) : report dividends written to Output/SIMM2.4_10D/dividends.csv
+NOTICE   [2026-Apr-18 19:21:40.306557]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/fixings.csv'
+NOTICE   [2026-Apr-18 19:21:40.306577]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/fixings.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306589]  (...ytics/orea/app/analyticsmanager.cpp:299) : report fixings written to Output/SIMM2.4_10D/fixings.csv
+NOTICE   [2026-Apr-18 19:21:40.306600]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/todaysmarketcalibration.csv'
+NOTICE   [2026-Apr-18 19:21:40.306619]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/todaysmarketcalibration.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306631]  (...ytics/orea/app/analyticsmanager.cpp:299) : report todaysmarketcalibration written to Output/SIMM2.4_10D/todaysmarketcalibration.csv
+NOTICE   [2026-Apr-18 19:21:40.306644]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/todaysmarketcalibration_cashflows.csv'
+NOTICE   [2026-Apr-18 19:21:40.306667]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/todaysmarketcalibration_cashflows.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306679]  (...ytics/orea/app/analyticsmanager.cpp:299) : report todaysmarketcalibration_cashflows written to Output/SIMM2.4_10D/todaysmarketcalibration_cashflows.csv
+NOTICE   [2026-Apr-18 19:21:40.306691]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/marketdata.csv'
+NOTICE   [2026-Apr-18 19:21:40.306732]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/marketdata.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306744]  (...ytics/orea/app/analyticsmanager.cpp:299) : report marketdata written to Output/SIMM2.4_10D/marketdata.csv
+NOTICE   [2026-Apr-18 19:21:40.306755]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/regulation_breakdown_simm.csv'
+NOTICE   [2026-Apr-18 19:21:40.306811]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/regulation_breakdown_simm.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306823]  (...ytics/orea/app/analyticsmanager.cpp:299) : report regulation_breakdown_simm written to Output/SIMM2.4_10D/regulation_breakdown_simm.csv
+NOTICE   [2026-Apr-18 19:21:40.306834]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/simm.csv'
+NOTICE   [2026-Apr-18 19:21:40.306887]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/simm.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306898]  (...ytics/orea/app/analyticsmanager.cpp:299) : report simm written to Output/SIMM2.4_10D/simm.csv
+NOTICE   [2026-Apr-18 19:21:40.306910]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/simm_data.csv'
+NOTICE   [2026-Apr-18 19:21:40.306973]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/simm_data.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.306985]  (...ytics/orea/app/analyticsmanager.cpp:299) : report simm_data written to Output/SIMM2.4_10D/simm_data.csv
+NOTICE   [2026-Apr-18 19:21:40.306996]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/SIMM2.4_10D/runtimes.csv'
+NOTICE   [2026-Apr-18 19:21:40.307026]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/SIMM2.4_10D/runtimes.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.307038]  (...ytics/orea/app/analyticsmanager.cpp:299) : report runtimes written to Output/SIMM2.4_10D/runtimes.csv
+WARNING  [2026-Apr-18 19:21:40.307058]        (OREAnalytics/orea/app/oreapp.cpp:343) : Finishing OREApp::analytics(): 91578368|54980608 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.307075]        (OREAnalytics/orea/app/oreapp.cpp:344) : ORE analytics done
+NOTICE   [2026-Apr-18 19:21:40.307089]        (OREAnalytics/orea/app/oreapp.cpp:485) : ORE done.

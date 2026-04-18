@@ -1,0 +1,2 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+EQ_CALL_STOXX50E,EquityOption,1,0,0

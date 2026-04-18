@@ -1,0 +1,29 @@
+WARNING  [2026-Apr-18 19:12:08.339648]        (OREAnalytics/orea/app/oreapp.cpp:701) : Base currency not set
+WARNING  [2026-Apr-18 19:12:08.339756]        (OREAnalytics/orea/app/oreapp.cpp:797) : Reference data not found
+WARNING  [2026-Apr-18 19:12:08.339776]        (OREAnalytics/orea/app/oreapp.cpp:806) : Script library not loaded
+WARNING  [2026-Apr-18 19:12:08.340261]        (OREAnalytics/orea/app/oreapp.cpp:822) : Using default Ibor fallback config
+WARNING  [2026-Apr-18 19:12:08.340281]        (OREAnalytics/orea/app/oreapp.cpp:830) : Using default Basel Traffic Light config
+WARNING  [2026-Apr-18 19:12:08.341277]  (...rketdata/todaysmarketparameters.cpp:204) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+WARNING  [2026-Apr-18 19:12:08.341309]  (...rketdata/todaysmarketparameters.cpp:204) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'CapFloorVolatilities', use 'key' instead.
+WARNING  [2026-Apr-18 19:12:08.341488]        (OREAnalytics/orea/app/oreapp.cpp:874) : CounterpartyManager not found
+WARNING  [2026-Apr-18 19:12:08.341634]  (...rio/scenariosimmarketparameters.cpp:746) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2026-Apr-18 19:12:08.341715]     (OREData/ored/model/irhwmodeldata.cpp:85) : HwModelData: attribute ccy is deprecated, use key instead.
+WARNING  [2026-Apr-18 19:12:08.344466]       (OREAnalytics/orea/app/oreapp.cpp:2041) : AMC pricing engine data not found, using standard pricing engines
+WARNING  [2026-Apr-18 19:12:08.344536]       (OREAnalytics/orea/app/oreapp.cpp:2595) : ScenarioSimMarket parameters for sensitivity not loaded
+WARNING  [2026-Apr-18 19:12:08.344552]       (OREAnalytics/orea/app/oreapp.cpp:2603) : Sensitivity scenario data not loaded
+WARNING  [2026-Apr-18 19:12:08.344615]        (OREAnalytics/orea/app/oreapp.cpp:238) : Starting OREApp::analytics(): 91623424|53125120 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:12:08.344684]        (OREAnalytics/orea/app/oreapp.cpp:218) : dividend data file not found
+WARNING  [2026-Apr-18 19:12:08.344699]        (OREAnalytics/orea/app/oreapp.cpp:226) : fixing cutoff date not set
+WARNING  [2026-Apr-18 19:12:08.425815]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (EUR_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:12:08.425914]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (GBP_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:12:08.425976]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (USD_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:12:08.426158]  (.../configuration/cdsvolcurveconfig.cpp:92) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+WARNING  [2026-Apr-18 19:12:08.426186]  (.../configuration/cdsvolcurveconfig.cpp:92) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+WARNING  [2026-Apr-18 19:12:08.432380]       (OREAnalytics/orea/app/analytic.cpp:97) : Starting XVA Analytic::runAnalytic(): 91623424|68227072 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+ALERT    [2026-Apr-18 19:12:08.432770]          (OREData/ored/utilities/log.cpp:215) : StructuredMessage { "category": "Error", "group": "Curve", "message": "No security spread or bond price to imply the spread is given. Will proceed assuming a zero spread.", "sub_fields": [ { "name": "curveId", "value": "Security/ISIN:XS0983610930" }, { "name": "exceptionType", "value": "Missing security spread" } ] }
+ALERT    [2026-Apr-18 19:12:08.432824]          (OREData/ored/utilities/log.cpp:215) : StructuredMessage { "category": "Error", "group": "Curve", "message": "No security spread or bond price to imply the spread is given. Will proceed assuming a zero spread.", "sub_fields": [ { "name": "curveId", "value": "Security/SECURITY_2" }, { "name": "exceptionType", "value": "Missing security spread" } ] }
+WARNING  [2026-Apr-18 19:12:08.546762]      (OREAnalytics/orea/app/analytic.cpp:102) : Finishing XVA Analytic::runAnalytic(): 91623424|88276992 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:12:08.598934]  (.../ored/configuration/conventions.cpp:649) : receiveFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:12:08.599000]  (.../ored/configuration/conventions.cpp:660) : payFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:12:08.637277]  (.../ored/configuration/conventions.cpp:660) : payFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:12:08.808544]        (OREAnalytics/orea/app/oreapp.cpp:343) : Finishing OREApp::analytics(): 98762752|99241984 (peakMemoryUsage (bytes) | memoryUsage (bytes))

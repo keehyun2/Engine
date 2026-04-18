@@ -1,0 +1,116 @@
+NOTICE   [2026-Apr-18 19:21:40.561951]    (OREAnalytics/orea/app/parameters.cpp:133) : Parameters:
+NOTICE   [2026-Apr-18 19:21:40.562029]    (OREAnalytics/orea/app/parameters.cpp:136) : group = imschedule : active = Y
+NOTICE   [2026-Apr-18 19:21:40.562051]    (OREAnalytics/orea/app/parameters.cpp:136) : group = imschedule : calculationCurrency = USD
+NOTICE   [2026-Apr-18 19:21:40.562067]    (OREAnalytics/orea/app/parameters.cpp:136) : group = imschedule : crif = crif_schedule.csv
+NOTICE   [2026-Apr-18 19:21:40.562083]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : fxcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.562100]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : lgmcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.562116]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : pricing = default
+NOTICE   [2026-Apr-18 19:21:40.562132]    (OREAnalytics/orea/app/parameters.cpp:136) : group = markets : simulation = default
+NOTICE   [2026-Apr-18 19:21:40.562156]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : asofDate = 2020-12-28
+NOTICE   [2026-Apr-18 19:21:40.562173]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : conventionsFile = ../../../Input/conventions.xml
+NOTICE   [2026-Apr-18 19:21:40.562194]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : curveConfigFile = ../../../Input/curveconfig.xml
+NOTICE   [2026-Apr-18 19:21:40.562211]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : fixingDataFile = 
+NOTICE   [2026-Apr-18 19:21:40.562226]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : implyTodaysFixings = N
+NOTICE   [2026-Apr-18 19:21:40.562242]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : inputPath = Input/Simm
+NOTICE   [2026-Apr-18 19:21:40.562257]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : logFile = log.txt
+NOTICE   [2026-Apr-18 19:21:40.562272]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : logMask = 31
+NOTICE   [2026-Apr-18 19:21:40.562287]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : marketConfigFile = simm_todaysmarket.xml
+NOTICE   [2026-Apr-18 19:21:40.562302]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : marketDataFile = simm_market.txt
+NOTICE   [2026-Apr-18 19:21:40.562317]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : observationModel = None
+NOTICE   [2026-Apr-18 19:21:40.562333]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : outputPath = Output/IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.562349]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : portfolioFile = 
+NOTICE   [2026-Apr-18 19:21:40.562365]    (OREAnalytics/orea/app/parameters.cpp:136) : group = setup : pricingEnginesFile = ../../../Input/pricingengine.xml
+NOTICE   [2026-Apr-18 19:21:40.562460]        (OREAnalytics/orea/app/oreapp.cpp:653) : load OREAppInputParameters called
+WARNING  [2026-Apr-18 19:21:40.562490]        (OREAnalytics/orea/app/oreapp.cpp:674) : Calendar adjustments not found, using defaults
+WARNING  [2026-Apr-18 19:21:40.562510]        (OREAnalytics/orea/app/oreapp.cpp:684) : Currency configurations not found, using defaults
+WARNING  [2026-Apr-18 19:21:40.562541]        (OREAnalytics/orea/app/oreapp.cpp:701) : Base currency not set
+NOTICE   [2026-Apr-18 19:21:40.562562]        (OREAnalytics/orea/app/oreapp.cpp:752) : Observation Mode is None
+WARNING  [2026-Apr-18 19:21:40.562599]        (OREAnalytics/orea/app/oreapp.cpp:797) : Reference data not found
+WARNING  [2026-Apr-18 19:21:40.562616]        (OREAnalytics/orea/app/oreapp.cpp:806) : Script library not loaded
+NOTICE   [2026-Apr-18 19:21:40.562646]        (OREAnalytics/orea/app/oreapp.cpp:811) : Loading conventions from file: "Input/Simm/../../../Input/conventions.xml"
+WARNING  [2026-Apr-18 19:21:40.563304]        (OREAnalytics/orea/app/oreapp.cpp:822) : Using default Ibor fallback config
+WARNING  [2026-Apr-18 19:21:40.563324]        (OREAnalytics/orea/app/oreapp.cpp:830) : Using default Basel Traffic Light config
+NOTICE   [2026-Apr-18 19:21:40.563347]        (OREAnalytics/orea/app/oreapp.cpp:835) : Load curve configurations from file: 
+NOTICE   [2026-Apr-18 19:21:40.564290]        (OREAnalytics/orea/app/oreapp.cpp:844) : Load pricing engine data from file: "Input/Simm/../../../Input/pricingengine.xml"
+NOTICE   [2026-Apr-18 19:21:40.564471]        (OREAnalytics/orea/app/oreapp.cpp:853) : Loading today's market parameters from file"Input/Simm/simm_todaysmarket.xml"
+WARNING  [2026-Apr-18 19:21:40.564573]        (OREAnalytics/orea/app/oreapp.cpp:866) : Portfolio data not provided
+WARNING  [2026-Apr-18 19:21:40.564590]        (OREAnalytics/orea/app/oreapp.cpp:874) : CounterpartyManager not found
+NOTICE   [2026-Apr-18 19:21:40.564609]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::fxcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.564624]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::lgmcalibration = default
+NOTICE   [2026-Apr-18 19:21:40.564639]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::pricing = default
+NOTICE   [2026-Apr-18 19:21:40.564653]        (OREAnalytics/orea/app/oreapp.cpp:884) : MarketContext::simulation = default
+NOTICE   [2026-Apr-18 19:21:40.564672]       (OREAnalytics/orea/app/oreapp.cpp:1573) : SIMM
+NOTICE   [2026-Apr-18 19:21:40.564687]       (OREAnalytics/orea/app/oreapp.cpp:1676) : IM SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.564704]       (OREAnalytics/orea/app/oreapp.cpp:1687) : set SIMM version for IM Schedule to 2.6, required to load CRIF
+NOTICE   [2026-Apr-18 19:21:40.565031]   (OREAnalytics/orea/simm/crifloader.cpp:243) : Starting StringStreamCrifLoader::loadFromStream()
+NOTICE   [2026-Apr-18 19:21:40.565312]   (OREAnalytics/orea/simm/crifloader.cpp:297) : Out of 20 lines, there were 18 valid lines, 0 invalid lines and 1 empty lines.
+WARNING  [2026-Apr-18 19:21:40.565410]       (OREAnalytics/orea/app/oreapp.cpp:2595) : ScenarioSimMarket parameters for sensitivity not loaded
+WARNING  [2026-Apr-18 19:21:40.565428]       (OREAnalytics/orea/app/oreapp.cpp:2603) : Sensitivity scenario data not loaded
+NOTICE   [2026-Apr-18 19:21:40.565454]       (OREAnalytics/orea/app/oreapp.cpp:3336) : analytics: 1
+NOTICE   [2026-Apr-18 19:21:40.565469]       (OREAnalytics/orea/app/oreapp.cpp:3338) : analytic: IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.565485]       (OREAnalytics/orea/app/oreapp.cpp:3342) : buildInputParameters done
+NOTICE   [2026-Apr-18 19:21:40.565507]  (...lytics/orea/app/inputparameters.cpp:983) : OutputFileNameMap called
+NOTICE   [2026-Apr-18 19:21:40.565540]  (...ytics/orea/app/inputparameters.cpp:1080) : OutputFileNameMap complete
+NOTICE   [2026-Apr-18 19:21:40.565560]        (OREAnalytics/orea/app/oreapp.cpp:409) : initFromParameters done, requested analytics:IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.565576]        (OREAnalytics/orea/app/oreapp.cpp:464) : Global IncludeTodaysCashFlows is set false, value: na
+NOTICE   [2026-Apr-18 19:21:40.565592]        (OREAnalytics/orea/app/oreapp.cpp:237) : ORE analytics starting
+WARNING  [2026-Apr-18 19:21:40.565606]        (OREAnalytics/orea/app/oreapp.cpp:238) : Starting OREApp::analytics(): 91578368|51519488 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+ALERT    [2026-Apr-18 19:21:40.565664]        (OREAnalytics/orea/app/oreapp.cpp:211) : fixing data file not found
+WARNING  [2026-Apr-18 19:21:40.565680]        (OREAnalytics/orea/app/oreapp.cpp:218) : dividend data file not found
+WARNING  [2026-Apr-18 19:21:40.565694]        (OREAnalytics/orea/app/oreapp.cpp:226) : fixing cutoff date not set
+NOTICE   [2026-Apr-18 19:21:40.565717]   (OREData/ored/marketdata/csvloader.cpp:101) : CSVLoader loading from Input/Simm/simm_market.txt
+NOTICE   [2026-Apr-18 19:21:40.565943]   (OREData/ored/marketdata/csvloader.cpp:194) : CSVLoader completed processing Input/Simm/simm_market.txt
+NOTICE   [2026-Apr-18 19:21:40.565963]    (OREData/ored/marketdata/csvloader.cpp:80) : CSVLoader loaded 7 market data points for December 28th, 2020
+NOTICE   [2026-Apr-18 19:21:40.565979]    (OREData/ored/marketdata/csvloader.cpp:85) : CSVLoader loaded 0 fixings
+NOTICE   [2026-Apr-18 19:21:40.565998]    (OREData/ored/marketdata/csvloader.cpp:90) : CSVLoader loaded 0 dividends
+NOTICE   [2026-Apr-18 19:21:40.566012]    (OREData/ored/marketdata/csvloader.cpp:92) : CSVLoader complete.
+NOTICE   [2026-Apr-18 19:21:40.566042]  (...lytics/orea/app/analyticsmanager.cpp:51) : register analytic with label 'IM_SCHEDULE' and sub-analytics IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.566060]        (OREAnalytics/orea/app/oreapp.cpp:262) : Available analytics: IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.566078]        (OREAnalytics/orea/app/oreapp.cpp:265) : Requested analytics: IM_SCHEDULE
+NOTICE   [2026-Apr-18 19:21:40.566120]  (...ytics/orea/app/analyticsmanager.cpp:149) : run analytic with label 'IM_SCHEDULE'
+WARNING  [2026-Apr-18 19:21:40.566148]       (OREAnalytics/orea/app/analytic.cpp:97) : Starting IM_SCHEDULE Analytic::runAnalytic(): 91578368|52908032 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.566172]  (...app/analytics/imscheduleanalytic.cpp:55) : IMScheduleAnalytic::runAnalytic called
+NOTICE   [2026-Apr-18 19:21:40.566188]      (OREAnalytics/orea/app/analytic.cpp:241) : Analytic::buildMarket called
+ALERT    [2026-Apr-18 19:21:40.566203]      (OREAnalytics/orea/app/analytic.cpp:274) : Skip building the market due to missing today's market parameters in configurations
+NOTICE   [2026-Apr-18 19:21:40.566231]      (OREAnalytics/orea/app/analytic.cpp:279) : Market Build time 0.000000 sec
+WARNING  [2026-Apr-18 19:21:40.566246]         (OREAnalytics/orea/simm/crif.cpp:466) : CrifLoader::fillAmountUsd() was called, but market object is empty.
+NOTICE   [2026-Apr-18 19:21:40.566276]  (...app/analytics/imscheduleanalytic.cpp:65) : Calculating Schedule IM
+NOTICE   [2026-Apr-18 19:21:40.566318]  (.../orea/simm/imschedulecalculator.cpp:102) : IMScheduleCalculator: Collecting CRIF trade data
+NOTICE   [2026-Apr-18 19:21:40.566420]  (.../orea/simm/imschedulecalculator.cpp:217) : IMScheduleCalculator: Populating higher level results
+NOTICE   [2026-Apr-18 19:21:40.566439]  (.../orea/simm/imschedulecalculator.cpp:478) : IMScheduleCalculator: Populating Call IM for netting set [NettingSetId='nettingSetId_1'] under regulation Unspecified
+NOTICE   [2026-Apr-18 19:21:40.566459]  (.../orea/simm/imschedulecalculator.cpp:478) : IMScheduleCalculator: Populating Post IM for netting set [NettingSetId='nettingSetId_1'] under regulation Unspecified
+NOTICE   [2026-Apr-18 19:21:40.566475]  (.../orea/simm/imschedulecalculator.cpp:232) : IMScheduleCalculator: Determining winning regulations
+NOTICE   [2026-Apr-18 19:21:40.566495]  (.../orea/simm/imschedulecalculator.cpp:522) : IMScheduleCalculator: Populating final winning regulators' IM
+NOTICE   [2026-Apr-18 19:21:40.566528]  (...app/analytics/imscheduleanalytic.cpp:86) : Generating Schedule IM reports
+NOTICE   [2026-Apr-18 19:21:40.566547]  (...nalytics/orea/app/reportwriter.cpp:2157) : Writing IM Schedule trade results report.
+NOTICE   [2026-Apr-18 19:21:40.566610]  (...nalytics/orea/app/reportwriter.cpp:2222) : IM Schedule trade results report written.
+NOTICE   [2026-Apr-18 19:21:40.566627]  (...nalytics/orea/app/reportwriter.cpp:2043) : Writing IM Schedule results summary report.
+NOTICE   [2026-Apr-18 19:21:40.566657]  (...nalytics/orea/app/reportwriter.cpp:2150) : IM Schedule results summary report written.
+NOTICE   [2026-Apr-18 19:21:40.566672]  (...app/analytics/imscheduleanalytic.cpp:97) : Schedule IM reports generated
+WARNING  [2026-Apr-18 19:21:40.566691]      (OREAnalytics/orea/app/analytic.cpp:102) : Finishing IM_SCHEDULE Analytic::runAnalytic(): 91578368|53166080 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.566715]  (...ytics/orea/app/analyticsmanager.cpp:158) : run analytic with label 'IM_SCHEDULE' finished.
+NOTICE   [2026-Apr-18 19:21:40.566737]  (...nalytics/orea/app/reportwriter.cpp:1272) : Writing runtimes report
+NOTICE   [2026-Apr-18 19:21:40.566768]  (...nalytics/orea/app/reportwriter.cpp:1296) : Finished writing runtimes report
+NOTICE   [2026-Apr-18 19:21:40.566797]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name im_schedule occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.566815]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name im_schedule_trade occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.566829]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name runtimes occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.566843]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name todaysmarketcalibration occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.566856]  (...ytics/orea/app/analyticsmanager.cpp:246) : report name todaysmarketcalibration_cashflows occurs 1 times
+NOTICE   [2026-Apr-18 19:21:40.566875]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/IM_SCHEDULE/im_schedule.csv'
+NOTICE   [2026-Apr-18 19:21:40.566951]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/IM_SCHEDULE/im_schedule.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.566967]  (...ytics/orea/app/analyticsmanager.cpp:299) : report im_schedule written to Output/IM_SCHEDULE/im_schedule.csv
+NOTICE   [2026-Apr-18 19:21:40.566983]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/IM_SCHEDULE/im_schedule_trade.csv'
+NOTICE   [2026-Apr-18 19:21:40.567039]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/IM_SCHEDULE/im_schedule_trade.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.567054]  (...ytics/orea/app/analyticsmanager.cpp:299) : report im_schedule_trade written to Output/IM_SCHEDULE/im_schedule_trade.csv
+NOTICE   [2026-Apr-18 19:21:40.567069]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/IM_SCHEDULE/todaysmarketcalibration.csv'
+NOTICE   [2026-Apr-18 19:21:40.567094]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/IM_SCHEDULE/todaysmarketcalibration.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.567108]  (...ytics/orea/app/analyticsmanager.cpp:299) : report todaysmarketcalibration written to Output/IM_SCHEDULE/todaysmarketcalibration.csv
+NOTICE   [2026-Apr-18 19:21:40.567122]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/IM_SCHEDULE/todaysmarketcalibration_cashflows.csv'
+NOTICE   [2026-Apr-18 19:21:40.567156]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/IM_SCHEDULE/todaysmarketcalibration_cashflows.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.567170]  (...ytics/orea/app/analyticsmanager.cpp:299) : report todaysmarketcalibration_cashflows written to Output/IM_SCHEDULE/todaysmarketcalibration_cashflows.csv
+NOTICE   [2026-Apr-18 19:21:40.567185]       (OREData/ored/report/csvreport.cpp:133) : Opening CSV file report 'Output/IM_SCHEDULE/runtimes.csv'
+NOTICE   [2026-Apr-18 19:21:40.567215]       (OREData/ored/report/csvreport.cpp:222) : CSV file report 'Output/IM_SCHEDULE/runtimes.csv' closed.
+NOTICE   [2026-Apr-18 19:21:40.567230]  (...ytics/orea/app/analyticsmanager.cpp:299) : report runtimes written to Output/IM_SCHEDULE/runtimes.csv
+WARNING  [2026-Apr-18 19:21:40.567252]        (OREAnalytics/orea/app/oreapp.cpp:343) : Finishing OREApp::analytics(): 91578368|53456896 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+NOTICE   [2026-Apr-18 19:21:40.567273]        (OREAnalytics/orea/app/oreapp.cpp:344) : ORE analytics done
+NOTICE   [2026-Apr-18 19:21:40.567291]        (OREAnalytics/orea/app/oreapp.cpp:485) : ORE done.

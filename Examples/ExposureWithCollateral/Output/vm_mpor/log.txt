@@ -1,0 +1,39 @@
+WARNING  [2026-Apr-18 19:16:05.838063]        (OREAnalytics/orea/app/oreapp.cpp:674) : Calendar adjustments not found, using defaults
+WARNING  [2026-Apr-18 19:16:05.838116]        (OREAnalytics/orea/app/oreapp.cpp:684) : Currency configurations not found, using defaults
+WARNING  [2026-Apr-18 19:16:05.838167]        (OREAnalytics/orea/app/oreapp.cpp:797) : Reference data not found
+WARNING  [2026-Apr-18 19:16:05.838181]        (OREAnalytics/orea/app/oreapp.cpp:806) : Script library not loaded
+WARNING  [2026-Apr-18 19:16:05.838672]        (OREAnalytics/orea/app/oreapp.cpp:822) : Using default Ibor fallback config
+WARNING  [2026-Apr-18 19:16:05.838689]        (OREAnalytics/orea/app/oreapp.cpp:830) : Using default Basel Traffic Light config
+WARNING  [2026-Apr-18 19:16:05.839533]  (...rketdata/todaysmarketparameters.cpp:204) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'SwaptionVolatilities', use 'key' instead.
+WARNING  [2026-Apr-18 19:16:05.839560]  (...rketdata/todaysmarketparameters.cpp:204) : TodaysMarketParameters: the attribute 'currency' is deprecated for 'CapFloorVolatilities', use 'key' instead.
+WARNING  [2026-Apr-18 19:16:05.839754]        (OREAnalytics/orea/app/oreapp.cpp:874) : CounterpartyManager not found
+WARNING  [2026-Apr-18 19:16:05.839858]  (...rio/scenariosimmarketparameters.cpp:746) : ScenarioSimMarket parameter Extrapolation should be FlatFwd or FlatZero, mapping deprecated boolean 'Y' to FlatFwd. Please change this in your configuration.
+WARNING  [2026-Apr-18 19:16:05.839883]  (...rio/scenariosimmarketparameters.cpp:820) : ScenarioSimMarketParameters: SwaptionVolatilities/Currencies is deprecated, use Keys instead.
+WARNING  [2026-Apr-18 19:16:05.839952]  (.../ored/model/crossassetmodeldata.cpp:265) : Simulation/Parameters/Discretization is deprecated, use Simulation/CrossAssetModel/Discretization instead.
+WARNING  [2026-Apr-18 19:16:05.839982]         (OREData/ored/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2026-Apr-18 19:16:05.840033]         (OREData/ored/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2026-Apr-18 19:16:05.840057]         (OREData/ored/model/irlgmdata.cpp:33) : IrLgmData: attribute ccy is deprecated, use key instead.
+WARNING  [2026-Apr-18 19:16:05.840633]       (OREAnalytics/orea/app/oreapp.cpp:2041) : AMC pricing engine data not found, using standard pricing engines
+WARNING  [2026-Apr-18 19:16:06.845714]       (OREAnalytics/orea/app/oreapp.cpp:2595) : ScenarioSimMarket parameters for sensitivity not loaded
+WARNING  [2026-Apr-18 19:16:06.845771]       (OREAnalytics/orea/app/oreapp.cpp:2603) : Sensitivity scenario data not loaded
+WARNING  [2026-Apr-18 19:16:06.845843]        (OREAnalytics/orea/app/oreapp.cpp:238) : Starting OREApp::analytics(): 91676672|78888960 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:16:06.845919]        (OREAnalytics/orea/app/oreapp.cpp:218) : dividend data file not found
+WARNING  [2026-Apr-18 19:16:06.845932]        (OREAnalytics/orea/app/oreapp.cpp:226) : fixing cutoff date not set
+WARNING  [2026-Apr-18 19:16:06.920999]  (...ed/marketdata/marketdatumparser.cpp:751) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2026-Apr-18 19:16:06.921060]  (...ed/marketdata/marketdatumparser.cpp:751) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2026-Apr-18 19:16:06.921076]  (...ed/marketdata/marketdatumparser.cpp:751) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2026-Apr-18 19:16:06.921092]  (...ed/marketdata/marketdatumparser.cpp:751) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2026-Apr-18 19:16:06.921114]  (...ed/marketdata/marketdatumparser.cpp:751) : Deprecated MarketDatum::InstrumentType::CDS_INDEX, please use INDEX_CDS_TRANCHE/BASE_CORRELATION/IndexName/Term/DetachPoint or INDEX_CDS_TRANCHE/PRICE/IndexName/Term/AttachPoint/DetachPoint instead
+WARNING  [2026-Apr-18 19:16:06.940743]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (EUR_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:16:06.940870]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (GBP_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:16:06.940931]  (...guration/capfloorvolcurveconfig.cpp:141) : CapFloorVolatilityCurveConfig (USD_CF_N): The IborIndex node is deprecated, use Index instead.
+WARNING  [2026-Apr-18 19:16:06.941113]  (.../configuration/cdsvolcurveconfig.cpp:92) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+WARNING  [2026-Apr-18 19:16:06.941150]  (.../configuration/cdsvolcurveconfig.cpp:92) : Using an Expiries node only in CDSVolatilityCurveConfig is deprecated. A volatility configuration node should be used instead.
+WARNING  [2026-Apr-18 19:16:06.949349]       (OREAnalytics/orea/app/analytic.cpp:97) : Starting PRICING Analytic::runAnalytic(): 93700096|94208000 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:16:06.974713]  (.../ored/configuration/conventions.cpp:649) : receiveFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:16:06.974760]  (.../ored/configuration/conventions.cpp:660) : payFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:16:07.178459]  (.../ored/configuration/conventions.cpp:660) : payFrequency_ empty set to index tenor.
+WARNING  [2026-Apr-18 19:16:07.323184]      (OREAnalytics/orea/app/analytic.cpp:102) : Finishing PRICING Analytic::runAnalytic(): 110800896|111304704 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:16:07.342063]       (OREAnalytics/orea/app/analytic.cpp:97) : Starting XVA Analytic::runAnalytic(): 133464064|133935104 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:16:10.915127]      (OREAnalytics/orea/app/analytic.cpp:102) : Finishing XVA Analytic::runAnalytic(): 1059450880|1059991552 (peakMemoryUsage (bytes) | memoryUsage (bytes))
+WARNING  [2026-Apr-18 19:16:14.011411]        (OREAnalytics/orea/app/oreapp.cpp:343) : Finishing OREApp::analytics(): 1059581952|1060151296 (peakMemoryUsage (bytes) | memoryUsage (bytes))

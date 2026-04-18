@@ -1,0 +1,9 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+EqCall_Luft,EquityOption,8002,30000,3
+EqCall_SP5,EquityOption,7002,0,0
+EqForwardTrade_Luft,EquityForward,8002,30000,3
+EqFwd_SP5,EquityForward,7002,10000,1
+EqPut_Luft,EquityOption,8002,10000,1
+EqPut_SP5,EquityOption,7002,10000,1
+EquitySwap_1,EquitySwap,39002,840000,21
+EquitySwap_2,EquitySwap,39002,850000,21

@@ -1,0 +1,6 @@
+#TradeId,TradeType,NumberOfPricings,CumulativeTiming,AverageTiming
+CommodityAPO,CommodityAveragePriceOption,23002,70140000,3049
+CommodityForward,CommodityForward,23002,50000,2
+CommodityOption,CommodityOption,23002,150000,6
+CommoditySwap,CommoditySwap,23002,210000,9
+CommoditySwaption,CommoditySwaption,15002,3680000,245
