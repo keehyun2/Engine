@@ -1,0 +1,1080 @@
+<StressTesting>
+	<UseSpreadedTermStructures>true</UseSpreadedTermStructures>
+	<StressTest id="IndexCurve/EUR-EURIBOR-6M/19">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, 0.00044086886233533722, -3.8070153230973645e-05, -3.0456121577840261e-05, -2.5387048262984839e-05, -1.9040281983504794e-05, -1.5233058296723941e-05, -1.2694098393980483e-05</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="IndexCurve/EUR-EURIBOR-6M/20">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, 0.0012015022613733554, -0.00012486117712492495, -0.00010407946464423664, -7.8059598483177492e-05, -6.2451097954259384e-05, -5.2042106722483648e-05</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="SwaptionVolatility/EUR/41">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SwaptionVolatilities>
+			<SwaptionVolatility key="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>
+					<Shift expiry="1M" term="1Y">0</Shift>
+					<Shift expiry="1M" term="2Y">0</Shift>
+					<Shift expiry="1M" term="3Y">0</Shift>
+					<Shift expiry="1M" term="4Y">0</Shift>
+					<Shift expiry="1M" term="5Y">0</Shift>
+					<Shift expiry="1M" term="7Y">0</Shift>
+					<Shift expiry="1M" term="10Y">0</Shift>
+					<Shift expiry="1M" term="15Y">0</Shift>
+					<Shift expiry="1M" term="20Y">0</Shift>
+					<Shift expiry="1M" term="25Y">0</Shift>
+					<Shift expiry="1M" term="30Y">0</Shift>
+					<Shift expiry="3M" term="1Y">0</Shift>
+					<Shift expiry="3M" term="2Y">0</Shift>
+					<Shift expiry="3M" term="3Y">0</Shift>
+					<Shift expiry="3M" term="4Y">0</Shift>
+					<Shift expiry="3M" term="5Y">0</Shift>
+					<Shift expiry="3M" term="7Y">0</Shift>
+					<Shift expiry="3M" term="10Y">0</Shift>
+					<Shift expiry="3M" term="15Y">0</Shift>
+					<Shift expiry="3M" term="20Y">0</Shift>
+					<Shift expiry="3M" term="25Y">0</Shift>
+					<Shift expiry="3M" term="30Y">0</Shift>
+					<Shift expiry="6M" term="1Y">0</Shift>
+					<Shift expiry="6M" term="2Y">0</Shift>
+					<Shift expiry="6M" term="3Y">0</Shift>
+					<Shift expiry="6M" term="4Y">0</Shift>
+					<Shift expiry="6M" term="5Y">0</Shift>
+					<Shift expiry="6M" term="7Y">0</Shift>
+					<Shift expiry="6M" term="10Y">0</Shift>
+					<Shift expiry="6M" term="15Y">0</Shift>
+					<Shift expiry="6M" term="20Y">0</Shift>
+					<Shift expiry="6M" term="25Y">0</Shift>
+					<Shift expiry="6M" term="30Y">0</Shift>
+					<Shift expiry="1Y" term="1Y">0</Shift>
+					<Shift expiry="1Y" term="2Y">0</Shift>
+					<Shift expiry="1Y" term="3Y">0</Shift>
+					<Shift expiry="1Y" term="4Y">0</Shift>
+					<Shift expiry="1Y" term="5Y">0</Shift>
+					<Shift expiry="1Y" term="7Y">0</Shift>
+					<Shift expiry="1Y" term="10Y">0</Shift>
+					<Shift expiry="1Y" term="15Y">0</Shift>
+					<Shift expiry="1Y" term="20Y">-0.002</Shift>
+					<Shift expiry="1Y" term="25Y">0</Shift>
+					<Shift expiry="1Y" term="30Y">0</Shift>
+					<Shift expiry="2Y" term="1Y">0</Shift>
+					<Shift expiry="2Y" term="2Y">0</Shift>
+					<Shift expiry="2Y" term="3Y">0</Shift>
+					<Shift expiry="2Y" term="4Y">0</Shift>
+					<Shift expiry="2Y" term="5Y">0</Shift>
+					<Shift expiry="2Y" term="7Y">0</Shift>
+					<Shift expiry="2Y" term="10Y">0</Shift>
+					<Shift expiry="2Y" term="15Y">0</Shift>
+					<Shift expiry="2Y" term="20Y">0</Shift>
+					<Shift expiry="2Y" term="25Y">0</Shift>
+					<Shift expiry="2Y" term="30Y">0</Shift>
+					<Shift expiry="3Y" term="1Y">0</Shift>
+					<Shift expiry="3Y" term="2Y">0</Shift>
+					<Shift expiry="3Y" term="3Y">0</Shift>
+					<Shift expiry="3Y" term="4Y">0</Shift>
+					<Shift expiry="3Y" term="5Y">0</Shift>
+					<Shift expiry="3Y" term="7Y">0</Shift>
+					<Shift expiry="3Y" term="10Y">0</Shift>
+					<Shift expiry="3Y" term="15Y">0</Shift>
+					<Shift expiry="3Y" term="20Y">0</Shift>
+					<Shift expiry="3Y" term="25Y">0</Shift>
+					<Shift expiry="3Y" term="30Y">0</Shift>
+					<Shift expiry="4Y" term="1Y">0</Shift>
+					<Shift expiry="4Y" term="2Y">0</Shift>
+					<Shift expiry="4Y" term="3Y">0</Shift>
+					<Shift expiry="4Y" term="4Y">0</Shift>
+					<Shift expiry="4Y" term="5Y">0</Shift>
+					<Shift expiry="4Y" term="7Y">0</Shift>
+					<Shift expiry="4Y" term="10Y">0</Shift>
+					<Shift expiry="4Y" term="15Y">0</Shift>
+					<Shift expiry="4Y" term="20Y">0</Shift>
+					<Shift expiry="4Y" term="25Y">0</Shift>
+					<Shift expiry="4Y" term="30Y">0</Shift>
+					<Shift expiry="5Y" term="1Y">0</Shift>
+					<Shift expiry="5Y" term="2Y">0</Shift>
+					<Shift expiry="5Y" term="3Y">0</Shift>
+					<Shift expiry="5Y" term="4Y">0</Shift>
+					<Shift expiry="5Y" term="5Y">0</Shift>
+					<Shift expiry="5Y" term="7Y">0</Shift>
+					<Shift expiry="5Y" term="10Y">0</Shift>
+					<Shift expiry="5Y" term="15Y">0</Shift>
+					<Shift expiry="5Y" term="20Y">0</Shift>
+					<Shift expiry="5Y" term="25Y">0</Shift>
+					<Shift expiry="5Y" term="30Y">0</Shift>
+					<Shift expiry="7Y" term="1Y">0</Shift>
+					<Shift expiry="7Y" term="2Y">0</Shift>
+					<Shift expiry="7Y" term="3Y">0</Shift>
+					<Shift expiry="7Y" term="4Y">0</Shift>
+					<Shift expiry="7Y" term="5Y">0</Shift>
+					<Shift expiry="7Y" term="7Y">0</Shift>
+					<Shift expiry="7Y" term="10Y">0</Shift>
+					<Shift expiry="7Y" term="15Y">0</Shift>
+					<Shift expiry="7Y" term="20Y">0</Shift>
+					<Shift expiry="7Y" term="25Y">0</Shift>
+					<Shift expiry="7Y" term="30Y">0</Shift>
+					<Shift expiry="10Y" term="1Y">0</Shift>
+					<Shift expiry="10Y" term="2Y">0</Shift>
+					<Shift expiry="10Y" term="3Y">0</Shift>
+					<Shift expiry="10Y" term="4Y">0</Shift>
+					<Shift expiry="10Y" term="5Y">0</Shift>
+					<Shift expiry="10Y" term="7Y">0</Shift>
+					<Shift expiry="10Y" term="10Y">0</Shift>
+					<Shift expiry="10Y" term="15Y">0</Shift>
+					<Shift expiry="10Y" term="20Y">0</Shift>
+					<Shift expiry="10Y" term="25Y">0</Shift>
+					<Shift expiry="10Y" term="30Y">0</Shift>
+					<Shift expiry="15Y" term="1Y">0</Shift>
+					<Shift expiry="15Y" term="2Y">0</Shift>
+					<Shift expiry="15Y" term="3Y">0</Shift>
+					<Shift expiry="15Y" term="4Y">0</Shift>
+					<Shift expiry="15Y" term="5Y">0</Shift>
+					<Shift expiry="15Y" term="7Y">0</Shift>
+					<Shift expiry="15Y" term="10Y">0</Shift>
+					<Shift expiry="15Y" term="15Y">0</Shift>
+					<Shift expiry="15Y" term="20Y">0</Shift>
+					<Shift expiry="15Y" term="25Y">0</Shift>
+					<Shift expiry="15Y" term="30Y">0</Shift>
+					<Shift expiry="20Y" term="1Y">0</Shift>
+					<Shift expiry="20Y" term="2Y">0</Shift>
+					<Shift expiry="20Y" term="3Y">0</Shift>
+					<Shift expiry="20Y" term="4Y">0</Shift>
+					<Shift expiry="20Y" term="5Y">0</Shift>
+					<Shift expiry="20Y" term="7Y">0</Shift>
+					<Shift expiry="20Y" term="10Y">0</Shift>
+					<Shift expiry="20Y" term="15Y">0</Shift>
+					<Shift expiry="20Y" term="20Y">0</Shift>
+					<Shift expiry="20Y" term="25Y">0</Shift>
+					<Shift expiry="20Y" term="30Y">0</Shift>
+					<Shift expiry="25Y" term="1Y">0</Shift>
+					<Shift expiry="25Y" term="2Y">0</Shift>
+					<Shift expiry="25Y" term="3Y">0</Shift>
+					<Shift expiry="25Y" term="4Y">0</Shift>
+					<Shift expiry="25Y" term="5Y">0</Shift>
+					<Shift expiry="25Y" term="7Y">0</Shift>
+					<Shift expiry="25Y" term="10Y">0</Shift>
+					<Shift expiry="25Y" term="15Y">0</Shift>
+					<Shift expiry="25Y" term="20Y">0</Shift>
+					<Shift expiry="25Y" term="25Y">0</Shift>
+					<Shift expiry="25Y" term="30Y">0</Shift>
+					<Shift expiry="30Y" term="1Y">0</Shift>
+					<Shift expiry="30Y" term="2Y">0</Shift>
+					<Shift expiry="30Y" term="3Y">0</Shift>
+					<Shift expiry="30Y" term="4Y">0</Shift>
+					<Shift expiry="30Y" term="5Y">0</Shift>
+					<Shift expiry="30Y" term="7Y">0</Shift>
+					<Shift expiry="30Y" term="10Y">0</Shift>
+					<Shift expiry="30Y" term="15Y">0</Shift>
+					<Shift expiry="30Y" term="20Y">0</Shift>
+					<Shift expiry="30Y" term="25Y">0</Shift>
+					<Shift expiry="30Y" term="30Y">0</Shift>
+				</Shifts>
+				<ShiftExpiries>1M, 3M, 6M, 1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftExpiries>
+				<ShiftTerms>1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftTerms>
+			</SwaptionVolatility>
+		</SwaptionVolatilities>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="SwaptionVolatility/EUR/51">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SwaptionVolatilities>
+			<SwaptionVolatility key="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>
+					<Shift expiry="1M" term="1Y">0</Shift>
+					<Shift expiry="1M" term="2Y">0</Shift>
+					<Shift expiry="1M" term="3Y">0</Shift>
+					<Shift expiry="1M" term="4Y">0</Shift>
+					<Shift expiry="1M" term="5Y">0</Shift>
+					<Shift expiry="1M" term="7Y">0</Shift>
+					<Shift expiry="1M" term="10Y">0</Shift>
+					<Shift expiry="1M" term="15Y">0</Shift>
+					<Shift expiry="1M" term="20Y">0</Shift>
+					<Shift expiry="1M" term="25Y">0</Shift>
+					<Shift expiry="1M" term="30Y">0</Shift>
+					<Shift expiry="3M" term="1Y">0</Shift>
+					<Shift expiry="3M" term="2Y">0</Shift>
+					<Shift expiry="3M" term="3Y">0</Shift>
+					<Shift expiry="3M" term="4Y">0</Shift>
+					<Shift expiry="3M" term="5Y">0</Shift>
+					<Shift expiry="3M" term="7Y">0</Shift>
+					<Shift expiry="3M" term="10Y">0</Shift>
+					<Shift expiry="3M" term="15Y">0</Shift>
+					<Shift expiry="3M" term="20Y">0</Shift>
+					<Shift expiry="3M" term="25Y">0</Shift>
+					<Shift expiry="3M" term="30Y">0</Shift>
+					<Shift expiry="6M" term="1Y">0</Shift>
+					<Shift expiry="6M" term="2Y">0</Shift>
+					<Shift expiry="6M" term="3Y">0</Shift>
+					<Shift expiry="6M" term="4Y">0</Shift>
+					<Shift expiry="6M" term="5Y">0</Shift>
+					<Shift expiry="6M" term="7Y">0</Shift>
+					<Shift expiry="6M" term="10Y">0</Shift>
+					<Shift expiry="6M" term="15Y">0</Shift>
+					<Shift expiry="6M" term="20Y">0</Shift>
+					<Shift expiry="6M" term="25Y">0</Shift>
+					<Shift expiry="6M" term="30Y">0</Shift>
+					<Shift expiry="1Y" term="1Y">0</Shift>
+					<Shift expiry="1Y" term="2Y">0</Shift>
+					<Shift expiry="1Y" term="3Y">0</Shift>
+					<Shift expiry="1Y" term="4Y">0</Shift>
+					<Shift expiry="1Y" term="5Y">0</Shift>
+					<Shift expiry="1Y" term="7Y">0</Shift>
+					<Shift expiry="1Y" term="10Y">0</Shift>
+					<Shift expiry="1Y" term="15Y">0</Shift>
+					<Shift expiry="1Y" term="20Y">0</Shift>
+					<Shift expiry="1Y" term="25Y">0</Shift>
+					<Shift expiry="1Y" term="30Y">0</Shift>
+					<Shift expiry="2Y" term="1Y">0</Shift>
+					<Shift expiry="2Y" term="2Y">0</Shift>
+					<Shift expiry="2Y" term="3Y">0</Shift>
+					<Shift expiry="2Y" term="4Y">0</Shift>
+					<Shift expiry="2Y" term="5Y">0</Shift>
+					<Shift expiry="2Y" term="7Y">0</Shift>
+					<Shift expiry="2Y" term="10Y">0</Shift>
+					<Shift expiry="2Y" term="15Y">-0.001</Shift>
+					<Shift expiry="2Y" term="20Y">0</Shift>
+					<Shift expiry="2Y" term="25Y">0</Shift>
+					<Shift expiry="2Y" term="30Y">0</Shift>
+					<Shift expiry="3Y" term="1Y">0</Shift>
+					<Shift expiry="3Y" term="2Y">0</Shift>
+					<Shift expiry="3Y" term="3Y">0</Shift>
+					<Shift expiry="3Y" term="4Y">0</Shift>
+					<Shift expiry="3Y" term="5Y">0</Shift>
+					<Shift expiry="3Y" term="7Y">0</Shift>
+					<Shift expiry="3Y" term="10Y">0</Shift>
+					<Shift expiry="3Y" term="15Y">0</Shift>
+					<Shift expiry="3Y" term="20Y">0</Shift>
+					<Shift expiry="3Y" term="25Y">0</Shift>
+					<Shift expiry="3Y" term="30Y">0</Shift>
+					<Shift expiry="4Y" term="1Y">0</Shift>
+					<Shift expiry="4Y" term="2Y">0</Shift>
+					<Shift expiry="4Y" term="3Y">0</Shift>
+					<Shift expiry="4Y" term="4Y">0</Shift>
+					<Shift expiry="4Y" term="5Y">0</Shift>
+					<Shift expiry="4Y" term="7Y">0</Shift>
+					<Shift expiry="4Y" term="10Y">0</Shift>
+					<Shift expiry="4Y" term="15Y">0</Shift>
+					<Shift expiry="4Y" term="20Y">0</Shift>
+					<Shift expiry="4Y" term="25Y">0</Shift>
+					<Shift expiry="4Y" term="30Y">0</Shift>
+					<Shift expiry="5Y" term="1Y">0</Shift>
+					<Shift expiry="5Y" term="2Y">0</Shift>
+					<Shift expiry="5Y" term="3Y">0</Shift>
+					<Shift expiry="5Y" term="4Y">0</Shift>
+					<Shift expiry="5Y" term="5Y">0</Shift>
+					<Shift expiry="5Y" term="7Y">0</Shift>
+					<Shift expiry="5Y" term="10Y">0</Shift>
+					<Shift expiry="5Y" term="15Y">0</Shift>
+					<Shift expiry="5Y" term="20Y">0</Shift>
+					<Shift expiry="5Y" term="25Y">0</Shift>
+					<Shift expiry="5Y" term="30Y">0</Shift>
+					<Shift expiry="7Y" term="1Y">0</Shift>
+					<Shift expiry="7Y" term="2Y">0</Shift>
+					<Shift expiry="7Y" term="3Y">0</Shift>
+					<Shift expiry="7Y" term="4Y">0</Shift>
+					<Shift expiry="7Y" term="5Y">0</Shift>
+					<Shift expiry="7Y" term="7Y">0</Shift>
+					<Shift expiry="7Y" term="10Y">0</Shift>
+					<Shift expiry="7Y" term="15Y">0</Shift>
+					<Shift expiry="7Y" term="20Y">0</Shift>
+					<Shift expiry="7Y" term="25Y">0</Shift>
+					<Shift expiry="7Y" term="30Y">0</Shift>
+					<Shift expiry="10Y" term="1Y">0</Shift>
+					<Shift expiry="10Y" term="2Y">0</Shift>
+					<Shift expiry="10Y" term="3Y">0</Shift>
+					<Shift expiry="10Y" term="4Y">0</Shift>
+					<Shift expiry="10Y" term="5Y">0</Shift>
+					<Shift expiry="10Y" term="7Y">0</Shift>
+					<Shift expiry="10Y" term="10Y">0</Shift>
+					<Shift expiry="10Y" term="15Y">0</Shift>
+					<Shift expiry="10Y" term="20Y">0</Shift>
+					<Shift expiry="10Y" term="25Y">0</Shift>
+					<Shift expiry="10Y" term="30Y">0</Shift>
+					<Shift expiry="15Y" term="1Y">0</Shift>
+					<Shift expiry="15Y" term="2Y">0</Shift>
+					<Shift expiry="15Y" term="3Y">0</Shift>
+					<Shift expiry="15Y" term="4Y">0</Shift>
+					<Shift expiry="15Y" term="5Y">0</Shift>
+					<Shift expiry="15Y" term="7Y">0</Shift>
+					<Shift expiry="15Y" term="10Y">0</Shift>
+					<Shift expiry="15Y" term="15Y">0</Shift>
+					<Shift expiry="15Y" term="20Y">0</Shift>
+					<Shift expiry="15Y" term="25Y">0</Shift>
+					<Shift expiry="15Y" term="30Y">0</Shift>
+					<Shift expiry="20Y" term="1Y">0</Shift>
+					<Shift expiry="20Y" term="2Y">0</Shift>
+					<Shift expiry="20Y" term="3Y">0</Shift>
+					<Shift expiry="20Y" term="4Y">0</Shift>
+					<Shift expiry="20Y" term="5Y">0</Shift>
+					<Shift expiry="20Y" term="7Y">0</Shift>
+					<Shift expiry="20Y" term="10Y">0</Shift>
+					<Shift expiry="20Y" term="15Y">0</Shift>
+					<Shift expiry="20Y" term="20Y">0</Shift>
+					<Shift expiry="20Y" term="25Y">0</Shift>
+					<Shift expiry="20Y" term="30Y">0</Shift>
+					<Shift expiry="25Y" term="1Y">0</Shift>
+					<Shift expiry="25Y" term="2Y">0</Shift>
+					<Shift expiry="25Y" term="3Y">0</Shift>
+					<Shift expiry="25Y" term="4Y">0</Shift>
+					<Shift expiry="25Y" term="5Y">0</Shift>
+					<Shift expiry="25Y" term="7Y">0</Shift>
+					<Shift expiry="25Y" term="10Y">0</Shift>
+					<Shift expiry="25Y" term="15Y">0</Shift>
+					<Shift expiry="25Y" term="20Y">0</Shift>
+					<Shift expiry="25Y" term="25Y">0</Shift>
+					<Shift expiry="25Y" term="30Y">0</Shift>
+					<Shift expiry="30Y" term="1Y">0</Shift>
+					<Shift expiry="30Y" term="2Y">0</Shift>
+					<Shift expiry="30Y" term="3Y">0</Shift>
+					<Shift expiry="30Y" term="4Y">0</Shift>
+					<Shift expiry="30Y" term="5Y">0</Shift>
+					<Shift expiry="30Y" term="7Y">0</Shift>
+					<Shift expiry="30Y" term="10Y">0</Shift>
+					<Shift expiry="30Y" term="15Y">0</Shift>
+					<Shift expiry="30Y" term="20Y">0</Shift>
+					<Shift expiry="30Y" term="25Y">0</Shift>
+					<Shift expiry="30Y" term="30Y">0</Shift>
+				</Shifts>
+				<ShiftExpiries>1M, 3M, 6M, 1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftExpiries>
+				<ShiftTerms>1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftTerms>
+			</SwaptionVolatility>
+		</SwaptionVolatilities>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="SwaptionVolatility/EUR/52">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SwaptionVolatilities>
+			<SwaptionVolatility key="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>
+					<Shift expiry="1M" term="1Y">0</Shift>
+					<Shift expiry="1M" term="2Y">0</Shift>
+					<Shift expiry="1M" term="3Y">0</Shift>
+					<Shift expiry="1M" term="4Y">0</Shift>
+					<Shift expiry="1M" term="5Y">0</Shift>
+					<Shift expiry="1M" term="7Y">0</Shift>
+					<Shift expiry="1M" term="10Y">0</Shift>
+					<Shift expiry="1M" term="15Y">0</Shift>
+					<Shift expiry="1M" term="20Y">0</Shift>
+					<Shift expiry="1M" term="25Y">0</Shift>
+					<Shift expiry="1M" term="30Y">0</Shift>
+					<Shift expiry="3M" term="1Y">0</Shift>
+					<Shift expiry="3M" term="2Y">0</Shift>
+					<Shift expiry="3M" term="3Y">0</Shift>
+					<Shift expiry="3M" term="4Y">0</Shift>
+					<Shift expiry="3M" term="5Y">0</Shift>
+					<Shift expiry="3M" term="7Y">0</Shift>
+					<Shift expiry="3M" term="10Y">0</Shift>
+					<Shift expiry="3M" term="15Y">0</Shift>
+					<Shift expiry="3M" term="20Y">0</Shift>
+					<Shift expiry="3M" term="25Y">0</Shift>
+					<Shift expiry="3M" term="30Y">0</Shift>
+					<Shift expiry="6M" term="1Y">0</Shift>
+					<Shift expiry="6M" term="2Y">0</Shift>
+					<Shift expiry="6M" term="3Y">0</Shift>
+					<Shift expiry="6M" term="4Y">0</Shift>
+					<Shift expiry="6M" term="5Y">0</Shift>
+					<Shift expiry="6M" term="7Y">0</Shift>
+					<Shift expiry="6M" term="10Y">0</Shift>
+					<Shift expiry="6M" term="15Y">0</Shift>
+					<Shift expiry="6M" term="20Y">0</Shift>
+					<Shift expiry="6M" term="25Y">0</Shift>
+					<Shift expiry="6M" term="30Y">0</Shift>
+					<Shift expiry="1Y" term="1Y">0</Shift>
+					<Shift expiry="1Y" term="2Y">0</Shift>
+					<Shift expiry="1Y" term="3Y">0</Shift>
+					<Shift expiry="1Y" term="4Y">0</Shift>
+					<Shift expiry="1Y" term="5Y">0</Shift>
+					<Shift expiry="1Y" term="7Y">0</Shift>
+					<Shift expiry="1Y" term="10Y">0</Shift>
+					<Shift expiry="1Y" term="15Y">0</Shift>
+					<Shift expiry="1Y" term="20Y">0</Shift>
+					<Shift expiry="1Y" term="25Y">0</Shift>
+					<Shift expiry="1Y" term="30Y">0</Shift>
+					<Shift expiry="2Y" term="1Y">0</Shift>
+					<Shift expiry="2Y" term="2Y">0</Shift>
+					<Shift expiry="2Y" term="3Y">0</Shift>
+					<Shift expiry="2Y" term="4Y">0</Shift>
+					<Shift expiry="2Y" term="5Y">0</Shift>
+					<Shift expiry="2Y" term="7Y">0</Shift>
+					<Shift expiry="2Y" term="10Y">0</Shift>
+					<Shift expiry="2Y" term="15Y">0</Shift>
+					<Shift expiry="2Y" term="20Y">-0.002</Shift>
+					<Shift expiry="2Y" term="25Y">0</Shift>
+					<Shift expiry="2Y" term="30Y">0</Shift>
+					<Shift expiry="3Y" term="1Y">0</Shift>
+					<Shift expiry="3Y" term="2Y">0</Shift>
+					<Shift expiry="3Y" term="3Y">0</Shift>
+					<Shift expiry="3Y" term="4Y">0</Shift>
+					<Shift expiry="3Y" term="5Y">0</Shift>
+					<Shift expiry="3Y" term="7Y">0</Shift>
+					<Shift expiry="3Y" term="10Y">0</Shift>
+					<Shift expiry="3Y" term="15Y">0</Shift>
+					<Shift expiry="3Y" term="20Y">0</Shift>
+					<Shift expiry="3Y" term="25Y">0</Shift>
+					<Shift expiry="3Y" term="30Y">0</Shift>
+					<Shift expiry="4Y" term="1Y">0</Shift>
+					<Shift expiry="4Y" term="2Y">0</Shift>
+					<Shift expiry="4Y" term="3Y">0</Shift>
+					<Shift expiry="4Y" term="4Y">0</Shift>
+					<Shift expiry="4Y" term="5Y">0</Shift>
+					<Shift expiry="4Y" term="7Y">0</Shift>
+					<Shift expiry="4Y" term="10Y">0</Shift>
+					<Shift expiry="4Y" term="15Y">0</Shift>
+					<Shift expiry="4Y" term="20Y">0</Shift>
+					<Shift expiry="4Y" term="25Y">0</Shift>
+					<Shift expiry="4Y" term="30Y">0</Shift>
+					<Shift expiry="5Y" term="1Y">0</Shift>
+					<Shift expiry="5Y" term="2Y">0</Shift>
+					<Shift expiry="5Y" term="3Y">0</Shift>
+					<Shift expiry="5Y" term="4Y">0</Shift>
+					<Shift expiry="5Y" term="5Y">0</Shift>
+					<Shift expiry="5Y" term="7Y">0</Shift>
+					<Shift expiry="5Y" term="10Y">0</Shift>
+					<Shift expiry="5Y" term="15Y">0</Shift>
+					<Shift expiry="5Y" term="20Y">0</Shift>
+					<Shift expiry="5Y" term="25Y">0</Shift>
+					<Shift expiry="5Y" term="30Y">0</Shift>
+					<Shift expiry="7Y" term="1Y">0</Shift>
+					<Shift expiry="7Y" term="2Y">0</Shift>
+					<Shift expiry="7Y" term="3Y">0</Shift>
+					<Shift expiry="7Y" term="4Y">0</Shift>
+					<Shift expiry="7Y" term="5Y">0</Shift>
+					<Shift expiry="7Y" term="7Y">0</Shift>
+					<Shift expiry="7Y" term="10Y">0</Shift>
+					<Shift expiry="7Y" term="15Y">0</Shift>
+					<Shift expiry="7Y" term="20Y">0</Shift>
+					<Shift expiry="7Y" term="25Y">0</Shift>
+					<Shift expiry="7Y" term="30Y">0</Shift>
+					<Shift expiry="10Y" term="1Y">0</Shift>
+					<Shift expiry="10Y" term="2Y">0</Shift>
+					<Shift expiry="10Y" term="3Y">0</Shift>
+					<Shift expiry="10Y" term="4Y">0</Shift>
+					<Shift expiry="10Y" term="5Y">0</Shift>
+					<Shift expiry="10Y" term="7Y">0</Shift>
+					<Shift expiry="10Y" term="10Y">0</Shift>
+					<Shift expiry="10Y" term="15Y">0</Shift>
+					<Shift expiry="10Y" term="20Y">0</Shift>
+					<Shift expiry="10Y" term="25Y">0</Shift>
+					<Shift expiry="10Y" term="30Y">0</Shift>
+					<Shift expiry="15Y" term="1Y">0</Shift>
+					<Shift expiry="15Y" term="2Y">0</Shift>
+					<Shift expiry="15Y" term="3Y">0</Shift>
+					<Shift expiry="15Y" term="4Y">0</Shift>
+					<Shift expiry="15Y" term="5Y">0</Shift>
+					<Shift expiry="15Y" term="7Y">0</Shift>
+					<Shift expiry="15Y" term="10Y">0</Shift>
+					<Shift expiry="15Y" term="15Y">0</Shift>
+					<Shift expiry="15Y" term="20Y">0</Shift>
+					<Shift expiry="15Y" term="25Y">0</Shift>
+					<Shift expiry="15Y" term="30Y">0</Shift>
+					<Shift expiry="20Y" term="1Y">0</Shift>
+					<Shift expiry="20Y" term="2Y">0</Shift>
+					<Shift expiry="20Y" term="3Y">0</Shift>
+					<Shift expiry="20Y" term="4Y">0</Shift>
+					<Shift expiry="20Y" term="5Y">0</Shift>
+					<Shift expiry="20Y" term="7Y">0</Shift>
+					<Shift expiry="20Y" term="10Y">0</Shift>
+					<Shift expiry="20Y" term="15Y">0</Shift>
+					<Shift expiry="20Y" term="20Y">0</Shift>
+					<Shift expiry="20Y" term="25Y">0</Shift>
+					<Shift expiry="20Y" term="30Y">0</Shift>
+					<Shift expiry="25Y" term="1Y">0</Shift>
+					<Shift expiry="25Y" term="2Y">0</Shift>
+					<Shift expiry="25Y" term="3Y">0</Shift>
+					<Shift expiry="25Y" term="4Y">0</Shift>
+					<Shift expiry="25Y" term="5Y">0</Shift>
+					<Shift expiry="25Y" term="7Y">0</Shift>
+					<Shift expiry="25Y" term="10Y">0</Shift>
+					<Shift expiry="25Y" term="15Y">0</Shift>
+					<Shift expiry="25Y" term="20Y">0</Shift>
+					<Shift expiry="25Y" term="25Y">0</Shift>
+					<Shift expiry="25Y" term="30Y">0</Shift>
+					<Shift expiry="30Y" term="1Y">0</Shift>
+					<Shift expiry="30Y" term="2Y">0</Shift>
+					<Shift expiry="30Y" term="3Y">0</Shift>
+					<Shift expiry="30Y" term="4Y">0</Shift>
+					<Shift expiry="30Y" term="5Y">0</Shift>
+					<Shift expiry="30Y" term="7Y">0</Shift>
+					<Shift expiry="30Y" term="10Y">0</Shift>
+					<Shift expiry="30Y" term="15Y">0</Shift>
+					<Shift expiry="30Y" term="20Y">0</Shift>
+					<Shift expiry="30Y" term="25Y">0</Shift>
+					<Shift expiry="30Y" term="30Y">0</Shift>
+				</Shifts>
+				<ShiftExpiries>1M, 3M, 6M, 1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftExpiries>
+				<ShiftTerms>1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftTerms>
+			</SwaptionVolatility>
+		</SwaptionVolatilities>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="SurvivalProbability/CPTY_A/3">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, 0.019868017118376134, -0.0039779034846835516</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="SurvivalProbability/CPTY_A/4">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, 0.026561884496720256</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+	<StressTest id="t1">
+		<ParShifts>
+			<IRCurves>false</IRCurves>
+			<CapFloorVolatilities>false</CapFloorVolatilities>
+			<SurvivalProbability>false</SurvivalProbability>
+		</ParShifts>
+		<DiscountCurves>
+			<DiscountCurve ccy="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</DiscountCurve>
+			<DiscountCurve ccy="USD">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>3D, 4D, 7D, 10D, 16D, 23D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D</ShiftTenors>
+			</DiscountCurve>
+		</DiscountCurves>
+		<IndexCurves>
+			<IndexCurve index="EUR-ESTER">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 9D, 16D, 23D, 32D, 63D, 94D, 126D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4019D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-3M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>185D, 218D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="EUR-EURIBOR-6M">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, 0.00044086886233533722, 0.0011643184082742735, -0.00015460826407948501, -0.00012887548976784865, -9.6656617325941739e-05, -7.7329527615349391e-05, -6.4440684964450122e-05</Shifts>
+				<ShiftTenors>185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 732D, 1099D, 1463D, 1828D, 2193D, 2558D, 2926D, 3290D, 3654D, 4385D, 5481D, 7308D, 9135D, 10959D, 14612D, 18264D, 21917D</ShiftTenors>
+			</IndexCurve>
+			<IndexCurve index="USD-SOFR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>1D, 10D, 16D, 32D, 63D, 94D, 127D, 155D, 185D, 217D, 247D, 275D, 308D, 336D, 367D, 459D, 550D, 640D, 732D, 1099D, 1828D, 3654D, 5481D, 7308D, 10959D</ShiftTenors>
+			</IndexCurve>
+		</IndexCurves>
+		<SwaptionVolatilities>
+			<SwaptionVolatility key="EUR">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>
+					<Shift expiry="1M" term="1Y">0</Shift>
+					<Shift expiry="1M" term="2Y">0</Shift>
+					<Shift expiry="1M" term="3Y">0</Shift>
+					<Shift expiry="1M" term="4Y">0</Shift>
+					<Shift expiry="1M" term="5Y">0</Shift>
+					<Shift expiry="1M" term="7Y">0</Shift>
+					<Shift expiry="1M" term="10Y">0</Shift>
+					<Shift expiry="1M" term="15Y">0</Shift>
+					<Shift expiry="1M" term="20Y">0</Shift>
+					<Shift expiry="1M" term="25Y">0</Shift>
+					<Shift expiry="1M" term="30Y">0</Shift>
+					<Shift expiry="3M" term="1Y">0</Shift>
+					<Shift expiry="3M" term="2Y">0</Shift>
+					<Shift expiry="3M" term="3Y">0</Shift>
+					<Shift expiry="3M" term="4Y">0</Shift>
+					<Shift expiry="3M" term="5Y">0</Shift>
+					<Shift expiry="3M" term="7Y">0</Shift>
+					<Shift expiry="3M" term="10Y">0</Shift>
+					<Shift expiry="3M" term="15Y">0</Shift>
+					<Shift expiry="3M" term="20Y">0</Shift>
+					<Shift expiry="3M" term="25Y">0</Shift>
+					<Shift expiry="3M" term="30Y">0</Shift>
+					<Shift expiry="6M" term="1Y">0</Shift>
+					<Shift expiry="6M" term="2Y">0</Shift>
+					<Shift expiry="6M" term="3Y">0</Shift>
+					<Shift expiry="6M" term="4Y">0</Shift>
+					<Shift expiry="6M" term="5Y">0</Shift>
+					<Shift expiry="6M" term="7Y">0</Shift>
+					<Shift expiry="6M" term="10Y">0</Shift>
+					<Shift expiry="6M" term="15Y">0</Shift>
+					<Shift expiry="6M" term="20Y">0</Shift>
+					<Shift expiry="6M" term="25Y">0</Shift>
+					<Shift expiry="6M" term="30Y">0</Shift>
+					<Shift expiry="1Y" term="1Y">0</Shift>
+					<Shift expiry="1Y" term="2Y">0</Shift>
+					<Shift expiry="1Y" term="3Y">0</Shift>
+					<Shift expiry="1Y" term="4Y">0</Shift>
+					<Shift expiry="1Y" term="5Y">0</Shift>
+					<Shift expiry="1Y" term="7Y">0</Shift>
+					<Shift expiry="1Y" term="10Y">0</Shift>
+					<Shift expiry="1Y" term="15Y">0</Shift>
+					<Shift expiry="1Y" term="20Y">-0.002</Shift>
+					<Shift expiry="1Y" term="25Y">0</Shift>
+					<Shift expiry="1Y" term="30Y">0</Shift>
+					<Shift expiry="2Y" term="1Y">0</Shift>
+					<Shift expiry="2Y" term="2Y">0</Shift>
+					<Shift expiry="2Y" term="3Y">0</Shift>
+					<Shift expiry="2Y" term="4Y">0</Shift>
+					<Shift expiry="2Y" term="5Y">0</Shift>
+					<Shift expiry="2Y" term="7Y">0</Shift>
+					<Shift expiry="2Y" term="10Y">0</Shift>
+					<Shift expiry="2Y" term="15Y">-0.001</Shift>
+					<Shift expiry="2Y" term="20Y">-0.002</Shift>
+					<Shift expiry="2Y" term="25Y">0</Shift>
+					<Shift expiry="2Y" term="30Y">0</Shift>
+					<Shift expiry="3Y" term="1Y">0</Shift>
+					<Shift expiry="3Y" term="2Y">0</Shift>
+					<Shift expiry="3Y" term="3Y">0</Shift>
+					<Shift expiry="3Y" term="4Y">0</Shift>
+					<Shift expiry="3Y" term="5Y">0</Shift>
+					<Shift expiry="3Y" term="7Y">0</Shift>
+					<Shift expiry="3Y" term="10Y">0</Shift>
+					<Shift expiry="3Y" term="15Y">0</Shift>
+					<Shift expiry="3Y" term="20Y">0</Shift>
+					<Shift expiry="3Y" term="25Y">0</Shift>
+					<Shift expiry="3Y" term="30Y">0</Shift>
+					<Shift expiry="4Y" term="1Y">0</Shift>
+					<Shift expiry="4Y" term="2Y">0</Shift>
+					<Shift expiry="4Y" term="3Y">0</Shift>
+					<Shift expiry="4Y" term="4Y">0</Shift>
+					<Shift expiry="4Y" term="5Y">0</Shift>
+					<Shift expiry="4Y" term="7Y">0</Shift>
+					<Shift expiry="4Y" term="10Y">0</Shift>
+					<Shift expiry="4Y" term="15Y">0</Shift>
+					<Shift expiry="4Y" term="20Y">0</Shift>
+					<Shift expiry="4Y" term="25Y">0</Shift>
+					<Shift expiry="4Y" term="30Y">0</Shift>
+					<Shift expiry="5Y" term="1Y">0</Shift>
+					<Shift expiry="5Y" term="2Y">0</Shift>
+					<Shift expiry="5Y" term="3Y">0</Shift>
+					<Shift expiry="5Y" term="4Y">0</Shift>
+					<Shift expiry="5Y" term="5Y">0</Shift>
+					<Shift expiry="5Y" term="7Y">0</Shift>
+					<Shift expiry="5Y" term="10Y">0</Shift>
+					<Shift expiry="5Y" term="15Y">0</Shift>
+					<Shift expiry="5Y" term="20Y">0</Shift>
+					<Shift expiry="5Y" term="25Y">0</Shift>
+					<Shift expiry="5Y" term="30Y">0</Shift>
+					<Shift expiry="7Y" term="1Y">0</Shift>
+					<Shift expiry="7Y" term="2Y">0</Shift>
+					<Shift expiry="7Y" term="3Y">0</Shift>
+					<Shift expiry="7Y" term="4Y">0</Shift>
+					<Shift expiry="7Y" term="5Y">0</Shift>
+					<Shift expiry="7Y" term="7Y">0</Shift>
+					<Shift expiry="7Y" term="10Y">0</Shift>
+					<Shift expiry="7Y" term="15Y">0</Shift>
+					<Shift expiry="7Y" term="20Y">0</Shift>
+					<Shift expiry="7Y" term="25Y">0</Shift>
+					<Shift expiry="7Y" term="30Y">0</Shift>
+					<Shift expiry="10Y" term="1Y">0</Shift>
+					<Shift expiry="10Y" term="2Y">0</Shift>
+					<Shift expiry="10Y" term="3Y">0</Shift>
+					<Shift expiry="10Y" term="4Y">0</Shift>
+					<Shift expiry="10Y" term="5Y">0</Shift>
+					<Shift expiry="10Y" term="7Y">0</Shift>
+					<Shift expiry="10Y" term="10Y">0</Shift>
+					<Shift expiry="10Y" term="15Y">0</Shift>
+					<Shift expiry="10Y" term="20Y">0</Shift>
+					<Shift expiry="10Y" term="25Y">0</Shift>
+					<Shift expiry="10Y" term="30Y">0</Shift>
+					<Shift expiry="15Y" term="1Y">0</Shift>
+					<Shift expiry="15Y" term="2Y">0</Shift>
+					<Shift expiry="15Y" term="3Y">0</Shift>
+					<Shift expiry="15Y" term="4Y">0</Shift>
+					<Shift expiry="15Y" term="5Y">0</Shift>
+					<Shift expiry="15Y" term="7Y">0</Shift>
+					<Shift expiry="15Y" term="10Y">0</Shift>
+					<Shift expiry="15Y" term="15Y">0</Shift>
+					<Shift expiry="15Y" term="20Y">0</Shift>
+					<Shift expiry="15Y" term="25Y">0</Shift>
+					<Shift expiry="15Y" term="30Y">0</Shift>
+					<Shift expiry="20Y" term="1Y">0</Shift>
+					<Shift expiry="20Y" term="2Y">0</Shift>
+					<Shift expiry="20Y" term="3Y">0</Shift>
+					<Shift expiry="20Y" term="4Y">0</Shift>
+					<Shift expiry="20Y" term="5Y">0</Shift>
+					<Shift expiry="20Y" term="7Y">0</Shift>
+					<Shift expiry="20Y" term="10Y">0</Shift>
+					<Shift expiry="20Y" term="15Y">0</Shift>
+					<Shift expiry="20Y" term="20Y">0</Shift>
+					<Shift expiry="20Y" term="25Y">0</Shift>
+					<Shift expiry="20Y" term="30Y">0</Shift>
+					<Shift expiry="25Y" term="1Y">0</Shift>
+					<Shift expiry="25Y" term="2Y">0</Shift>
+					<Shift expiry="25Y" term="3Y">0</Shift>
+					<Shift expiry="25Y" term="4Y">0</Shift>
+					<Shift expiry="25Y" term="5Y">0</Shift>
+					<Shift expiry="25Y" term="7Y">0</Shift>
+					<Shift expiry="25Y" term="10Y">0</Shift>
+					<Shift expiry="25Y" term="15Y">0</Shift>
+					<Shift expiry="25Y" term="20Y">0</Shift>
+					<Shift expiry="25Y" term="25Y">0</Shift>
+					<Shift expiry="25Y" term="30Y">0</Shift>
+					<Shift expiry="30Y" term="1Y">0</Shift>
+					<Shift expiry="30Y" term="2Y">0</Shift>
+					<Shift expiry="30Y" term="3Y">0</Shift>
+					<Shift expiry="30Y" term="4Y">0</Shift>
+					<Shift expiry="30Y" term="5Y">0</Shift>
+					<Shift expiry="30Y" term="7Y">0</Shift>
+					<Shift expiry="30Y" term="10Y">0</Shift>
+					<Shift expiry="30Y" term="15Y">0</Shift>
+					<Shift expiry="30Y" term="20Y">0</Shift>
+					<Shift expiry="30Y" term="25Y">0</Shift>
+					<Shift expiry="30Y" term="30Y">0</Shift>
+				</Shifts>
+				<ShiftExpiries>1M, 3M, 6M, 1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftExpiries>
+				<ShiftTerms>1Y, 2Y, 3Y, 4Y, 5Y, 7Y, 10Y, 15Y, 20Y, 25Y, 30Y</ShiftTerms>
+			</SwaptionVolatility>
+		</SwaptionVolatilities>
+		<SurvivalProbabilities>
+			<SurvivalProbability name="BANK">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000, -0.0000000000000000</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+			<SurvivalProbability name="CPTY_A">
+				<ShiftType>Absolute</ShiftType>
+				<Shifts>-0, -0.0000000000000000, -0.0000000000000000, 0.019868017118376134, 0.021112826580707164</Shifts>
+				<ShiftTenors>375D, 742D, 1106D, 1836D, 3662D</ShiftTenors>
+			</SurvivalProbability>
+		</SurvivalProbabilities>
+	</StressTest>
+</StressTesting>
+

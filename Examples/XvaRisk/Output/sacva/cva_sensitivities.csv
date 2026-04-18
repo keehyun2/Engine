@@ -1,0 +1,15 @@
+#NettingSet,RiskFactor,ShiftType,ShiftSize,Currency,BaseCva,Delta
+CPTY_A,InterestRate/Delta/EUR/1Y,Absolute,0.000100,EUR,64966.51,17.6550
+CPTY_A,InterestRate/Delta/EUR/5Y,Absolute,0.000100,EUR,64966.51,-99.4332
+CPTY_A,InterestRate/Delta/USD/1Y,Absolute,0.000100,EUR,64966.51,2.3652
+CPTY_A,InterestRate/Delta/USD/5Y,Absolute,0.000100,EUR,64966.51,62.6055
+CPTY_A,InterestRate/Delta/EUR/1Y,Absolute,0.000100,EUR,64966.51,-122.7489
+CPTY_A,InterestRate/Delta/EUR/5Y,Absolute,0.000100,EUR,64966.51,594.9127
+CPTY_A,InterestRate/Delta/USD/1Y,Absolute,0.000100,EUR,64966.51,-101.0173
+CPTY_A,InterestRate/Delta/USD/5Y,Absolute,0.000100,EUR,64966.51,446.6808
+CPTY_A,InterestRate/Vega/EUR/0D,Relative,0.010000,EUR,64966.51,295.6234
+CPTY_A,InterestRate/Vega/USD/0D,Relative,0.010000,EUR,64966.51,288.5480
+CPTY_A,ForeignExchange/Delta/USDEUR/0D,Relative,0.010000,EUR,64966.51,383.5186
+CPTY_A,ForeignExchange/Vega/EURUSD/0D,Relative,0.010000,EUR,64966.51,18.3227
+CPTY_A,CreditCounterparty/Delta/CPTY_A/1Y,Absolute,0.000100,EUR,64966.51,-31.6702
+CPTY_A,CreditCounterparty/Delta/CPTY_A/5Y,Absolute,0.000100,EUR,64966.51,1034.7728

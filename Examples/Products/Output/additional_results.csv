@@ -1,0 +1,21 @@
+#TradeId,ResultId,ResultType,ResultValue
+CommodityOption,PricingConfigEngine,string,AnalyticEuropeanForwardEngine
+CommodityOption,PricingConfigModel,string,BlackScholes
+CommodityOption,PricingConfigProductType,string,CommodityOptionForward
+CommodityOption,isdaAssetClass,string,Commodity
+CommodityOption,isdaBaseProduct,string,Option
+CommodityOption,isdaSubProduct,string,Price Return Basic Performance
+CommodityOption,isdaTransaction,string,
+CommodityOption,quantity,double,500000.000000000000
+CommodityOption,strike,double,70.000000000000
+CommodityOption,strikeCurrency,string,USD
+CommodityOption,cashFlowResults[0],cashflows,8.984731428532  @ 2026-04-19
+CommodityOption,discountFactor,double,0.950454769348
+CommodityOption,dividendDiscount,double,0.888768782931
+CommodityOption,forward,double,67.298765209375
+CommodityOption,instMultiplier,double,-500000.000000000000
+CommodityOption,riskFreeDiscount,double,0.950454769348
+CommodityOption,spot,double,71.969710900000
+CommodityOption,strike,double,70.000000000000
+CommodityOption,timeToExpiry,double,1.186301369863
+CommodityOption,volatility,double,0.254196894501

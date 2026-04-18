@@ -1,0 +1,4 @@
+{ "@timestamp": "2026-04-18T09:11:27.851293", "detail": "25 trades, 3 samples", "key": "stress scenarios", "progress": 0, "total": 75 }
+{ "@timestamp": "2026-04-18T09:11:27.868003", "detail": "25 trades, 3 samples", "key": "stress scenarios", "progress": 25, "total": 75 }
+{ "@timestamp": "2026-04-18T09:11:27.884679", "detail": "25 trades, 3 samples", "key": "stress scenarios", "progress": 50, "total": 75 }
+{ "@timestamp": "2026-04-18T09:11:27.884728", "detail": "25 trades, 3 samples", "key": "stress scenarios", "progress": 75, "total": 75 }

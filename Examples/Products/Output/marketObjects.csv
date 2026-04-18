@@ -1,0 +1,5 @@
+#MarketObjectType,MarketObjectName
+DiscountCurve,USD
+IndexCurve,USD-FedFunds|USD-SOFR
+CommodityCurves,NYMEX:CL
+CommodityVolatilities,NYMEX:CL

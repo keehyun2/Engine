@@ -69,7 +69,7 @@ Docs/UserGuide/userguide.pdf
 ##########################
 Examples/Legacy/Example_?/Output/
 Examples/Legacy/Example_[0-9][0-9]/Output/
-Examples/Academy/*/Output/
+# Examples/Academy/*/Output/
 # these are generated
 Examples/Legacy/Example_26/Input/EUR_xois_portfolio.xml
 Examples/Legacy/Example_26/Input/USD_xois_portfolio.xml
@@ -294,10 +294,10 @@ GRTAGS
 ###########################
 
 Docs/UserGuide/userguide.pdf
-Examples/*/Output/*.csv
-Examples/*/Output/log.txt
-Examples/*/Output/*.pdf
-*/*/Output/*
+# Examples/*/Output/*.csv
+# Examples/*/Output/log.txt
+# Examples/*/Output/*.pdf
+# */*/*/Output/*
 Test/test
 Test/simulation
 Test/Output/
@@ -340,9 +340,9 @@ QuantExt/qle/gitversion.hpp
 ##########################
 # Examples output
 ##########################
-Examples/*/Output/
-!Examples/*/Output/README_korean.md
-!Examples/*/Output/*/README_korean.md
+# Examples/*/Output/
+# !Examples/*/Output/README_korean.md
+# !Examples/*/Output/*/README_korean.md
 logs/
 
 Examples/**/pricingstats.csv

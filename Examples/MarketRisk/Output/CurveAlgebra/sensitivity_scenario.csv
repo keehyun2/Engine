@@ -1,0 +1,17 @@
+#TradeId,Factor,Up/Down,Base NPV,ShiftSize_1,ShiftSize_2,Scenario NPV,Difference
+BasisSwap,DiscountCurve/USD/0/6M,Up,-9253250.00,0.000000,#N/A,-9252938.52,311.48
+BasisSwap,DiscountCurve/USD/0/6M,Down,-9253250.00,0.000000,#N/A,-9253561.49,-311.49
+BasisSwap,CommodityCurve/NaturalGasBasis/20/21D,Up,-9253250.00,1.862500,#N/A,-9541937.50,-288687.50
+BasisSwap,CommodityCurve/NaturalGasBasis/53/54D,Up,-9253250.00,1.862500,#N/A,-9532625.00,-279375.00
+BasisSwap,CommodityCurve/NaturalGasBasis/82/83D,Up,-9253250.00,1.862500,#N/A,-9541937.50,-288687.50
+BasisSwap,CommodityCurve/NaturalGasBasis/101/102D,Up,-9253250.00,1.862500,#N/A,-9541937.50,-288687.50
+BasisSwap,CommodityCurve/NaturalGasBasis/20/21D,Down,-9253250.00,1.862500,#N/A,-8964562.50,288687.50
+BasisSwap,CommodityCurve/NaturalGasBasis/53/54D,Down,-9253250.00,1.862500,#N/A,-8973875.00,279375.00
+BasisSwap,CommodityCurve/NaturalGasBasis/82/83D,Down,-9253250.00,1.862500,#N/A,-8964562.50,288687.50
+BasisSwap,CommodityCurve/NaturalGasBasis/101/102D,Down,-9253250.00,1.862500,#N/A,-8964562.50,288687.50
+Option,DiscountCurve/USD/0/6M,Up,19972500.00,0.000000,#N/A,19972390.56,-109.44
+Option,DiscountCurve/USD/0/6M,Down,19972500.00,0.000000,#N/A,19972609.44,109.44
+Option,CommodityCurve/NaturalGas/41/42D,Up,19972500.00,1.862500,#N/A,20028375.00,55875.00
+Option,CommodityCurve/NaturalGasBasis/41/42D,Up,19972500.00,1.862500,#N/A,20028375.00,55875.00
+Option,CommodityCurve/NaturalGas/41/42D,Down,19972500.00,1.862500,#N/A,19916625.00,-55875.00
+Option,CommodityCurve/NaturalGasBasis/41/42D,Down,19972500.00,1.862500,#N/A,19916625.00,-55875.00

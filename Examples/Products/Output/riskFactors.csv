@@ -1,0 +1,4 @@
+#RiskFactorType,RiskFactorName
+DiscountCurve,USD
+CommodityCurve,NYMEX:CL
+CommodityVolatility,NYMEX:CL
