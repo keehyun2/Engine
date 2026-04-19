@@ -289,6 +289,118 @@ FX 포워드 헷지 비율 = Σ PV(Floating Cashflows)
 
 ---
 
+## 📚 금융 용어 사전 (비전문가용)
+
+### 기본 개념
+
+**할인율 (Discount Factor)**
+- 미래에 받을 돈을 현재 가치로 변환하는 비율
+- 예: 1년 후 100원 × 할인율 0.99 = 현재 99원
+- 금리가 높을수록 할인율은 낮아짐
+
+**이자율 평가 (Interest Rate Parity)**
+- 두 통화의 금리 차이가 선도 환율에 반영된다는 이론
+- 금리가 높은 통화는 미래에 가치가 하락 (선도 환율 하락)
+
+**NPV (Net Present Value, 순현재가치)**
+- 모든 미래 현금흐름을 현재 가치로 합산한 값
+- 0: 공정 가격 (시장 데이터와 일치)
+- NPV = 0이면 곡선 구축이 정확함을 의미
+
+### 상품 유형
+
+**XOIS (Cross-Currency OIS)**
+- 통화 간 거래에 사용하는 OIS 곡선
+- EUR OIS: EUR 기준 할인율
+- USD OIS: USD 기준 할인율
+
+**FX 포워드 (Foreign Exchange Forward)**
+- 미래 특정일에 고정된 환율로 통화 교환
+- 현물 환율 + 금리 차이 = 선도 환율
+- 환율 변동 리스크 회피에 사용
+
+**크로스 통화 베이시스 스왑 (Cross-Currency Basis Swap)**
+- 서로 다른 통화의 변동 금리 교환 + 원금 교환
+- 예: "EUR 3M EURIBOR 지급 / GBP 3M LIBOR 수취 + 베이시스"
+- 통화 간 자금 조달에 사용
+
+### 시장 용어
+
+**EONIA (Euro Overnight Index Average)**
+- 유로존 익일 금리 (EUR OIS 기준)
+- 단기 파생상품 할인에 사용
+
+**EURIBOR 3M**
+- 3개월물 유로 금리
+- 스왑의 변동 금리 기준
+
+**LIBOR 3M**
+- 3개월물 달러/파운드 금리
+- 금융계의 기준 금리 (SOFR 등으로 대체 중)
+
+**SONIA (Sterling Overnight Index Average)**
+- 영국 파운드 익일 금리 (GBP OIS 기준)
+
+**SARON (Swiss Average Rate Overnight)**
+- 스위스 프랑 익일 금리 (CHF OIS 기준)
+
+### 기술 용어
+
+**베이시스 (Basis)**
+- 두 금리 간의 차이
+- 예: EUR/GBP 베이시스 -20bp → EUR가 0.2% 불리
+- 음수: EUR 자금 수요가 더 높음
+
+**선도 환율 (Forward Rate)**
+- 미래의 환율을 미리 정한 가격
+- F = S × (DF_foreign / DF_domestic)
+- 현물 환율 × (외국 할인율 /本国 할인율)
+
+**현물 환율 (Spot Rate)**
+- 현재 시장 환율
+- 선도 환율의 기준
+
+**bp (basis point)**
+- 금리 단위: 1bp = 0.01%
+- 예: 25bp = 0.25%
+
+**만기 (Maturity)**
+- 계약 종료일
+- 3M = 3개월, 5Y = 5년
+
+**명목 금액 (Notional)**
+- 계약 기준 금액 (실제 교환 여부는 상품에 따름)
+
+**DayCount**
+- 이자 계산 기간
+- 예: 3M EURIBOR × Notional × (90/360)
+
+### 경제 개념
+
+**유동성 프리미엄 (Liquidity Premium)**
+- 쉽게 현금화 가능한 통화가 더 선호됨
+- USD > EUR > GBP 순으로 유동성 높음
+
+**커버드 이자율 평가**
+- 선도 환율 = 현물 환율 × (1 + r_foreign) / (1 + r_domestic)
+- 두 통화의 금리 차이가 선도 환율에 반영
+
+**재가격 (Repricing)**
+- 구축된 곡선으로 다시 가격 계산
+- NPV = 0이면 일관성 확인
+
+### 곡선 관련
+
+**OIS 곡선 (OIS Curve)**
+- 익일 금리 기반 할인율 곡선
+- 단기 리스크 프리 할인에 사용
+
+**통화 간 일관성 (Cross-Currency Consistency)**
+- 동일한 OIS 곡선이 여러 통화 거래에 일관되게 적용되는지 확인
+- FX 포워드와 스왑 모두 NPV = 0이어야 함
+
+---
+
 ## 💻 실제 실행 결과 분석
 
 ### ORE 실행 개요

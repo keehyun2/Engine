@@ -161,6 +161,92 @@ F/S = (1 + r_foreign) / (1 + r_domestic)
 
 ---
 
+## 📚 금융 용어 사전 (비전문가용)
+
+### 기본 개념
+
+**할인율 (Discount Factor)**
+- 미래 현금흐름의 현재 가치 변환 비율
+- 예: 1년 후 100원 × 0.99 = 현재 99원
+
+**이자율 평가 (Interest Rate Parity)**
+- 두 통화의 금리 차이 → 선도 환율 차이
+- 금리 높은 통화: 미래 가치 하락 예상
+
+**NPV (순현재가치)**
+- 모든 미래 현금흐름의 현재 가치 합계
+- 0: 공정 가격 (정확히 재현)
+
+### 상품 유형
+
+**XOIS USD (Cross-Currency OIS USD)**
+- USD 기준 OIS 곡선을 사용한 통화 간 거래
+- FedFunds가 USD 할인의 기준
+
+**FX 포워드 (외환 선도 계약)**
+- 미래 특정일에 고정 환율로 통화 교환
+- USD/JPY, USD/EUR 등
+
+**크로스 통화 베이시스 스왑**
+- 서로 다른 통화의 변동 금리 교환
+- USD 3M LIBOR ↔ EUR 3M EURIBOR + 베이시스
+
+### 시장 용어
+
+**FedFunds (연방기금 금리)**
+- 미국 Fed의 기준 금리
+- USD OIS 곡선의 기준
+
+**LIBOR 3M**
+- 3개월물 달러 금리
+- USD 기반 스왑의 기준
+
+**EURIBOR 3M**
+- 3개월물 유로 금리
+- EUR 기반 스왑의 기준
+
+**EONIA**
+- 유로존 익일 금리
+- EUR OIS 곡선의 기준
+
+### 기술 용어
+
+**베이시스 (Basis)**
+- 두 금리 간 차이 (1bp = 0.01%)
+- 베이시스가 양수: 상대 통화가 유리
+
+**선도 환율 (Forward Rate)**
+- F = S × (DF_foreign / DF_domestic)
+- 현물 환율 × (외국 할인율 / USD 할인율)
+
+**만기 (Maturity)**
+- 계약 종료일 (3M, 1Y, 5Y 등)
+
+**명목 금액 (Notional)**
+- 계약 기준 금액
+
+**재가격 (Repricing)**
+- 구축된 곡선으로 다시 가격 계산
+- NPV = 0이면 일관성 확인
+
+### XOIS USD vs XOIS EUR
+
+| 특징 | XOIS USD | XOIS EUR |
+|------|----------|----------|
+| 기준 통화 | USD | EUR |
+| OIS 곡선 | FedFunds | EONIA |
+| 주요 통화 | EUR, JPY, GBP | USD, GBP, CHF |
+| 글로벌 사용 | 더 높음 | 유럽 중심 |
+
+### 통화 쌍별 특징
+
+**USD/EUR**: 가장 유동적인 통화 쌍
+**USD/JPY**: 아시아 통화 대표
+**USD/GBP**: 북미-유럽 간 거래
+**USD/CHF**: 스위스 프랑 안전자산 성격
+
+---
+
 ## 💻 실제 실행 결과 분석
 
 ### ORE 실행 개요
