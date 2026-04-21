@@ -1,32 +1,68 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- IR Swap 포트폴리오 정의 파일             -->
+<!-- Portfolio for IR Swap                   -->
+<!-- ======================================== -->
+<!--
+  [Portfolio란?]
+  - 분석할 파생상품 포트폴리오 정의
+  - 각 Trade(거래)는 TradeType, Envelope, ProductData로 구성
+
+  [이 예제의 거래: Swap_20y]
+  - EUR 기반 20년 만기 금리 스왑
+  - 고정 금리 4% 수신 (Fixed Receiver)
+  - EURIBOR 6M 변동 금리 지급 (Floating Payer)
+  - 명목 금액: EUR 10,000,000
+-->
+
 <Portfolio>
   <Trade id="Swap_20y">
     <TradeType>Swap</TradeType>
+
+    <!-- ========== Envelope: 거래 메타데이터 ========== -->
     <Envelope>
+      <!-- 상대방 -->
       <CounterParty>CPTY_A</CounterParty>
+      <!-- 순结算 집합 ID (Netting Set) -->
       <NettingSetId>CPTY_A</NettingSetId>
       <AdditionalFields/>
     </Envelope>
+
+    <!-- ========== SwapData: 스왑 상세 데이터 ========== -->
     <SwapData>
+
+      <!-- ========== Leg 1: 고정 금리 레그 ========== -->
       <LegData>
         <LegType>Fixed</LegType>
+        <!-- Payer=false: 금리를 수신함 (Receiver) -->
         <Payer>false</Payer>
         <Currency>EUR</Currency>
+
+        <!-- 명목 금액 -->
         <Notionals>
           <Notional>10000000.000000</Notional>
         </Notionals>
+
+        <!-- 일수 계산 방식: 30/360 -->
         <DayCounter>30/360</DayCounter>
+        <!-- 지급 관행: Following (다음 영업일) -->
         <PaymentConvention>F</PaymentConvention>
+
         <FixedLegData>
+          <!-- 고정 금리: 4% (0.04) -->
           <Rates>
             <Rate>0.04</Rate>
           </Rates>
         </FixedLegData>
+
+        <!-- 일정 생성 규칙 -->
         <ScheduleData>
           <Rules>
             <StartDate>20160301</StartDate>
             <EndDate>20360301</EndDate>
+            <!-- 지급 빈도: 1년 -->
             <Tenor>1Y</Tenor>
+            <!-- 캘린더: TARGET (유로존 영업일) -->
             <Calendar>TARGET</Calendar>
             <Convention>F</Convention>
             <TermConvention>F</TermConvention>
@@ -37,27 +73,43 @@
           </Rules>
         </ScheduleData>
       </LegData>
+
+      <!-- ========== Leg 2: 변동 금리 레그 ========== -->
       <LegData>
         <LegType>Floating</LegType>
+        <!-- Payer=true: 금리를 지급함 (Payer) -->
         <Payer>true</Payer>
         <Currency>EUR</Currency>
+
+        <!-- 명목 금액 -->
         <Notionals>
           <Notional>10000000.000000</Notional>
         </Notionals>
+
+        <!-- 일수 계산: Actual/360 -->
         <DayCounter>A360</DayCounter>
+        <!-- 지급 관행: MF (Modified Following) -->
         <PaymentConvention>MF</PaymentConvention>
+
         <FloatingLegData>
+          <!-- 인덱스: EURIBOR 6개월 -->
           <Index>EUR-EURIBOR-6M</Index>
+          <!-- 스프레드: 0 (기준선) -->
           <Spreads>
             <Spread>0.000000</Spread>
           </Spreads>
+          <!-- 후불(Fixing in arrears) 여부 -->
           <IsInArrears>false</IsInArrears>
+          <!-- Fixing 고정일: 2영업일 전 -->
           <FixingDays>2</FixingDays>
         </FloatingLegData>
+
+        <!-- 일정 생성 규칙 -->
         <ScheduleData>
           <Rules>
             <StartDate>20160301</StartDate>
             <EndDate>20360301</EndDate>
+            <!-- 지급 빈도: 6개월 -->
             <Tenor>6M</Tenor>
             <Calendar>TARGET</Calendar>
             <Convention>MF</Convention>
@@ -69,6 +121,7 @@
           </Rules>
         </ScheduleData>
       </LegData>
+
     </SwapData>
   </Trade>
 </Portfolio>

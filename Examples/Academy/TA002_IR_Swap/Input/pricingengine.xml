@@ -1,8 +1,33 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 가격 결정 엔진 설정 파일                -->
+<!-- PricingEngine for IR Swap               -->
+<!-- ======================================== -->
+<!--
+  [Pricing Engine란?]
+  - 각 파생상품 유형별 가격 계산 방법 정의
+  - 모델(Model): 상품 가격 결정의 수학적 모델
+  - 엔진(Engine): 해당 모델을 구현한 계산 엔진
+
+  [Swap을 위한 설정]
+  - Product Type: Swap (금리 스왑)
+  - Model: DiscountedCashflows (현금흐름 할인 모델)
+  - Engine: DiscountingSwapEngine
+
+  [DiscountingSwapEngine]
+  - 가장 기본적인 Swap 가격 결정 엔진
+  - 각 레그(Leg)의 미래 현금흐름을 예측
+  - 할인 곡선으로 현재가치(PV) 계산
+  - 양쪽 레그의 PV 차이로 Swap 가격 도출
+-->
+
 <PricingEngines>
   <Product type="Swap">
+    <!-- 모델: 현금흐름 할인 모델 -->
     <Model>DiscountedCashflows</Model>
     <ModelParameters/>
+
+    <!-- 엔진: 할인 스왑 엔진 -->
     <Engine>DiscountingSwapEngine</Engine>
     <EngineParameters/>
   </Product>

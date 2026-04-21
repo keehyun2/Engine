@@ -1,19 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ======================================== -->
+<!-- 시장 관습(Conventions) 설정 파일         -->
+<!-- Conventions for IR Swap                 -->
+<!-- ======================================== -->
+<!--
+  [Conventions란?]
+  - 금융 상품의 표준화된 계약 조건
+  - 캘린더, 결산일, 롤오버, 지급 빈도 등
+  - 각 상품 유형별로 시장 관습 정의
+
+  [이 예제의 Conventions]
+  1. EUR-EONIA-CONVENTIONS: EONIA 예금
+  2. EUR-EURIBOR-CONVENTIONS: EURIBOR 예금
+  3. EUR-OIS-CONVENTIONS: EUR OIS 스왑
+  4. EUR-6M-SWAP-CONVENTIONS: EUR 6M 스왑
+-->
+
 <Conventions>
 
-  <!-- Deposits -->
+  <!-- ========== 예금 (Deposit) Conventions ========== -->
+
+  <!-- EONIA (Euro Overnight Index Average) 예금 -->
   <Deposit>
     <Id>EUR-EONIA-CONVENTIONS</Id>
+    <!-- 인덱스 기반 예금 여부 -->
     <IndexBased>true</IndexBased>
     <Index>EUR-EONIA</Index>
   </Deposit>
+
+  <!-- EURIBOR (Euro Interbank Offered Rate) 예금 -->
   <Deposit>
     <Id>EUR-EURIBOR-CONVENTIONS</Id>
     <IndexBased>true</IndexBased>
     <Index>EUR-EURIBOR</Index>
   </Deposit>
-  
-  <!-- Overnight Index linked Swap Legs -->
+
+  <!-- ========== OIS (Overnight Index Swap) Conventions ========== -->
+  <!--
+    [OIS란?]
+    - 고정 금리와 익일 인덱스(Overnight Index) 평균 교환
+    - 무위험 할인률로 사용 (OIS 금리)
+    - SpotLag: 거래일(T)부터 정산일까지의 지연일
+    - FixedDayCounter: 고정 금리 레그의 일수 계산 방식
+    - FixedFrequency: 고정 금리 지급 빈도
+    - Rule: 날짜 생성 규칙 (Backward/Forward)
+  -->
   <OIS>
     <Id>EUR-OIS-CONVENTIONS</Id>
     <SpotLag>2</SpotLag>
@@ -27,7 +58,16 @@
     <Rule>Backward</Rule>
   </OIS>
 
-  <!-- Interest Rate Swaps -->
+  <!-- ========== Interest Rate Swap Conventions ========== -->
+  <!--
+    [IRS란?]
+    - 고정 금리와 변동 금리 교환
+    - FixedCalendar: 고정 금리 레그의 캘린더
+    - FixedFrequency: 고정 금리 지급 빈도 (연간)
+    - FixedConvention: 고정 금리 레그의 영업일 규칙 (MF=Modified Following)
+    - FixedDayCounter: 고정 금리 레그의 일수 계산 (30/360)
+    - Index: 변동 금리 인덱스 (EURIBOR-6M)
+  -->
   <Swap>
     <Id>EUR-6M-SWAP-CONVENTIONS</Id>
     <FixedCalendar>TARGET</FixedCalendar>

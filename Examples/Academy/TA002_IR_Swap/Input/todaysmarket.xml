@@ -1,14 +1,45 @@
 <?xml version="1.0"?>
+<!-- ======================================== -->
+<!-- 오늘의 시장 매핑 설정 파일              -->
+<!-- TodaysMarket for IR Swap                -->
+<!-- ======================================== -->
+<!--
+  [TodaysMarket란?]
+  - 구축된 수익률 곡선들을 실제 시장 맥락에 매핑
+  - 각 통화의 할인 곡선(Discounting Curve) 지정
+  - 각 인덱스의 포워딩 곡선(Forwarding Curve) 지정
+  - 여러 시장 컨텍스트 정의 가능 (pricing, simulation 등)
+
+  [이 예제의 매핑]
+  - "default" 컨텍스트 정의
+  - EUR 할인: Yield/EUR/EUR1D (EONIA 기반)
+  - EUR-EURIBOR-6M 포워딩: Yield/EUR/EUR6M
+-->
+
 <TodaysMarket>
 
-  <!-- discounting curve definition -->
+  <!-- ========== 할인 곡선 정의 ========== -->
+  <!--
+    [할인 곡선의 역할]
+    - 미래 현금흐름의 현재가치(PV) 계산
+    - 각 통화별로 기준 할인 곡선 지정
+    - "default" ID는 ore.xml의 Markets 섹션에서 참조
+  -->
   <DiscountingCurves id="default">
+    <!-- EUR 현금흐름은 EONIA 기반 EUR1D 곡선으로 할인 -->
     <DiscountingCurve currency="EUR">Yield/EUR/EUR1D</DiscountingCurve>
   </DiscountingCurves>
-  
-  <!-- index forwarding curve definition -->
+
+  <!-- ========== 인덱스 포워딩 곡선 정의 ========== -->
+  <!--
+    [포워딩 곡선의 역할]
+    - 변동 금리 인덱스의 미래 금리(Fixing) 예측
+    - 각 인덱스별로 해당 곡선 매핑
+    - 예: EURIBOR-6M의 미래 Fixing은 EUR6M 곡선에서 계산
+  -->
   <IndexForwardingCurves id="default">
+    <!-- EURIBOR-6M 인덱스는 EUR6M 곡선 사용 -->
     <Index name="EUR-EURIBOR-6M">Yield/EUR/EUR6M</Index>
-   </IndexForwardingCurves>
-   
+  </IndexForwardingCurves>
+
 </TodaysMarket>
