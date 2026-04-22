@@ -1,5 +1,4 @@
 # Large output files (excluded from git due to size)
-**/*.csv.gz
 **/scenariodump.csv
 **/rawcube.csv
 **/cube.csv
