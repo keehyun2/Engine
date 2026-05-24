@@ -1,0 +1,243 @@
+## Stress Scenario Analysis: `stressconfig.xml`
+
+Stress tests can be applied in ORE to the same market segments and with
+same granularity as described in the sensitivity section
+<a href="#sec:sensitivity" data-reference-type="ref"
+data-reference="sec:sensitivity">[sec:sensitivity]</a>.
+
+This file `stressconfig.xml` specifies how stress tests can be
+configured. The general structure is shown in listing
+<a href="#lst:stress_config" data-reference-type="ref"
+data-reference="lst:stress_config">[lst:stress_config]</a>.
+
+In this example, two zero stress scenarios “parallel_rates” and “twist”
+and one par rate “par_parallel” are defined. Each scenario definition
+contains the market components to be shifted in this scenario in a
+similar syntax that is also used for the sensitivitya configuration, see
+<a href="#sec:sensitivity" data-reference-type="ref"
+data-reference="sec:sensitivity">[sec:sensitivity]</a>. Components that
+should not be shifted, can just be omitted in the definition of the
+scenario. Shifts for rate curves, credit curves and interest rate
+cap/floors can be given as par or zero rate shifts. By default shifts
+are zero rate shifts. If shifts are marked as par rate shifts all
+components (rate/credit/caps) shifts are par shifts in that category,
+for example it is not possible to have par rate first for one yield
+curve and zero rate for another curve in the same scenario. In case of
+par stress scenario, the shifted par instruments and related conventions
+are defined in a sensitivity configuration. The number number stress
+shifts (tenors/expiries and strikes) need to be align with the
+tenors/expiries and strikes of par instruments
+<a href="#sec:sensitivity" data-reference-type="ref"
+data-reference="sec:sensitivity">[sec:sensitivity]</a>.
+
+However, instead of specifying one shift size per market component, here
+a whole vector of shifts can be given, with different shift sizes
+applied to each point of the curve (or surface / cube).
+
+In case of the swaption volatility shifts, the single value given as
+`Shift` (without the attributes `expiry` and `term`) represents a
+default value that is used whenever no explicit value is given for a
+expiry / term pair.
+
+For FX volatility shifts, the configuration can be specified either
+explicitly or using a weighting schema. In the explicit approach, exact
+shift values for each expiry and tenor can be provided, as demonstrated
+in listing
+<a href="#lst:stress_config_fxvol_explicit" data-reference-type="ref"
+data-reference="lst:stress_config_fxvol_explicit">[lst:stress_config_fxvol_explicit]</a>
+If only one tenor and shift value are provided, a parallel shift will be
+applied across all other tenors.
+
+Two weighting schemas are supported for FX volatility shifts:
+
+- `Unadjusted`: The shift is applied solely to the specified tenor,
+  leaving all other tenors unchanged.
+
+- `Weighted`: The given shift $s_i$ is applied to the specified tenor
+  $i$, while shifts for other tenors are determined using the formula
+  $s_j = s_i \frac{w_j}{w_i}$, where $w_j$ and $w_i$ represent the
+  weights for tenors $j$ and $i$, respectively.
+
+<div class="listing">
+
+``` xml
+  <FxVolatilities>
+      <FxVolatility ccypair="USDEUR">
+        <ShiftType>Absolute</ShiftType>
+        <Shifts>0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.3</Shifts>
+        <ShiftExpiries>6M, 1Y, 2Y, 4Y, 5Y, 7Y, 10Y</ShiftExpiries>
+      </FxVolatility>
+    </FxVolatilities>
+```
+
+</div>
+
+For commodity volatility currently only single shift per expiry is
+supported, which implies same shift size for all moneyness levels
+provided.
+
+<div class="listing">
+
+``` xml
+  <FxVolatilities>
+      <FxVolatility ccypair="USDEUR">
+        <ShiftType>Absolute</ShiftType>
+        <WeightedShifts>
+          <WeightingSchema>Weighted</WeightingSchema>
+          <Shift>0.1</Shift>
+          <Tenor>1Y</Tenor>
+          <ShiftWeights>0.5,1.0,2.0,3.0,4.0,5.0,6.0</ShiftWeights>
+          <WeightTenors>6M,1Y,2Y,4Y,5Y,7Y,10Y</WeightTenors>
+        </WeightedShifts>
+      </FxVolatility>
+```
+
+</div>
+
+<div class="listing">
+
+``` xml
+  <FxVolatilities>
+      <FxVolatility ccypair="USDEUR">
+        <ShiftType>Absolute</ShiftType>
+        <WeightedShifts>
+          <WeightingSchema>Unadjusted</WeightingSchema>
+          <Shift>0.1</Shift>
+          <Tenor>1Y</Tenor>
+        </WeightedShifts>
+      </FxVolatility>
+    </FxVolatilities>
+```
+
+</div>
+
+UseSpreadedTermStructures: If set to true, spreaded termstructures over
+t0 will be used for the scenario calculation, to improve the alignment
+of the scenario sim market and t0 curves.
+
+<div class="longlisting">
+
+``` xml
+<StressTesting>
+  <UseSpreadedTermStructures>false</UseSpreadedTermStructures>
+  <StressTest id="parallel_rates">
+    <DiscountCurves>
+      <DiscountCurve ccy="EUR">
+        <ShiftType>Absolute</ShiftType>
+        <ShiftTenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</ShiftTenors>
+        <Shifts>0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01</Shifts>
+      </DiscountCurve>
+      ...
+    </DiscountCurves>
+    <IndexCurves>
+      ...
+    </IndexCurves>
+    <YieldCurves>
+      ...
+    </YieldCurves>
+    <FxSpots>
+      <FxSpot ccypair="USDEUR">
+        <ShiftType>Relative</ShiftType>
+        <ShiftSize>0.01</ShiftSize>
+      </FxSpot>
+    </FxSpots>
+    <FxVolatilities>
+      ...
+    </FxVolatilities>
+    <CommodityCurves>
+      <CommodityCurve commodity="NYMEX:CL">
+        <Currency>USD</Currency>
+        <ShiftType>Relative</ShiftType>
+        <Shifts>0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01</Shifts>
+        <ShiftTenors>1D,1W,2W,1M,2M,3M,4M,5M,6M,7M,8M,9M,10M,11M,12M,13M,14M,15M,16M,17M,18M,19M,20M,21M,22M,23M,24M</ShiftTenors>
+      </CommodityCurve>
+    </CommodityCurves>
+    <SwaptionVolatilities>
+      <SwaptionVolatility ccy="EUR">
+        <ShiftType>Absolute</ShiftType>
+        <ShiftExpiries>1Y,10Y</ShiftExpiries>
+        <ShiftTerms>5Y</ShiftTerms>
+        <Shifts>
+          <Shift>0.0010</Shift>
+          <Shift expiry="1Y" term="5Y">0.0010</Shift>
+          <Shift expiry="1Y" term="5Y">0.0010</Shift>
+          <Shift expiry="1Y" term="5Y">0.0010</Shift>
+          <Shift expiry="10Y" term="5Y">0.0010</Shift>
+          <Shift expiry="10Y" term="5Y">0.0010</Shift>
+          <Shift expiry="10Y" term="5Y">0.0010</Shift>
+        </Shifts>
+      </SwaptionVolatility>
+    </SwaptionVolatilities>
+    <CapFloorVolatilities>
+      <CapFloorVolatility ccy="EUR">
+        <ShiftType>Absolute</ShiftType>
+        <ShiftExpiries>6M,1Y,2Y,3Y,5Y,10Y</ShiftExpiries>
+        <Shifts>0.001,0.001,0.001,0.001,0.001,0.001</Shifts>
+      </CapFloorVolatility>
+    </CapFloorVolatilities>
+    <CommodityVolatilities>
+      <CommodityVolatility commodity="NYMEX:CL">
+        <ShiftType>Relative</ShiftType>
+        <Shifts>0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01</Shifts>
+        <ShiftExpiries>2W, 1M, 3M, 6M, 9M, 1Y, 2Y, 3Y, 4Y, 5Y, 6Y, 7Y, 8Y, 9Y, 10Y</ShiftExpiries>
+        <ShiftMoneyness>1.0</ShiftMoneyness>
+      </CommodityVolatility>
+    </CommodityVolatilities>
+  </StressTest>
+  <StressTest id="twist">
+    ...
+  </StressTest>
+  <StressTest id="par_parallel">
+    <ParShifts>
+      <IRCurves>true</IRCurves>
+      <SurvivalProbability>true</SurvivalProbability>
+      <CapFloorVolatilities>true</CapFloorVolatilities>
+    </ParShifts>
+    <DiscountCurves>
+      <DiscountCurve ccy="EUR">
+        <ShiftType>Absolute</ShiftType>
+        <ShiftTenors>6M,1Y,2Y,3Y,5Y,7Y,10Y,15Y,20Y</ShiftTenors>
+        <Shifts>0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01</Shifts>
+      </DiscountCurve>
+      ...
+    </DiscountCurves>
+    <IndexCurves>
+      ...
+    </IndexCurves>
+    <YieldCurves />
+    <FxSpots />
+    <FxVolatilities />
+    <SwaptionVolatilities />
+    <CapFloorVolatilities>
+      <CapFloorVolatility key="EUR-EURIBOR-6M">
+        <ShiftType>Absolute</ShiftType>
+        <ShiftExpiries>1Y, 2Y, 3Y, 4Y, 5Y, 6Y, 7Y, 8Y, 9Y</ShiftExpiries>
+        <Shifts>
+          <Shift tenor="1Y">0.01</Shift>
+          <Shift tenor="2Y">0.01</Shift>
+          <Shift tenor="3Y">0.01</Shift>
+          <Shift tenor="4Y">0.01</Shift>
+          <Shift tenor="5Y">0.01</Shift>
+          <Shift tenor="6Y">0.01</Shift>
+          <Shift tenor="7Y">0.01</Shift>
+          <Shift tenor="8Y">0.01</Shift>
+          <Shift tenor="9Y">0.01</Shift>
+        </Shifts>
+      </CapFloorVolatility>
+    </CapFloorVolatilities>
+    <EquitySpots />
+    <EquityVolatilities />
+    <SecuritySpreads />
+    <RecoveryRates />
+    <SurvivalProbabilities>
+      <SurvivalProbability name="Underlying1">
+        <ShiftType>Absolute</ShiftType>
+        <Shifts>0.01, 0.01, 0.01, 0.01, 0.01</Shifts>
+        <ShiftTenors>1Y, 2Y, 3Y, 5Y, 10Y</ShiftTenors>
+      </SurvivalProbability>
+    </SurvivalProbabilities>
+  </StressTest>
+</StressTesting>
+```
+
+</div>

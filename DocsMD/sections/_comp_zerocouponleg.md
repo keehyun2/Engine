@@ -1,0 +1,91 @@
+### ZeroCouponFixed Leg Data
+
+A Zero Coupon Fixed leg contains a series of Zero Coupon payments, i.e
+$(1 + r)^t \,N$ for a compounded coupon. The uninflated notional $N$ can
+be subtracted from the payment , i.e $((1 + r)^t-1) \,N$, see
+`SubtractNotional` below.
+
+Listing <a href="#lst:zerolegdata" data-reference-type="ref"
+data-reference="lst:zerolegdata">[lst:zerolegdata]</a> shows an example
+for a leg of type Zero Coupon Fixed.
+
+To create a leg with only one payment, the schedule must only contain
+the start and end date. Note that this can be achieved by setting the
+*Tenor* to *0D* or *1T* in a rules based Schedule.
+
+Note that the DayCounter in a Zero Coupon Fixed leg is used to compute
+$t$ in $(1+r)^t$ so that the series of zero coupon payments are
+calculated as $(1 + r)^t \,N$. Also note that the “1/1” DayCounter is
+treated as “Year” DayCounter on Zero Coupon Fixed legs, (otherwise the
+$t$ would always be 1).
+
+For leg types other than Zero Coupon Fixed, the DayCounter is used to
+compute the “Accrual” (i.e. the accrual time period of a coupon) in a
+coupon payment calculated as: $N * Accrual * r$. However, the “Accrual”
+in the coupon formula is defaulted to 1 for the Zero Coupon Fixed leg
+type.
+
+- Rates: The fixed real rate(s) of the leg. While this can be a single
+  value, a vector of values or a dated vector of values.
+
+  Allowable values: Each rate element can take any real number. The rate
+  is expressed in decimal form, e.g. *0.05* is a rate of 5%.
+
+- Compounding \[Optional\]: The method of compounding applied to the
+  rate.
+
+  Allowable values: *Simple* i.e. $(1 + r * t)$, or *Compounded* i.e.
+  $(1 + r)^t$. Defaults to *Compounded* if left blank or omitted.
+
+- SubtractNotional \[Optional\]: Decides whether the notional is
+  subtracted from the compounding factor, i.e. $(1 + r * t)  - 1$
+  respectively $(1 + r)^t - 1$, or not, i.e. $(1 + r * t)$ respectively
+  $(1 + r)^t$
+
+  Note that if NotionalFinalExchange is set to *true* an additional
+  final uninflated notional flow $N$ is added. So if
+  NotionalFinalExchange is set to *true*, and SubtractNotional is set to
+  *false*, there will be two final notional flows. It is recommended to
+  omit NotionalFinalExchange causing it to default to *false*, and
+  solely use SubtractNotional to determine the final notional flow.
+
+  Allowable values: *true*, *Y* or *false*, *N*, defaults to *true* if
+  left blank or omitted.
+
+<div class="listing">
+
+``` xml
+      <LegData>
+        <LegType>ZeroCouponFixed</LegType>
+        <Payer>false</Payer>
+        <Currency>EUR</Currency>
+        <Notionals>
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>Year</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2016-07-18</StartDate>
+            <EndDate>2021-07-18</EndDate>
+            <Tenor>0D</Tenor>
+            <Calendar>UK</Calendar>
+            <Convention>ModifiedFollowing</Convention>
+            <TermConvention>ModifiedFollowing</TermConvention>
+            <Rule>Forward</Rule>
+            <EndOfMonth/>
+            <FirstDate/>
+            <LastDate/>
+          </Rules>
+        </ScheduleData>
+        <ZeroCouponFixedLegData>
+            <Rates>
+                <Rate>0.02</Rate>
+            </Rates>
+            <Compounding>Simple</Compounding>
+            <SubtractNotional>false</SubtractNotional>
+        </ZeroCouponFixedLegData>
+      </LegData>
+```
+
+</div>

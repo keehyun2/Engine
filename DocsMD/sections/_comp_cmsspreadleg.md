@@ -1,0 +1,80 @@
+### CMS Spread Leg Data
+
+A CMS Spread leg consists of coupons that are linked to differences
+(spreads) of CMS index fixings with different maturities. When these are
+capped and/or floored, then the leg (assuming NakedOption *true*)
+contains a sequence of CMS Spread Options with payoff
+$$N\cdot\left[(\CMS_m -\CMS_n - K)\right]^+ = N\cdot \max(0,\CMS_m-\CMS_n - K)$$
+where $N$ is the notional amount, $\CMS_{n/m}$ is the $n/m$ year CMS
+rate, and $K$ is the strike.
+
+Listing <a href="#lst:cmsspreadlegdata" data-reference-type="ref"
+data-reference="lst:cmsspreadlegdata">[lst:cmsspreadlegdata]</a> shows
+an example for a leg of type CMSSpread.
+
+<div class="listing">
+
+``` xml
+      <LegData>
+        <LegType>CMSSpread</LegType>
+        <Payer>false</Payer>
+        <Currency>GBP</Currency>
+        <Notionals>
+          <Notional>10000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>Following</PaymentConvention>
+        <ScheduleData>
+          ...
+        </ScheduleData>
+        <CMSSpreadLegData>
+          <Index1>EUR-CMS-10Y</Index1>
+          <Index2>EUR-CMS-2Y</Index2>
+          <Spreads>
+            <Spread>0.0010</Spread>
+          </Spreads>
+          <Gearings>
+            <Gearing>8.0</Gearing>
+          </Gearings>
+          <Caps>
+            <Cap>0.05</Cap>
+          </Caps>
+          <Floors>
+            <Floor>0.01</Floor>
+          </Floors>
+          <NakedOption>false</NakedOption>  
+        </CMSSpreadLegData>
+      </LegData>
+```
+
+</div>
+
+The elements of the CMSSpreadLegData block are identical to those of the
+CMSLegData (see <a href="#ss:cmslegdata" data-reference-type="ref"
+data-reference="ss:cmslegdata">[ss:cmslegdata]</a>), except for the
+index which is defined by two CMS indices as the difference between
+`Index1` and `Index2`.
+
+The payout for each coupon is thus:
+
+$N \cdot (gearing \cdot (Index1 - Index2) + Spread)  \cdot daycountfraction$
+
+Adding a cap, and assuming no spread, a gearing of 1, a daycount
+fraction of 1, and a notional of 1, the payout becomes:
+
+$min (Cap; Index1 - Index2)$
+
+If there is a floor instead of a cap, the payout is:
+
+$max (Floor; Index1 - Index2)$
+
+Note that a CMS Spread Option can be created by setting NakedOption to
+*true*. With this setting, the payout for the CMS Spread leg with a cap
+becomes an option with the cap rate as strike:
+
+$max (0; (Index1 - Index2) - Cap)$
+
+And the payout for a CMS Spread leg with a floor, and with NakedOption
+set to *true* is :
+
+$max (0; Floor - (Index1 - Index2))$

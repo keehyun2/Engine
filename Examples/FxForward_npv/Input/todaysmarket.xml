@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+  <Configuration id="default"/>
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="EUR">Yield/EUR/EUR-IN-USD</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
+  </DiscountingCurves>
+  <FxSpots id="default">
+    <FxSpot pair="USDEUR">FX/USD/EUR</FxSpot>
+  </FxSpots>
+</TodaysMarket>

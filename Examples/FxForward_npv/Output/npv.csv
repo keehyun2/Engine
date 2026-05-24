@@ -1,0 +1,2 @@
+#TradeId,TradeType,Maturity,MaturityTime,NPV,NpvCurrency,NPV(Base),BaseCurrency,Notional,NotionalCurrency,Notional(Base),NettingSet,CounterParty
+FX_Forward_2D,FxForward,2022-02-04,0.010959,-5242.684425,USD,-5242.684425,USD,1090000.00,USD,1090000.00,CPTY_A,CPTY_A

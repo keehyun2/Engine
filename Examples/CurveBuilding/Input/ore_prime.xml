@@ -71,6 +71,9 @@
 
     <!-- sensitivity: 민감도 분석용 시장 데이터 -->
     <Parameter name="sensitivity">default</Parameter>
+      <!-- 오늘 논의한 'Field-based' 데이터 로더 사용 설정 -->
+    <Parameter name="importerType">CSV</Parameter>
+    <Parameter name="csvSeparator"> </Parameter>
   </Markets>
 
   <Analytics>

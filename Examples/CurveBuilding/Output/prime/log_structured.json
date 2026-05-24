@@ -1,0 +1,1 @@
+{ "category": "Warning", "group": "Analytics", "message": "Error in ORE analytics: Invalid CSVLoader line, expected 3 columns, got 4: 2026-05-12  FXSpot  USDVND  25450.00", "sub_fields": [ { "name": "analyticType", "value": "OREApp::run()" }, { "name": "warningType", "value": "Error" } ] }
