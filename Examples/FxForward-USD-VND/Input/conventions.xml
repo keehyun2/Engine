@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Conventions>
+  <Deposit>
+    <Id>USD-ON-SOFR-DEPOSIT</Id>
+    <IndexBased>true</IndexBased>
+    <Index>USD-SOFR</Index>
+  </Deposit>
+  <OIS>
+    <Id>USD-SOFR-OIS</Id>
+    <SpotLag>0</SpotLag>
+    <Index>USD-SOFR</Index>
+    <FixedDayCounter>A360</FixedDayCounter>
+    <PaymentLag>2</PaymentLag>
+    <EOM>false</EOM>
+    <FixedFrequency>Annual</FixedFrequency>
+    <FixedConvention>MF</FixedConvention>
+    <FixedPaymentConvention>MF</FixedPaymentConvention>
+    <Rule>Backward</Rule>
+  </OIS>
+  <FX>
+    <Id>USD-VND-FX</Id>
+    <SpotDays>2</SpotDays>
+    <SourceCurrency>USD</SourceCurrency>
+    <TargetCurrency>VND</TargetCurrency>
+    <PointsFactor>1</PointsFactor>
+    <AdvanceCalendar>US,WeekendsOnly</AdvanceCalendar>
+    <SpotRelative>true</SpotRelative>
+  </FX>
+  <OvernightIndex>
+    <Id>USD-SOFR</Id>
+    <FixingCalendar>US</FixingCalendar>
+    <DayCounter>A360</DayCounter>
+    <SettlementDays>0</SettlementDays>
+  </OvernightIndex>
+</Conventions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Portfolio>
+  <Trade id="FX_Forward_2D">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId>CPTY_A</NettingSetId>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>20260530</ValueDate>
+      <BoughtCurrency>VND</BoughtCurrency>
+      <BoughtAmount>25000000000.0</BoughtAmount>
+      <SoldCurrency>USD</SoldCurrency>
+      <SoldAmount>1000000</SoldAmount>
+    </FxForwardData>
+  </Trade>
+</Portfolio>

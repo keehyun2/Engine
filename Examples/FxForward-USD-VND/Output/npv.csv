@@ -1,0 +1,2 @@
+#TradeId,TradeType,Maturity,MaturityTime,NPV,NpvCurrency,NPV(Base),BaseCurrency,Notional,NotionalCurrency,Notional(Base),NettingSet,CounterParty
+FX_Forward_2D,FxForward,2026-06-02,0.013699,-12180.531747,USD,-12180.531747,USD,1000000.00,USD,1000000.00,CPTY_A,CPTY_A
