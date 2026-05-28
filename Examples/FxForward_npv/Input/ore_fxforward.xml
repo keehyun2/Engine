@@ -7,7 +7,7 @@
     <Parameter name="logFile">log.txt</Parameter>
     <Parameter name="logMask">31</Parameter>
     <Parameter name="marketDataFile">market.txt</Parameter>
-    <Parameter name="fixingDataFile">fixings.txt</Parameter>
+    <!-- <Parameter name="fixingDataFile">fixings.txt</Parameter> -->
     <Parameter name="implyTodaysFixings">N</Parameter>
     <Parameter name="curveConfigFile">curveconfig.xml</Parameter>
     <Parameter name="conventionsFile">conventions.xml</Parameter>

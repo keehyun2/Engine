@@ -62,7 +62,7 @@ RUN mkdir -p /opencllibs && \
 
 
 ARG DEBIAN_TAG
-FROM ${DOCKER_REPO}debian:${DEBIAN_TAG}
+FROM ${DOCKER_REPO}debian:trixie
 
 COPY --from=orebuild /usr/local/include /usr/local/include
 COPY --from=orebuild /usr/local/lib/ /usr/local/lib
