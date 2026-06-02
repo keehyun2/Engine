@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PricingEngines>
+
+  <Product type="Bond">
+    <Model>DiscountedCashflows</Model>
+    <ModelParameters>
+      <Parameter name="OpenEndDateReplacement">50Y</Parameter>
+    </ModelParameters>
+    <Engine>DiscountingRiskyBondEngine</Engine>
+    <EngineParameters>
+      <Parameter name="TimestepPeriod">6M</Parameter>
+      <Parameter name="SensitivityTemplate">IR_Analytical</Parameter>
+    </EngineParameters>
+  </Product>
+
+</PricingEngines>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+  <Configuration id="default"/>
+  <YieldCurves id="default">
+    <YieldCurve name="VND-IN-USD">Yield/VND/VND-IN-USD</YieldCurve>
+  </YieldCurves>
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="VND">Yield/VND/VND-IN-USD</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
+  </DiscountingCurves>
+  <FxSpots id="default">
+    <FxSpot pair="USDVND">FX/USD/VND</FxSpot>
+  </FxSpots>
+</TodaysMarket>

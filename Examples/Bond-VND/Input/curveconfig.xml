@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<CurveConfiguration>
+  <YieldCurves>
+    <YieldCurve>
+      <CurveId>VND-IN-USD</CurveId>
+      <CurveDescription>VND collateralised in USD discount curve</CurveDescription>
+      <Currency>VND</Currency>
+      <DiscountCurve/>
+      <Segments>
+        <CrossCurrency>
+          <Type>FX Forward</Type>
+          <Quotes>
+            <Quote optional="true">FXFWD/RATE/USD/VND/ON</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/TN</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/SN</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/1W</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/2W</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/3W</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/1M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/2M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/3M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/4M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/5M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/6M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/7M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/8M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/9M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/10M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/11M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/1Y</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/15M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/18M</Quote>
+            <Quote optional="true">FXFWD/RATE/USD/VND/21M</Quote>
+          </Quotes>
+          <Conventions>USD-VND-FX</Conventions>
+          <DiscountCurve/>
+          <SpotRate>FX/RATE/USD/VND</SpotRate>
+        </CrossCurrency>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Tolerance>0.0000000000010000</Tolerance>
+      <Extrapolation>true</Extrapolation>
+      <BootstrapConfig>
+        <Accuracy>0.0000000000010000</Accuracy>
+        <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+        <DontThrow>false</DontThrow>
+        <MaxAttempts>5</MaxAttempts>
+        <MaxFactor>2</MaxFactor>
+        <MinFactor>2</MinFactor>
+        <DontThrowSteps>10</DontThrowSteps>
+      </BootstrapConfig>
+    </YieldCurve>
+    <YieldCurve>
+      <CurveId>USD-SOFR</CurveId>
+      <CurveDescription>USD SOFR discount curve</CurveDescription>
+      <Currency>USD</Currency>
+      <DiscountCurve>USD-SOFR</DiscountCurve>
+      <Segments>
+        <Simple>
+          <Type>Deposit</Type>
+          <Quotes>
+            <Quote>MM/RATE/USD/SOFR/0D/1D</Quote>
+          </Quotes>
+          <Conventions>USD-ON-SOFR-DEPOSIT</Conventions>
+          <ProjectionCurve>USD-SOFR</ProjectionCurve>
+        </Simple>
+        <Simple>
+          <Type>OIS</Type>
+          <Quotes>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/1W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/2W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/3W</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/1M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/2M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/3M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/4M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/5M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/6M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/7M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/8M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/9M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/10M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/11M</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/1Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/2Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/3Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/4Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/5Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/6Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/7Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/8Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/9Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/10Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/11Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/12Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/15Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/20Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/25Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/30Y</Quote>
+            <Quote optional="true">IR_SWAP/RATE/USD/SOFR/0D/1D/40Y</Quote>
+          </Quotes>
+          <Conventions>USD-SOFR-OIS</Conventions>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365</YieldCurveDayCounter>
+      <Tolerance>0.0000000000010000</Tolerance>
+      <Extrapolation>true</Extrapolation>
+      <BootstrapConfig>
+        <Accuracy>0.0000000000010000</Accuracy>
+        <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+        <DontThrow>false</DontThrow>
+        <MaxAttempts>5</MaxAttempts>
+        <MaxFactor>2</MaxFactor>
+        <MinFactor>2</MinFactor>
+        <DontThrowSteps>10</DontThrowSteps>
+      </BootstrapConfig>
+    </YieldCurve>
+  </YieldCurves>
+</CurveConfiguration>
