@@ -1,0 +1,1 @@
+{ "category": "Warning", "group": "Curve", "message": "Configuration 'inccy' not known - check why this is used. Will retry with default configuration.", "sub_fields": [ { "name": "curveId", "value": "DiscountCurve(USD)" }, { "name": "exceptionType", "value": "Unknown market configuration." } ] }

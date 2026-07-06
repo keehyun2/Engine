@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="VND">Yield/VND/VND-IN-USD</DiscountingCurve>
+    <DiscountingCurve currency="JPY">Yield/JPY/JPY-IN-USD</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
+  </DiscountingCurves>
+
+  <FxSpots id="default">
+    <FxSpot pair="USDVND">FX/USD/VND</FxSpot>
+    <FxSpot pair="USDJPY">FX/USD/JPY</FxSpot>
+  </FxSpots>
+
+</TodaysMarket>

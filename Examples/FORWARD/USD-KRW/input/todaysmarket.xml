@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<TodaysMarket>
+
+  <DiscountingCurves id="default">
+    <DiscountingCurve currency="KRW">Yield/KRW/KRW-IMPLIED</DiscountingCurve>
+    <DiscountingCurve currency="USD">Yield/USD/USD-SOFR</DiscountingCurve>
+  </DiscountingCurves>
+
+  <FxSpots id="default">
+    <FxSpot pair="USDKRW">FX/USD/KRW</FxSpot>
+  </FxSpots>
+
+</TodaysMarket>

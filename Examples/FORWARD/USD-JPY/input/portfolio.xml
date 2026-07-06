@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Portfolio>
+  <Trade id="FXFWD_USDJPY_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>USD</BoughtCurrency>
+      <BoughtAmount>1000000</BoughtAmount>
+      <SoldCurrency>JPY</SoldCurrency>
+      <SoldAmount>115121000.0</SoldAmount>
+    </FxForwardData>
+  </Trade>
+  <Trade id="FXFWD_JPYUSD_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>JPY</BoughtCurrency>
+      <BoughtAmount>115121000.0</BoughtAmount>
+      <SoldCurrency>USD</SoldCurrency>
+      <SoldAmount>1000000</SoldAmount>
+    </FxForwardData>
+  </Trade>
+</Portfolio>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Portfolio>
+  <Trade id="Bond_Fixed_USD">
+    <TradeType>Bond</TradeType>
+    <Envelope>
+      <CounterParty>CPTY_A</CounterParty>
+      <NettingSetId/>
+      <AdditionalFields/>
+    </Envelope>
+    <BondData>
+      <IssuerId>USD_GOV</IssuerId>
+      <CreditCurveId></CreditCurveId>
+      <SecurityId>SECURITY_1</SecurityId>
+      <ReferenceCurveId>VND-IN-USD</ReferenceCurveId>
+      <SettlementDays>2</SettlementDays>
+      <Calendar>US</Calendar>
+      <IssueDate>2025-02-03</IssueDate>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>false</Payer>
+        <Currency>USD</Currency>
+        <Notionals>
+          <Notional>1000000.000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>F</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.045</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2025-02-03</StartDate>
+            <EndDate>2035-02-03</EndDate>
+            <Tenor>6M</Tenor>
+            <Calendar>US</Calendar>
+            <Convention>F</Convention>
+            <TermConvention>F</TermConvention>
+            <Rule>Forward</Rule>
+            <EndOfMonth/>
+            <FirstDate/>
+            <LastDate/>
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </BondData>
+  </Trade>
+
+</Portfolio>

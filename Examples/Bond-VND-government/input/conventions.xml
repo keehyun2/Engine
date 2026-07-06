@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Conventions>
+  <Zero>
+    <Id>VND-GOVT-ZERO</Id>
+    <DayCounter>A365F</DayCounter>
+    <Compounding>Compounded</Compounding>
+    <Frequency>Annual</Frequency>
+  </Zero>
+</Conventions>

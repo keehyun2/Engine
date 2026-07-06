@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PricingEngines>
+  <Product type="Bond">
+    <Model>DiscountedCashflows</Model>
+    <ModelParameters>
+    </ModelParameters>
+    <Engine>DiscountingRiskyBondEngine</Engine>
+    <EngineParameters/>
+  </Product>
+</PricingEngines>

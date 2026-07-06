@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Portfolio>
+  <Trade id="FXFWD_USDVND_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>EUR</BoughtCurrency>
+      <BoughtAmount>1000000</BoughtAmount>
+      <SoldCurrency>VND</SoldCurrency>
+      <SoldAmount>27201120000.0</SoldAmount>
+    </FxForwardData>
+  </Trade>
+  <Trade id="FXFWD_VNDUSD_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>VND</BoughtCurrency>
+      <BoughtAmount>27201120000.0</BoughtAmount>
+      <SoldCurrency>EUR</SoldCurrency>
+      <SoldAmount>1000000</SoldAmount>
+    </FxForwardData>
+  </Trade>
+</Portfolio>

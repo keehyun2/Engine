@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<CurveConfiguration>
+  <YieldCurves>
+    <YieldCurve>
+      <CurveId>VND-GOVT-BOND</CurveId>
+      <CurveDescription>Vietnam Government Bond Yield Curve (Zero Rates)</CurveDescription>
+      <Currency>VND</Currency>
+      <DiscountCurve/>
+      <Segments>
+        <Simple>
+          <Type>Deposit</Type>
+          <Quotes>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1W</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/3M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/6M</Quote>
+            <!-- <Quote>MM/RATE/VND/VN-GOVT/2D/9M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/2Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/3Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/5Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/7Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/10Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/15Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/20Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/30Y</Quote> -->
+          </Quotes>
+          <Conventions>VND-GOVT-ZERO</Conventions>
+          <ProjectionCurve>VND-GOVT-BOND</ProjectionCurve>
+        </Simple>
+      </Segments>
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365F</YieldCurveDayCounter>
+      <Tolerance>0.0000000000010000</Tolerance>
+      <Extrapolation>true</Extrapolation>
+      <BootstrapConfig>
+        <Accuracy>0.0000000000010000</Accuracy>
+        <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+        <DontThrow>false</DontThrow>
+        <MaxAttempts>5</MaxAttempts>
+        <MaxFactor>2</MaxFactor>
+        <MinFactor>2</MinFactor>
+        <DontThrowSteps>10</DontThrowSteps>
+      </BootstrapConfig>
+    </YieldCurve>
+  </YieldCurves>
+</CurveConfiguration>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CurveConfiguration>
+
+  <YieldCurves>
+    <YieldCurve>
+      <CurveId>VND-GOVT-BOND</CurveId>
+      <CurveDescription>
+        VND Discount Curve bootstrapped from Vietnam Government Zero Rates
+      </CurveDescription>
+      <Currency>VND</Currency>
+      <DiscountCurve>VND-GOVT-BOND</DiscountCurve>
+      <Segments>
+
+        <!-- <Simple>
+          <Type>Deposit</Type>
+          <Quotes>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1W</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/3M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/6M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/9M</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/1Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/2Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/3Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/5Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/7Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/10Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/15Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/20Y</Quote>
+            <Quote>MM/RATE/VND/VN-GOVT/2D/30Y</Quote>
+          </Quotes>
+          <Conventions>VND-VONIA-CONVENTIONS</Conventions>
+        </Simple> -->
+
+        <Direct>
+          <Type>Zero</Type>
+          <Quotes>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/3D</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/1W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/4W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/2M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/3M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/4M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/5M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/6M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/7M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/8M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/39W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/10M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/11M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/12M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/24M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/36M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/48M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/60M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/72M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/84M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/96M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/108M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/120M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/574W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/144M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/156M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/168M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/180M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/192M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/887W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/216M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/228M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/240M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/252M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/1148W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/276M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/288M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/300M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/312M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/324M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/1461W</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/348M</Quote>
+            <Quote>ZERO/RATE/VND/VND-GOVT-BOND/A365/360M</Quote>
+
+          </Quotes>
+          <Conventions>VND-ZERO-CONVENTIONS</Conventions>
+        </Direct>
+
+      </Segments>
+
+      <InterpolationVariable>Discount</InterpolationVariable>
+      <InterpolationMethod>LogLinear</InterpolationMethod>
+      <YieldCurveDayCounter>A365F</YieldCurveDayCounter>
+      <Tolerance>0.0000000000010000</Tolerance>
+      <Extrapolation>true</Extrapolation>
+      <BootstrapConfig>
+        <Accuracy>0.0000000000010000</Accuracy>
+        <GlobalAccuracy>0.0000000000010000</GlobalAccuracy>
+        <DontThrow>false</DontThrow>
+        <MaxAttempts>5</MaxAttempts>
+        <MaxFactor>2</MaxFactor>
+        <MinFactor>2</MinFactor>
+        <DontThrowSteps>10</DontThrowSteps>
+      </BootstrapConfig>
+    </YieldCurve>
+  </YieldCurves>
+</CurveConfiguration>

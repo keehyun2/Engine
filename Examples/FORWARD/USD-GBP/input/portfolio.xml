@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Portfolio>
+  <Trade id="FXFWD_USDGBP_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>USD</BoughtCurrency>
+      <BoughtAmount>1000000</BoughtAmount>
+      <SoldCurrency>GBP</SoldCurrency>
+      <SoldAmount>742750.0</SoldAmount>
+    </FxForwardData>
+  </Trade>
+  <Trade id="FXFWD_GBPUSD_10Y">
+    <TradeType>FxForward</TradeType>
+    <Envelope>
+      <CounterParty>CPTY</CounterParty>
+    </Envelope>
+    <FxForwardData>
+      <ValueDate>2022-02-07</ValueDate>
+      <BoughtCurrency>GBP</BoughtCurrency>
+      <BoughtAmount>742750.0</BoughtAmount>
+      <SoldCurrency>USD</SoldCurrency>
+      <SoldAmount>1000000</SoldAmount>
+    </FxForwardData>
+  </Trade>
+</Portfolio>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================
+     portfolio.xml
+     베트남 국채 (VND) 평가용 포트폴리오
+     마켓데이터: ZERO/RATE/VND/VN-GOVT/A365F 기준 DCF 평가
+     기준일: 2026-06-24
+     - 발행기관 : 베트남 재무부 (Ministry of Finance)
+     - 쿠폰     : 연 1회 (Annual), ACT/365F
+     - 결제     : T+1
+     - 명목원금 : 각 10억 VND
+     ============================================================ -->
+<Portfolio>
+
+  <!-- ==========================================================
+       5Y 국채  |  쿠폰 5.50%  |  만기 2031-06-24
+       Zero Rate 5.650% → 할인 → 이론가격 산출
+       ========================================================== -->
+  <Trade id="VN-GOVT-BOND-5Y">
+    <TradeType>Bond</TradeType>
+    <Envelope>
+      <CounterParty>GOVT-VN</CounterParty>
+      <NettingSetId/>
+      <AdditionalFields/>
+    </Envelope>
+    <BondData>
+      <IssuerId>GOVT-VN</IssuerId>
+      <CreditCurveId></CreditCurveId>
+      <SecurityId>VN-GOVT-BOND-5Y</SecurityId>
+      <ReferenceCurveId>VND-GOVT-BOND</ReferenceCurveId>
+      <SettlementDays>1</SettlementDays>
+      <Calendar>TARGET</Calendar>
+      <IssueDate>2026-06-24</IssueDate>
+      <LegData>
+        <LegType>Fixed</LegType>
+        <Payer>false</Payer>
+        <Currency>VND</Currency>
+        <Notionals>
+          <Notional>1000000000</Notional>
+        </Notionals>
+        <DayCounter>ACT/ACT</DayCounter>
+        <PaymentConvention>MF</PaymentConvention>
+        <FixedLegData>
+          <Rates>
+            <Rate>0.0550</Rate>
+          </Rates>
+        </FixedLegData>
+        <ScheduleData>
+          <Rules>
+            <StartDate>2026-06-24</StartDate>
+            <EndDate>2031-06-24</EndDate>
+            <Tenor>1Y</Tenor>
+            <Calendar>TARGET</Calendar>
+            <Convention>MF</Convention>
+            <TermConvention>MF</TermConvention>
+            <Rule>Forward</Rule>
+            <EndOfMonth>false</EndOfMonth>
+          </Rules>
+        </ScheduleData>
+      </LegData>
+    </BondData>
+  </Trade>
+
+</Portfolio>

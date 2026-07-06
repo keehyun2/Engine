@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Conventions>
+
+  <OvernightIndex>
+    <Id>VND-VONIA</Id>
+    <FixingCalendar>VND</FixingCalendar>
+    <DayCounter>A365</DayCounter>
+    <SettlementDays>0</SettlementDays>
+  </OvernightIndex>
+
+  <Deposit>
+    <Id>VND-VONIA-CONVENTIONS</Id>
+    <IndexBased>true</IndexBased>
+    <Index>VND-VONIA</Index>
+  </Deposit>
+
+  <Zero>
+    <Id>VND-ZERO-CONVENTIONS</Id>
+    <TenorBased>true</TenorBased>
+    <DayCounter>A365</DayCounter>
+    <Compounding>Compounded</Compounding>
+    <CompoundingFrequency>Annual</CompoundingFrequency>
+    <TenorCalendar>VND</TenorCalendar>
+    <SpotLag>1</SpotLag>
+    <SpotCalendar>VND</SpotCalendar>
+    <RollConvention>Following</RollConvention>
+    <EOM>false</EOM>
+  </Zero>
+
+</Conventions>
