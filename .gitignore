@@ -340,9 +340,10 @@ QuantExt/qle/gitversion.hpp
 ##########################
 # Examples output
 ##########################
-# Examples/*/Output/
-# !Examples/*/Output/README_korean.md
-# !Examples/*/Output/*/README_korean.md
+# generated results under Examples output dirs; keep markdown docs
+Examples/**/[Oo]utput/**/*
+!Examples/**/[Oo]utput/**/*/
+!Examples/**/[Oo]utput/**/*.md
 logs/
 
 Examples/**/pricingstats.csv

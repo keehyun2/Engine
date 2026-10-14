@@ -1,2 +1,0 @@
-#TradeId,TradeType,Maturity,MaturityTime,NPV,NpvCurrency,NPV(Base),BaseCurrency,Notional,NotionalCurrency,Notional(Base),NettingSet,CounterParty
-VN-GOVT-BOND-5Y,Bond,2034-01-03,14.863014,669955431048.778564,VND,669955431048.778564,VND,650000000000.00,VND,650000000000.00,,GOVT-VN
