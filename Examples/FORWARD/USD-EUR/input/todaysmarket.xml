@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <TodaysMarket>
+  <Configuration id="default"/>
 
   <DiscountingCurves id="default">
     <DiscountingCurve currency="EUR">Yield/EUR/EUR-IMPLIED</DiscountingCurve>

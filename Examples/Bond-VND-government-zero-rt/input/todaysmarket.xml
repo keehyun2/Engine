@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TodaysMarket>
-<!--
-  <Configuration id="default">
-     <DiscountingCurves id="default">
-       <DiscountingCurve currency="VND">Yield/YieldCurve/VND-GOVT-BOND</DiscountingCurve>
-     </DiscountingCurves>
-  </Configuration>
--->
   <Configuration id="default"/>
   <YieldCurves id="default">
     <YieldCurve name="VND-GOVT-BOND">Yield/VND/VND-GOVT-BOND</YieldCurve>

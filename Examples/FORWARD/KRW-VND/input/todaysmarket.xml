@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <TodaysMarket>
+  <Configuration id="default" />
+    <!-- <DiscountingCurvesId>default</DiscountingCurvesId>
+  </Configuration> -->
 
   <DiscountingCurves id="default">
     <DiscountingCurve currency="VND">Yield/VND/VND-IN-USD</DiscountingCurve>

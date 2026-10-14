@@ -16,7 +16,7 @@
     <Parameter name="portfolioFile">portfolio_fx.xml</Parameter>
     <Parameter name="observationModel">None</Parameter>
     <Parameter name="continueOnError">false</Parameter>
-    <Parameter name="calendarAdjustment">../../Input/calendaradjustment.xml</Parameter>
+    <Parameter name="calendarAdjustment">calendaradjustment.xml</Parameter>
     <Parameter name="currencyConfiguration">../../Input/currencies.xml</Parameter>
   </Setup>
   <Markets>
