@@ -11,4 +11,80 @@
             <jxb:class name="ScheduleDates"/>
         </jxb:bindings>
     </jxb:bindings>
+    <jxb:bindings schemaLocation="simulation.xsd">
+        <!-- jarrowYildrim: element Index and attribute index collide, rename the attribute property -->
+        <jxb:bindings node="//xs:complexType[@name='jarrowYildrim']/xs:attribute[@name='index']">
+            <jxb:property name="indexName"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="instruments.xsd">
+        <!-- cbCallData: outer wrapper Soft and repeated entry Soft collide, rename the entry -->
+        <jxb:bindings node="//xs:complexType[@name='cbCallData']/xs:all/xs:element[@name='Soft']/xs:complexType/xs:sequence/xs:element[@name='Soft']/xs:complexType">
+            <jxb:class name="SoftEntry"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <!-- sensitivity.xsd uses all-lowercase type names (e.g. swaptionvolatility) that collide
+         case-insensitively on Windows with the camelCase types in curveconfig.xsd -->
+    <jxb:bindings schemaLocation="sensitivity.xsd">
+        <jxb:bindings node="//xs:complexType[@name='fxspot']">
+            <jxb:class name="SensitivityFxSpot"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='fxspots']">
+            <jxb:class name="SensitivityFxSpots"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='yieldcurve']">
+            <jxb:class name="SensitivityYieldCurve"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='yieldcurves']">
+            <jxb:class name="SensitivityYieldCurves"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='yieldvolatility']">
+            <jxb:class name="SensitivityYieldVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='yieldvolatilities']">
+            <jxb:class name="SensitivityYieldVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='swaptionvolatility']">
+            <jxb:class name="SensitivitySwaptionVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='swaptionvolatilities']">
+            <jxb:class name="SensitivitySwaptionVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='capfloorvolatility']">
+            <jxb:class name="SensitivityCapFloorVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='capfloorvolatilities']">
+            <jxb:class name="SensitivityCapFloorVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='cdsvolatility']">
+            <jxb:class name="SensitivityCdsVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='cdsvolatilities']">
+            <jxb:class name="SensitivityCdsVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='fxvolatility']">
+            <jxb:class name="SensitivityFxVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='fxvolatilities']">
+            <jxb:class name="SensitivityFxVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='equityvolatility']">
+            <jxb:class name="SensitivityEquityVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='equityvolatilities']">
+            <jxb:class name="SensitivityEquityVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='commodityvolatility']">
+            <jxb:class name="SensitivityCommodityVolatility"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='commodityvolatilities']">
+            <jxb:class name="SensitivityCommodityVolatilities"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='basecorrelation']">
+            <jxb:class name="SensitivityBaseCorrelation"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='basecorrelations']">
+            <jxb:class name="SensitivityBaseCorrelations"/>
+        </jxb:bindings>
+    </jxb:bindings>
 </jxb:bindings>
